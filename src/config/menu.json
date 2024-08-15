@@ -5,8 +5,12 @@
       "url": "/"
     },
     {
-      "name": "Blog",
+      "name": "Blogs",
       "url": "/blog"
+    },
+    {
+      "name": "Videos",
+      "url": "https://www.youtube.com/@cspbyarjit"
     },
     {
       "name": "About",
@@ -17,33 +21,37 @@
       "url": "/changelog"
     },
     {
-      "name": "Subjects",
+      "name": "Structured Content",
       "url": "",
       "hasChildren": true,
       "children": [
         {
           "name": "Development",
-          "url": "/development"
+          "url": "/categories/development"
         },
         {
           "name": "Development++",
-          "url": "/development-plus"
+          "url": "/categories/dev++"
         },
         {
           "name": "Core Computer Science",
-          "url": "/core"
+          "url": "/categories/core"
         },
         {
           "name": "Problem Solving",
-          "url": "/problem-solving"
+          "url": "/categories/problem-solving"
         },
         {
           "name": "Aptitude",
-          "url": "/aptitude"
+          "url": "/categories/aptitude"
         },
         {
           "name": "Electives",
-          "url": "/electives"
+          "url": "/categories/electives"
+        },
+        {
+          "name": "All Courses",
+          "url": "/courses"
         }
       ]
     }

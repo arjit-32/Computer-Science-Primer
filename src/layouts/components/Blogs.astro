@@ -13,24 +13,31 @@ const { posts } = Astro.props;
     posts.map((item: any) => (
       <div class="mb-8 md:col-6 lg:col-4">
         <div class="card">
-          <Image
+          {/* <Image
             class="card-img"
             width={335}
             height={210}
             src={item.data.image}
             alt=""
-          />
+          /> */}
+         
           <div class="card-content">
-            <div class="card-tags space-x-1">
-              {item.data.categories.map((category: any) => (
-                <a class="tag" href={`/categories/${slugify(category)}`}>
-                  {humanize(category)}
-                </a>
-              ))}
-            </div>
             <h3 class="h4 card-title">
               <a href={`/blog/${item.slug}`}>{item.data.title}</a>
             </h3>
+            <span class="card-tags space-x-1" style="">
+              {item.data.courses.map((courses: any) => (
+                <a class="bg-[#fb7299e6] border-[#fb7299] border-2 rounded text-white px-1 text-sm" href={`/courses/${slugify(courses)}`}>
+                  {humanize(courses)}
+                </a>
+              ))}
+              {item.data.categories.map((categories: any) => (
+                <a class="bg-[#f7e26bd8] border-[#f7e26b] border-2 rounded text-white px-1 text-sm" href={`/categories/${slugify(categories)}`}>
+                  {humanize(categories)}
+                </a>
+              ))}
+              
+            </span>
             <p class="mb-4 text-text">
               {plainify(item.body?.slice(0, Number(summary_length)))}...
             </p>

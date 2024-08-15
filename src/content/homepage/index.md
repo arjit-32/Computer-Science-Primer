@@ -9,7 +9,7 @@ banner:
     enable: true
 
 features:
-  title: The 5 fields <br /> we specialize in
+  title: The 6 categories <br /> to specialize in 
   features_list:
     - title: Development
       content: Building full-stack web applications with Node.js, React, and more.
@@ -19,6 +19,8 @@ features:
       content: Fundamental theoritical subjects like OS, DBMS, and more.
     - title: Problem Solving
       content: Solve problems using Data Structures and Algorithms in Java.
+    - title: Aptitude
+      content: Fundamental problem solving with aptitude, logical reasoning, and more.
     - title: Electives
       content: Topics that are'nt "Primer" like Product Management, AI and more.
     

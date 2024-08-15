@@ -1,8 +1,8 @@
 {
-  "name": "pinwheel-astro",
+  "name": "Computer Science Primer",
   "version": "2.0.0",
-  "description": "Astro and Tailwindcss boilerplate",
-  "author": "themefisher",
+  "description": "A curriculum to master foundational subjects along with real-world development skills",
+  "author": "Arjit Sharma",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {

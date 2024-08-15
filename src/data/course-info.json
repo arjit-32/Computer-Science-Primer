@@ -1,0 +1,79 @@
+{
+
+"mern": {
+    "title": "MERN Introduction",
+    "description": "Learn to build full stack web applications using MERN stack",
+    "navbar": [
+        {
+            "subheading": "Introduction",
+            "link": [
+                {
+                    "type":"youtube",
+                    "url":"https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s"
+                },
+            
+                {
+                    "type":"blog",
+                    "url":"post-1"
+                },
+            
+                {
+                    "type":"blog",
+                    "url":"post-2"
+                }]
+        },
+        {
+            "subheading": "React",
+            "link": [
+            
+                {
+                    "type":"blog",
+                    "url":"post-3"
+                },
+                {
+                    "type":"blog",
+                    "url":"post-4"
+                },
+                {
+                    "type":"blog",
+                    "url":"post-5"
+                }
+            
+            ]
+        }
+    ]
+},
+
+"java": {
+    "title": "Java Introduction",
+    "description": "Java Introduction",
+    "navbar": [
+        {
+            "subheading": "Introduction",
+            "link": ["https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s","post-1", "post-2"]
+        },
+        {
+            "subheading": "React",
+            "link": ["post-3", "post-4", "post-5"]
+        }
+    ]
+},
+
+
+"system-design": {
+    "title": "System Design Introduction",
+    "description": "System Design Introduction",
+    "navbar": [
+        {
+            "subheading": "Introduction",
+            "link": ["https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s","post-1", "post-2"]
+        },
+        {
+            "subheading": "React",
+            "link": ["post-3", "post-4", "post-5"]
+        }
+    ]
+}
+
+
+}

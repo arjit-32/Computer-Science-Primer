@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import config from "@/config/config.json";
+import dateFormat from "@/lib/utils/dateFormat";
+import readingTime from "@/lib/utils/readingTime";
+import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
+const { summary_length } = config.settings;
+const { posts } = Astro.props;
+---
+
+<div class="row">
+  {
+    posts.map((item: any) => (
+      <div class="mb-8 md:col-12 lg:col-12">
+        <div class="card">
+         
+          <div class="card-content">
+            <h3 class="h4 card-title">
+              <a href={`/blog/${item.slug}`}>{item.data.title}</a>
+            </h3>
+  
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>

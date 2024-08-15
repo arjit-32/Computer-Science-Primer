@@ -451,7 +451,7 @@ select:invalid {
   }
 
   &-tags {
-    @apply absolute right-10 top-10 z-[1] mb-6;
+    // @apply absolute right-10 top-10 z-[1] mb-6;
   }
 
   &-content {
@@ -500,7 +500,7 @@ select:invalid {
 }
 
 .filter-btn {
-  @apply m-3 rounded-3xl border border-[#A9A9A9] text-dark;
+  @apply m-3 rounded-3xl border border-[#A9A9A9] text-dark bg-white;
 
   &-active,
   &.active {

@@ -1,0 +1,82 @@
+---
+import BlogCourses from "@/components/blog/BlogCourses.astro";
+import BlogsSimple from "@/components/Blogs-Simple.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import Shape from "@/components/Shape.astro";
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { getTaxonomy } from "@/lib/taxonomyParser.astro";
+import taxonomyFilter from "@/lib/utils/taxonomyFilter";
+import { slugify, humanize } from "@/lib/utils/textConverter";
+import courseInfo from "@/data/course-info.json";
+
+export async function getStaticPaths() {
+  const courses = await getTaxonomy(
+    config.settings.blog_folder,
+    "courses",
+  );
+  return courses.map((item) => {
+    const course = slugify(item);
+    return {
+      params: { course },
+      props: {
+        item,
+      },
+    };
+  });
+}
+
+const { course } = Astro.params;
+const { item } = Astro.props;
+
+const posts = await getSinglePage(config.settings.blog_folder);
+const filterByTags = taxonomyFilter(posts, "courses", course);
+const page_data = {
+  index_title: "Courses",
+  slug: item,
+};
+
+const courseData = courseInfo[course];
+
+
+---
+
+<Base title={course as string}>
+  <Shape />
+  
+  <section class="page-hero pb-8 pt-16">
+    <div class="container">
+      <div class="page-hero-content mx-auto max-w-[883px] text-center">
+        <h1 class="h2 mb-14 text-center">
+          <span class="text-white bg-[#fb7299e6] px-3">{courseData.title}</span> 
+        </h1>
+        <p>{courseData.description}</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <!-- <BlogCourses courses={courses} /> -->
+      <!-- <BlogsSimple posts={filterByTags} /> -->
+      <div class="row">
+        {
+          courseData.navbar.map((item: any) => (
+            <div class="mb-2 md:col-12 lg:col-12">
+              <div class="card p-2 justify-center items-center flex">
+                <div class="card-content">
+                  <h3 class="h4 card-title">
+                    {item.subheading}
+                  </h3>
+                  {item.link.map((link: any) => (
+                   link.type === "youtube" ? <a href={link.url} class="text-[#fb7299]">Youtube</a> <br/> : <a href={"/blog/"+link.url} class="text-[#fb7299]">{link.url}</a> <br/>
+                  ))
+                  }
+                </div>
+              </div>
+            </div>
+          ))
+        }
+    </div>
+  </section>
+</Base>

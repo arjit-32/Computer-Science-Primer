@@ -1,0 +1,29 @@
+---
+import { humanize, slugify } from "@/lib/utils/textConverter";
+const { courses } = Astro.props;
+const params = Astro.params;
+---
+
+<div class="category-filter mb-10 mt-3 rounded-xl bg-[#f7e26b] p-4 relative">
+  <div>
+    <h3 class="h4 mb-4 bg-[#fa729a] w-max text-white px-3 rounded-3xl absolute top-0 left-[-24px] rotate-[-30deg]">Courses</h3>
+  </div>
+  <ul class="filter-list flex flex-wrap items-center justify-center">
+    {
+      courses.map((course: any) => (
+        <li>
+          <a
+            class={`filter-btn ${
+              params.course === slugify(course)
+                ? "filter-btn-active"
+                : undefined
+            } btn btn-sm`}
+            href={`/courses/${slugify(course)}`}
+          >
+            {humanize(course)}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

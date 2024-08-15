@@ -4,8 +4,11 @@ const { categories } = Astro.props;
 const params = Astro.params;
 ---
 
-<div class="category-filter mb-10 mt-3 rounded-xl bg-[#EEEEEE] p-4">
-  <ul class="filter-list flex flex-wrap items-center">
+<div class="category-filter mb-10 mt-3 rounded-xl bg-[#f7e26b] p-4 relative">
+  <div>
+    <h3 class="h4 mb-4 bg-[#fa729a] w-max text-white px-3 rounded-3xl absolute top-0 left-[-32px] rotate-[-30deg]">Categories</h3>
+  </div>
+  <ul class="filter-list flex flex-wrap items-center justify-center">
     <li>
       <a
         class={`filter-btn ${
