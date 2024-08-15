@@ -9,17 +9,20 @@
             "link": [
                 {
                     "type":"youtube",
-                    "url":"https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s"
+                    "url":"https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s",
+                    "title":"Video Intro"
                 },
             
                 {
                     "type":"blog",
-                    "url":"post-1"
+                    "url":"post-1",
+                    "title":"MERN Introduction"
                 },
             
                 {
                     "type":"blog",
-                    "url":"post-2"
+                    "url":"post-2",
+                    "title":"Advantages of MERN"
                 }]
         },
         {
@@ -28,15 +31,18 @@
             
                 {
                     "type":"blog",
-                    "url":"post-3"
+                    "url":"post-3",
+                    "title":"React Introduction"
                 },
                 {
                     "type":"blog",
-                    "url":"post-4"
+                    "url":"post-4",
+                    "title":"React Components"
                 },
                 {
                     "type":"blog",
-                    "url":"post-5"
+                    "url":"post-5",
+                    "title":"React Hooks"
                 }
             
             ]

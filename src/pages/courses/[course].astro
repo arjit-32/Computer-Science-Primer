@@ -49,7 +49,7 @@ const courseData = courseInfo[course];
     <div class="container">
       <div class="page-hero-content mx-auto max-w-[883px] text-center">
         <h1 class="h2 mb-14 text-center">
-          <span class="text-white bg-[#fb7299e6] px-3">{courseData.title}</span> 
+          <span class="text-white bg-[#fb7299] px-3">{courseData.title}</span> 
         </h1>
         <p>{courseData.description}</p>
       </div>
@@ -60,23 +60,28 @@ const courseData = courseInfo[course];
       <!-- <BlogCourses courses={courses} /> -->
       <!-- <BlogsSimple posts={filterByTags} /> -->
       <div class="row">
-        {
-          courseData.navbar.map((item: any) => (
-            <div class="mb-2 md:col-12 lg:col-12">
-              <div class="card p-2 justify-center items-center flex">
-                <div class="card-content">
-                  <h3 class="h4 card-title">
-                    {item.subheading}
-                  </h3>
-                  {item.link.map((link: any) => (
-                   link.type === "youtube" ? <a href={link.url} class="text-[#fb7299]">Youtube</a> <br/> : <a href={"/blog/"+link.url} class="text-[#fb7299]">{link.url}</a> <br/>
-                  ))
-                  }
-                </div>
-              </div>
+        {courseData.navbar.map((item: any, index: number) => (
+          <div class="mb-4">
+            <button
+              class="w-full text-left bg-[#fb7299] text-white p-3 rounded-md font-semibold"
+            >
+              {item.subheading}
+            </button>
+            <div id={`dropdown-${index}`} class=" mt-2 bg-gray-100 rounded-md p-2">
+              {item.link.map((link: any) => (
+                link.type === "youtube" ? 
+                <a href={link.url} target="_blank" class="block text-blue-500 hover:underline mb-2">
+                  {link.title}
+                </a> 
+                : 
+                <a href={"/blog/" + link.url} class="block text-blue-500 hover:underline mb-2">
+                  {link.title}
+                </a>
+              ))}
             </div>
-          ))
-        }
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 </Base>
