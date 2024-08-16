@@ -27,35 +27,45 @@ features:
 #service
 service:
   homepage_tab:
-    title: Prevent failure from to impacting your reputation
-    description: Our platform helps you build secure onboarding authentication experiences that retain and engage your users. We build the infrastructure, you can.
+    title: Each category has a set of courses
+    description: Focus is on mastering web development and DSA, but the whole point of CSP is to get better on other subjects too.
     tab_list:
-        - title: Habit building essential choose habit
-          icon: "lock"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/sells-by-country.png"
-        - title: Get an overview of Habit Calendars.
-          icon: "clock"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/collaboration.png"
-        - title: Start building with Habitify platform
-          icon: "bell"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/sells-by-country.png"
+        - title: Development
+          icon: "code"  #icon package react-feather-icon [https://feathericons.com/]
+          image: "/images/categories/development.png"
+        - title: Development++
+          icon: "anchor"  #icon package react-feather-icon [https://feathericons.com/]
+          image: "/images/categories/developmentplus.png"
+        - title: Problem Solving
+          icon: "filter"  #icon package react-feather-icon [https://feathericons.com/]
+          image: "/images/categories/problemsolving.png"
+        - title: Core Computer Science
+          icon: "cpu"  #icon package react-feather-icon [https://feathericons.com/]
+          image: "/images/categories/corecs.png"
+        - title: Aptitude
+          icon: "divide"  #icon package react-feather-icon [https://feathericons.com/]
+          image: "/images/categories/aptitude.png"
+        - title: Electives
+          icon: "coffee"  #icon package react-feather-icon [https://feathericons.com/]
+          image: "/images/categories/electives.png"
 
   our_service:
-    - title: Accept payments any country in this whole universe
+    - title: What is the aim of Computer Science Primer?
       desctiption: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed
       image: "/images/collaboration.png"
       list:
-        - Supporting more than 119 country world
-        - Open transaction with more than currencies
-        - Customer Service with 79 languages
-    - title: Accountability that works for you
-      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
+        - Become a fullstack Web-Dev engineer
+        - Develop problem solving skills with DSA
+        - Have strong foundations in Core CS subjects
+        - Develop a habit of learning new things
+    - title: Work on real-world projects
+      description: By the end of the CSP syllabus, you should be able to build real-world projects and become an amazing problem solver.
       video:
         thumbnail: "/images/intro-thumbnail.png"
         video_id: "g3-VxLQO7do"
       button:
-        label: Know About Us
-        link: "#"
+        label: Start with a Course
+        link: "/courses/mern"
         enable: true
 
 #testimonial

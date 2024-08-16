@@ -18,11 +18,11 @@
   },
 
   "call_to_action": {
-    "title": "Transform into a kick-ass Software Engineer",
-    "description": "Contribute to CSP, to build a platform",
+    "title": "Connect with the Founder",
+    "description": "Computer Science Primer (CSP) is being built by single soul, if you have some suggestions regarding the future of this project or some errors you found in my blogs, dm me and I will try to get back to you as soon as possible. Thank you :) !",
     "button": {
-      "label": "Download The Theme",
-      "link": "https://themefisher.com/astro-themes/pinwheel-astro"
+      "label": "Contact",
+      "link": "https://arjit-32.github.io/"
     }
   },
 
