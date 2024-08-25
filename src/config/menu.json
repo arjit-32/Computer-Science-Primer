@@ -17,37 +17,13 @@
       "url": "/about"
     },
     {
-      "name": "Changelog",
-      "url": "/changelog"
-    },
-    {
       "name": "Structured Content",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Development",
-          "url": "/categories/development"
-        },
-        {
-          "name": "Development++",
-          "url": "/categories/dev++"
-        },
-        {
-          "name": "Core Computer Science",
-          "url": "/categories/core"
-        },
-        {
-          "name": "Problem Solving",
-          "url": "/categories/problem-solving"
-        },
-        {
-          "name": "Aptitude",
-          "url": "/categories/aptitude"
-        },
-        {
-          "name": "Electives",
-          "url": "/categories/electives"
+          "name": "All Categories",
+          "url": "/categories"
         },
         {
           "name": "All Courses",
@@ -59,20 +35,16 @@
 
   "footer": [
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Hashnode",
+      "url": "https://computerscienceprimer.hashnode.dev/"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Dev.to",
+      "url": "https://dev.to/cspbyarjit"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "Changelog",
-      "url": "/changelog"
+      "name": "Medium",
+      "url": "https://medium.com/@cspbyarjit"
     }
   ]
 }

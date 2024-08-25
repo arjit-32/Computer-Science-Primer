@@ -1,11 +1,12 @@
 ---
+import HomepageTab from "@/layouts/function-components/HomepageTab";
 import { Image } from "astro:assets";
 const {
-  features: { title, button, features_list },
+  features: { title, button, features_list, homepage_tab },
 } = Astro.props;
 ---
 
-<section class="section">
+<section class="section services">
   <div class="container">
     <div class="row items-center justify-between">
       <div class="md:col-5">
@@ -35,5 +36,8 @@ const {
         ))
       }
     </div>
+    
+    <HomepageTab client:load homepage_tab={homepage_tab} />
   </div>
+  
 </section>

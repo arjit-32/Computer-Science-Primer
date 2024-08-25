@@ -19,6 +19,7 @@ const { Content } = await post.render();
 <section class="section blog-single">
   <div class="container">
     <div class="row justify-center">
+      { post.data.image && 
       <div class="lg:col-10">
         <Image
           class="w-full rounded-xl"
@@ -28,6 +29,7 @@ const { Content } = await post.render();
           height={450}
         />
       </div>
+      }
       <div class="mt-10 max-w-[810px] lg:col-9">
         <h1 class="h2">
           {post.data.title}

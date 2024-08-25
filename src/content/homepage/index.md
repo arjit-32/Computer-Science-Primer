@@ -1,7 +1,7 @@
 ---
 banner:
   title: "Fullstack Engineering from the ground up"
-  content: "Computer Science Primer is a curriculum to master foundational subjects along with real-world development skills"
+  content: "Computer Science Primer is a curriculum to master foundational cs subjects along with real-world development skills needed to become a fullstack developer."
   image: /images/banner-img.png
   button:
     label: Checkout Courses
@@ -23,9 +23,6 @@ features:
       content: Fundamental problem solving with aptitude, logical reasoning, and more.
     - title: Electives
       content: Topics that are'nt "Primer" like Product Management, AI and more.
-    
-#service
-service:
   homepage_tab:
     title: Each category has a set of courses
     description: Focus is on mastering web development and DSA, but the whole point of CSP is to get better on other subjects too.
@@ -48,7 +45,8 @@ service:
         - title: Electives
           icon: "coffee"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/categories/electives.png"
-
+#service
+service:
   our_service:
     - title: What is the aim of Computer Science Primer?
       desctiption: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed

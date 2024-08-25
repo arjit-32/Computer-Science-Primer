@@ -402,6 +402,10 @@ select:invalid {
 
 //services
 .services {
+  .tab{ 
+    background: #fff;
+  }
+
   .tab-nav {
     @apply inline-block;
   }

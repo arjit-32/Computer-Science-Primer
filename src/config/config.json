@@ -18,32 +18,32 @@
   },
 
   "call_to_action": {
-    "title": "Connect with the Founder",
-    "description": "Computer Science Primer (CSP) is being built by single soul, if you have some suggestions regarding the future of this project or some errors you found in my blogs, dm me and I will try to get back to you as soon as possible. Thank you :) !",
+    "title": "Complaints ?",
+    "description": "Being built by single soul, lots of errors are to be expected. Feel free to point out my mistakes, and let your dude learn and grow. Thank you :)",
     "button": {
-      "label": "Contact",
+      "label": "Contact Me",
       "link": "https://arjit-32.github.io/"
     }
   },
 
   "disqus": {
     "enable": true,
-    "shortname": "themefisher-template",
+    "shortname": "csp-2",
     "settings": {}
   },
 
   "params": {
-    "footer_description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
-    "email": "info@andromeda.io",
-    "location": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
-    "phone": "+704-555-0127",
+    "footer_description": "Computer Science Primer is a curriculum to master foundational cs subjects along with real-world development skills needed to become a fullstack developer.",
+    "email": "cspbyarjit@gmail.com",
+    "location": "Bengaluru, India",
+    "phone": "",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2023 a theme by [Themefisher](https://themefisher.com)"
+    "copyright": "Copyright on content © 2024 by Computer Science Primer"
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "ComputerSciencePrimer",
     "meta_image": "/images/og-image.png",
-    "meta_description": "pinwheel astro"
+    "meta_description": "Computer Science Primer"
   }
 }

@@ -1,8 +1,8 @@
 {
 
-"mern": {
-    "title": "MERN Introduction",
-    "description": "Learn to build full stack web applications using MERN stack",
+"java": {
+    "title": "Java Up and Running",
+    "description": "Learn the basics of Java programming language and get comfortable with the syntax.",
     "navbar": [
         {
             "subheading": "Introduction",
@@ -26,7 +26,7 @@
                 }]
         },
         {
-            "subheading": "React",
+            "subheading": "Java Ecosystem",
             "link": [
             
                 {
@@ -46,37 +46,6 @@
                 }
             
             ]
-        }
-    ]
-},
-
-"java": {
-    "title": "Java Introduction",
-    "description": "Java Introduction",
-    "navbar": [
-        {
-            "subheading": "Introduction",
-            "link": ["https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s","post-1", "post-2"]
-        },
-        {
-            "subheading": "React",
-            "link": ["post-3", "post-4", "post-5"]
-        }
-    ]
-},
-
-
-"system-design": {
-    "title": "System Design Introduction",
-    "description": "System Design Introduction",
-    "navbar": [
-        {
-            "subheading": "Introduction",
-            "link": ["https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s","post-1", "post-2"]
-        },
-        {
-            "subheading": "React",
-            "link": ["post-3", "post-4", "post-5"]
         }
     ]
 }
