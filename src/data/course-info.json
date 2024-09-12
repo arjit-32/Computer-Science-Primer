@@ -1,8 +1,9 @@
 {
 
-"java": {
-    "title": "Java Up and Running",
-    "description": "Learn the basics of Java programming language and get comfortable with the syntax.",
+"discrete-math": {
+    
+    "title": "Discrete Math",
+    "description": "Something about Something",
     "navbar": [
         {
             "subheading": "Introduction",
@@ -24,31 +25,8 @@
                     "url":"post-2",
                     "title":"Advantages of MERN"
                 }]
-        },
-        {
-            "subheading": "Java Ecosystem",
-            "link": [
-            
-                {
-                    "type":"blog",
-                    "url":"post-3",
-                    "title":"React Introduction"
-                },
-                {
-                    "type":"blog",
-                    "url":"post-4",
-                    "title":"React Components"
-                },
-                {
-                    "type":"blog",
-                    "url":"post-5",
-                    "title":"React Hooks"
-                }
-            
-            ]
         }
     ]
 }
-
 
 }

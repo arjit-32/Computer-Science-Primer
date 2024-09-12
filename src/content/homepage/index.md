@@ -19,8 +19,6 @@ features:
       content: Fundamental theoritical subjects like OS, DBMS, and more.
     - title: Problem Solving
       content: Solve problems using Data Structures and Algorithms in Java.
-    - title: Aptitude
-      content: Fundamental problem solving with aptitude, logical reasoning, and more.
     - title: Electives
       content: Topics that are'nt "Primer" like Product Management, AI and more.
   homepage_tab:
@@ -39,9 +37,6 @@ features:
         - title: Core Computer Science
           icon: "cpu"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/categories/corecs.png"
-        - title: Aptitude
-          icon: "divide"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/categories/aptitude.png"
         - title: Electives
           icon: "coffee"  #icon package react-feather-icon [https://feathericons.com/]
           image: "/images/categories/electives.png"
@@ -66,54 +61,4 @@ service:
         link: "/courses/mern"
         enable: true
 
-#testimonial
-testimonial:
-  title: Our customers have nice things to say about us
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
-  testimonial_list:
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-6.png"
-      organization: meta limited
-      rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-2.png"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-3.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-4.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-1.png"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
 ---
