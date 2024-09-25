@@ -52,13 +52,13 @@ service:
         - Have strong foundations in Core CS subjects
         - Develop a habit of learning new things
     - title: Work on real-world projects
-      description: By the end of the CSP syllabus, you should be able to build real-world projects and become an amazing problem solver.
+      description: By the end of the CSP syllabus, one should be able to build real-world projects and become an amazing problem solver.
       video:
         thumbnail: "/images/intro-thumbnail.png"
-        video_id: "g3-VxLQO7do"
+        video_id: "mdi7F-e91iU"
       button:
         label: Start with a Course
-        link: "/courses/mern"
+        link: "/courses"
         enable: true
 
 ---
