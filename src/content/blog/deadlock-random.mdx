@@ -2,7 +2,7 @@
 title: Deadlocks in Action- Lessons Learned from Real-World Scenarios
 subtitle: What are sets, subsets and laws related to it.
 author: Arjit Sharma
-date: 2024-08-24T05:00:00Z
+date: 2024-09-25T05:00:00Z
 courses: []
 categories: ["Core", "Dev-Plus"]
 image: /images/thumbnails/group-of-devs.jpg
@@ -37,7 +37,7 @@ You might be thinking: *I’m not an OS developer—why should I care about dead
     
     Neither transaction can proceed because they are both waiting for the other to release a lock, leading to a deadlock.
     
-    ```sql
+    ```sql ln lh={1-3} name={"hello.java"}
     -- Transaction A
     START TRANSACTION;
     UPDATE accounts SET balance = balance - 100 WHERE account_id = 1; -- Locks account 1

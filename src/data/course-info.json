@@ -27,6 +27,35 @@
                 }]
         }
     ]
+},
+
+"random": {
+"title": "Java Up & Running",
+    "description": "Spark your curiosity with everyday questions in tech !",
+    "navbar": [
+        {
+            "subheading": "Introduction",
+            "link": [
+                {
+                    "type":"youtube",
+                    "url":"https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s",
+                    "title":"Video Intro"
+                },
+            
+                {
+                    "type":"blog",
+                    "url":"post-1",
+                    "title":"MERN Introduction"
+                },
+            
+                {
+                    "type":"blog",
+                    "url":"post-2",
+                    "title":"Advantages of MERN"
+                }]
+        }
+    ]
+
 }
 
 }
