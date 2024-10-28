@@ -1,16 +1,13 @@
 ---
-import Blogs from "@/components/Blogs.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import Shape from "@/components/Shape.astro";
-import BlogCategories from "@/components/blog/BlogCategories.astro";
 import BlogCourses from "@/components/blog/BlogCourses.astro";
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import { getSinglePage } from "@/lib/contentParser.astro";
 import { getTaxonomy } from "@/lib/taxonomyParser.astro";
+import courseInfo from "@/data/course-info.json";
 
 const { blog_folder } = config.settings;
-const posts = await getSinglePage(blog_folder);
 const courses = await getTaxonomy(blog_folder, "courses");
 ---
 
@@ -22,10 +19,17 @@ const courses = await getTaxonomy(blog_folder, "courses");
     </div>
   </section>
   <section class="section">
-    <div class="container">
-      <BlogCourses courses={courses}/>
-      <!-- <Blogs posts={posts} /> -->
-       
+    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {Object.entries(courseInfo).map(([slug, course]) => (
+        <div class="card bg-white rounded-lg shadow-md p-6">
+          <img src={course.image || "/path/to/default-image.jpg"} alt={course.title} class="w-full h-48 object-cover rounded-md mb-4"/>
+          <h2 class="text-xl font-semibold text-gray-800">{course.title}</h2>
+          <p class="text-gray-600 mt-2 mb-4">{course.description}</p>
+          <a href={`/courses/${slug}`} class="inline-block mt-4 text-blue-600 hover:text-blue-800">
+            Start Learning
+          </a>
+        </div>
+      ))}
     </div>
   </section>
 </Base>

@@ -1,9 +1,10 @@
 {
-
-"discrete-math": {
+"ui-ux-development": {
     
-    "title": "Discrete Math",
-    "description": "Something about Something",
+    "title": "UI UX Development",
+    "image": "/images/collaboration.png",
+    "description": "Course about UI UX to learn about Product",
+    "category": "UI/UX & Product",
     "navbar": [
         {
             "subheading": "Introduction",
@@ -16,46 +17,17 @@
             
                 {
                     "type":"blog",
-                    "url":"post-1",
-                    "title":"MERN Introduction"
+                    "url":"uiux-1",
+                    "title":"UI UX Introduction"
                 },
             
                 {
                     "type":"blog",
-                    "url":"post-2",
-                    "title":"Advantages of MERN"
+                    "url":"uiux-2",
+                    "title":"Wireframing"
                 }]
         }
     ]
-},
-
-"random": {
-"title": "Java Up & Running",
-    "description": "Spark your curiosity with everyday questions in tech !",
-    "navbar": [
-        {
-            "subheading": "Introduction",
-            "link": [
-                {
-                    "type":"youtube",
-                    "url":"https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s",
-                    "title":"Video Intro"
-                },
-            
-                {
-                    "type":"blog",
-                    "url":"post-1",
-                    "title":"MERN Introduction"
-                },
-            
-                {
-                    "type":"blog",
-                    "url":"post-2",
-                    "title":"Advantages of MERN"
-                }]
-        }
-    ]
-
 }
 
 }

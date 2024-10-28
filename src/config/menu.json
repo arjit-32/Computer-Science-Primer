@@ -5,27 +5,12 @@
       "url": "/"
     },
     {
-      "name": "Blogs",
+      "name": "All Blogs",
       "url": "/blog"
     },
     {
-      "name": "Videos",
-      "url": "https://www.youtube.com/@cspbyarjit"
-    },
-    {
-      "name": "Structured Content",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "All Categories",
-          "url": "/categories"
-        },
-        {
-          "name": "All Courses",
-          "url": "/courses"
-        }
-      ]
+      "name": "Courses",
+      "url": "/courses"
     }
   ],
 

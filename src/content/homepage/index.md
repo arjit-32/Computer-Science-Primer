@@ -1,64 +1,71 @@
 ---
 banner:
   title: "Fullstack Engineering from the ground up"
-  content: "Computer Science Primer is a curriculum to master foundational cs subjects along with real-world development skills needed to become a fullstack developer."
+  content: "Computer Science Primer is a curriculum to Master Core CS Fundamentals and Real-World Development Skills to Become a 10x Developer."
   image: /images/banner-img.png
   button:
-    label: Checkout Courses
-    link: "https://www.youtube.com/channel/UCxnwwhbLSLQBXXjD0aDVoJw"
+    label: Start with a Series
+    link: "/courses"
     enable: true
 
 features:
-  title: The 6 categories <br /> to specialize in 
+  title: The 6 Subjects <br /> to work on 
   features_list:
     - title: Development
-      content: Building full-stack web applications with Node.js, React, and more.
+      content: Build complete web applications from concept to deployment. Gain the expertise to develop and launch industry-grade web solutions.
     - title: Development++
-      content: Designing systems, AWS, Devops, and more.
+      content: Advance your skill set with Git, AWS, DevOps, and Microservices, building resilient and scalable systems.
+    - title: UI/UX & Product 
+      content: It never hurts a developer to have cross-functional skills, collaborating effectively with designers and product managers.
     - title: Core Computer Science
-      content: Fundamental theoritical subjects like OS, DBMS, and more.
-    - title: Problem Solving
-      content: Solve problems using Data Structures and Algorithms in Java.
-    - title: Electives
-      content: Topics that are'nt "Primer" like Product Management, AI and more.
+      content: Master foundational subjects like Operating Systems, Computer Networks, Databases and more.
+    - title: Data Structures & Algorithms
+      content: Strengthen your problem-solving skills with DSA in Java.
+    - title: System Design
+      content: Design APIs, architect systems, and learn design patterns for both low-level and high-level solutions.
+    
   homepage_tab:
-    title: Each category has a set of courses
-    description: Focus is on mastering web development and DSA, but the whole point of CSP is to get better on other subjects too.
+    title: Roadmap of each Subject
+    description: Follow structured paths to mastery, with clear milestones for every topic from fundamentals to advanced concepts.
     tab_list:
         - title: Development
           icon: "code"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/categories/development.png"
+          image: "/images/categories/1.png"
         - title: Development++
           icon: "anchor"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/categories/developmentplus.png"
-        - title: Problem Solving
+          image: "/images/categories/2.png"
+        - title: UI/UX & Product 
           icon: "filter"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/categories/problemsolving.png"
+          image: "/images/categories/3.png"
         - title: Core Computer Science
           icon: "cpu"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/categories/corecs.png"
-        - title: Electives
+          image: "/images/categories/4.png"
+        - title: Data Structures & Algorithms
           icon: "coffee"  #icon package react-feather-icon [https://feathericons.com/]
-          image: "/images/categories/electives.png"
+          image: "/images/categories/5.png"
+        - title: System Design
+          icon: "coffee"  #icon package react-feather-icon [https://feathericons.com/]
+          image: "/images/categories/6.png"
 #service
 service:
   our_service:
-    - title: What is the aim of Computer Science Primer?
-      desctiption: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed
+    - title: What is the Aim of Computer Science Primer?
+      description: Move beyond the Development vs. DSA debate. The goal is to become a great problem solver with expertise across multiple facets of Computer Science Engineering.
       image: "/images/collaboration.png"
       list:
-        - Become a fullstack Web-Dev engineer
-        - Develop problem solving skills with DSA
-        - Have strong foundations in Core CS subjects
-        - Develop a habit of learning new things
-    - title: Work on real-world projects
-      description: By the end of the CSP syllabus, one should be able to build real-world projects and become an amazing problem solver.
+        - Become a Full-Stack Web Developer
+        - Master problem-solving skills with DSA
+        - Build a solid foundation in core CS subjects
+        - Cultivate a habit of continuous learning
+   
+    - title: Join the Learning Journey
+      description: I’m completing the CSPrimer syllabus alongside you. Along the way, I’ll share blog series, videos, handwritten notes, open-source projects, roadmaps, and resources for each subject-everything you need to dive in and become a 10x Developer.
+
       video:
         thumbnail: "/images/intro-thumbnail.png"
         video_id: "mdi7F-e91iU"
       button:
-        label: Start with a Course
+        label: Start with a Series
         link: "/courses"
         enable: true
-
 ---
