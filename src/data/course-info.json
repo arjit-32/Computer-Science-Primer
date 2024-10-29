@@ -20,6 +20,51 @@
                         "title":"Introduction to Ui development"
                     }
               ]
+            },
+            {
+                "subheading": "Wireframing",
+                "link": [
+                    {
+                        "type":"youtube",
+                        "url":"",
+                        "title":"Video Intro"
+                    },
+                    {
+                        "type":"blog",
+                        "url":"ui-1",
+                        "title":"Introduction to Ui development"
+                    },
+                    {
+                        "type":"blog",
+                        "url":"ui-1",
+                        "title":"Introduction to Ui development"
+                    },
+                    {
+                        "type":"blog",
+                        "url":"ui-1",
+                        "title":"Introduction to Ui development"
+                    },
+                    {
+                        "type":"blog",
+                        "url":"ui-1",
+                        "title":"Introduction to Ui development"
+                    },
+                    {
+                        "type":"blog",
+                        "url":"ui-1",
+                        "title":"Introduction to Ui development"
+                    },
+                    {
+                        "type":"blog",
+                        "url":"ui-1",
+                        "title":"Introduction to Ui development"
+                    },
+                    {
+                        "type":"blog",
+                        "url":"ui-1",
+                        "title":"Introduction to Ui development"
+                    }
+              ]
             }
         ]
     }

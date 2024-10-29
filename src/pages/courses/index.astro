@@ -24,7 +24,7 @@ const courses = await getTaxonomy(blog_folder, "courses");
         <a href={`/courses/${slug}`} class="group relative card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
           <img src={course.image || "/images/collaboration.png"} alt={course.title} class="w-full h-48 object-cover rounded-md mb-4"/>
           
-          <!-- Category pill -->
+         
           <span class="inline-block bg-[#f7e26bd8] text-black text-xs font-semibold py-1 px-3 rounded-full mb-4">
             {course.category}
           </span>
