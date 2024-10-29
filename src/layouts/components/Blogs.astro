@@ -32,7 +32,7 @@ const { posts } = Astro.props;
                 </a>
               ))}
               {item.data.categories.map((categories: any) => (
-                <a class="bg-[#f7e26bd8] border-[#f7e26b] border-2 rounded text-white px-1 text-sm" href={`/categories/${slugify(categories)}`}>
+                <a class="bg-[#f7e26bd8] border-[#f7e26b] border-2 rounded text-black px-1 text-sm" href={`/categories/${slugify(categories)}`}>
                   {humanize(categories)}
                 </a>
               ))}

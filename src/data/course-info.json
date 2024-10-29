@@ -1,33 +1,26 @@
 {
-"ui-ux-development": {
-    
-    "title": "UI UX Development",
-    "image": "/images/collaboration.png",
-    "description": "Course about UI UX to learn about Product",
-    "category": "UI/UX & Product",
-    "navbar": [
-        {
-            "subheading": "Introduction",
-            "link": [
-                {
-                    "type":"youtube",
-                    "url":"https://www.youtube.com/watch?v=_g89_8Bb57g&t=474s",
-                    "title":"Video Intro"
-                },
-            
-                {
-                    "type":"blog",
-                    "url":"uiux-1",
-                    "title":"UI UX Introduction"
-                },
-            
-                {
-                    "type":"blog",
-                    "url":"uiux-2",
-                    "title":"Wireframing"
-                }]
-        }
-    ]
-}
-
+    "ui": {
+        "title": "UI/UX Design for Developers",
+        "image": "/images/thumbnails/designer.jpeg",
+        "description": "A comprehensive course on UI/UX principles and design processes.",
+        "time": "5 hr",
+        "category": "UI/UX & Product",
+        "navbar": [
+            {
+                "subheading": "Introduction",
+                "link": [
+                    {
+                        "type":"youtube",
+                        "url":"",
+                        "title":"Video Intro"
+                    },
+                    {
+                        "type":"blog",
+                        "url":"ui-1",
+                        "title":"Introduction to Ui development"
+                    }
+              ]
+            }
+        ]
+    }
 }
