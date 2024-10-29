@@ -25,45 +25,35 @@
                 "subheading": "Wireframing",
                 "link": [
                     {
-                        "type":"youtube",
-                        "url":"",
-                        "title":"Video Intro"
-                    },
-                    {
-                        "type":"blog",
-                        "url":"ui-1",
-                        "title":"Introduction to Ui development"
-                    },
-                    {
-                        "type":"blog",
-                        "url":"ui-1",
-                        "title":"Introduction to Ui development"
-                    },
-                    {
-                        "type":"blog",
-                        "url":"ui-1",
-                        "title":"Introduction to Ui development"
-                    },
-                    {
-                        "type":"blog",
-                        "url":"ui-1",
-                        "title":"Introduction to Ui development"
-                    },
-                    {
-                        "type":"blog",
-                        "url":"ui-1",
-                        "title":"Introduction to Ui development"
-                    },
-                    {
-                        "type":"blog",
-                        "url":"ui-1",
-                        "title":"Introduction to Ui development"
-                    },
-                    {
-                        "type":"blog",
-                        "url":"ui-1",
-                        "title":"Introduction to Ui development"
-                    }
+                        "type": "youtube",
+                        "url": "https://youtube.com/...",
+                        "title": "Video Tutorial"
+                      },
+                      {
+                        "type": "external",
+                        "url": "https://example.com",
+                        "title": "External Resource"
+                      },
+                      {
+                        "type": "course",
+                        "url": "https://coursera.org/...",
+                        "title": "Related Course"
+                      },
+                      {
+                        "type": "external-blog",
+                        "url": "https://blog.example.com/...",
+                        "title": "External Blog Post"
+                      },
+                      {
+                        "type": "assignment",
+                        "url": "/assignments/...",
+                        "title": "Weekly Assignment"
+                      },
+                      {
+                        "type": "github",
+                        "url": "https://github.com/...",
+                        "title": "Project Repository"
+                      }
               ]
             }
         ]
