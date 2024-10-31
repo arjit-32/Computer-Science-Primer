@@ -2,30 +2,146 @@
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
-import { getEntryBySlug } from "astro:content";
-import config from "@/config/config.json";
 
-const { logo } = config.site;
-const entry = await getEntryBySlug("pages", "404");
-const { Content } = await entry.render();
 ---
 
-<Base title={entry.data.title}>
-  <section class="section">
+<Base title={"404"}>
+  
+  <section class="section bg-gradient-to-b from-blue-600 to-purple-700 text-white min-h-screen flex items-center">
     <div class="container">
-      <div class="flex h-[40vh] items-center justify-center">
-        <div class="text-center">
-          <Image
-            src="/images/404.png"
-            class="mb-4 inline"
-            alt="logo"
-            height={120}
-            width={120}
-          />
-          <h1 class="mb-4" set:html={markdownify(entry.data.title)} />
-          <Content />
-        </div>
+      <div class="flex flex-col items-center justify-center text-center">
+        
+        <h1 class="text-5xl font-bold mb-4 text-white"> Error 404 </h1>
+        <Image
+          src="/images/meme.png" 
+          class="mb-8"
+          alt="404 Meme"
+          height={360}
+          width={360}
+        />
+  
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" width="400" height="300" class="border-4 border-white mt-6"></canvas>
+        <p class="mt-2 text-sm">Use Left and Right Arrow Keys to move and catch stars!</p>
       </div>
     </div>
   </section>
+
+  <script>
+    // Game Setup
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const player = { x: 180, y: 260, width: 40, height: 20, dx: 5 };
+    const star = { x: Math.random() * 380, y: 0, radius: 10, dy: 2 };
+    let score = 0;
+    let lives = 3;
+    let gameOver = false;
+
+    function drawPlayer() {
+      ctx.fillStyle = "#FFD700";
+      ctx.fillRect(player.x, player.y, player.width, player.height);
+    }
+
+    function drawStar() {
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      ctx.fillStyle = "#FFFF00";
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    function drawScore() {
+      ctx.font = "16px Arial";
+      ctx.fillStyle = "white";
+      ctx.fillText("Score: " + score, 10, 20);
+    }
+
+    function drawPixelatedHeart(x, y) {
+      // Draw a pixelated heart with red squares
+      ctx.fillStyle = "#FF0000";
+      const pixelSize = 4;
+      const heartShape = [
+        [0, 1, 1, 0, 0, 1, 1, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1],
+        [0, 1, 1, 1, 1, 1, 1, 0],
+        [0, 0, 1, 1, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0, 0]
+      ];
+      for (let row = 0; row < heartShape.length; row++) {
+        for (let col = 0; col < heartShape[row].length; col++) {
+          if (heartShape[row][col]) {
+            ctx.fillRect(x + col * pixelSize, y + row * pixelSize, pixelSize, pixelSize);
+          }
+        }
+      }
+    }
+
+    function drawLives() {
+      for (let i = 0; i < lives; i++) {
+        drawPixelatedHeart(canvas.width - 30 * (i + 1), 10);
+      }
+    }
+
+    function movePlayer() {
+      document.addEventListener('keydown', (e) => {
+        if (e.code === 'ArrowLeft' && player.x > 0) {
+          player.x -= player.dx;
+        } else if (e.code === 'ArrowRight' && player.x + player.width < canvas.width) {
+          player.x += player.dx;
+        }
+      });
+    }
+
+    function updateStar() {
+      star.y += star.dy;
+
+      // Reset star if caught or missed
+      if (star.y > canvas.height) {
+        lives--;
+        star.y = 0;
+        star.x = Math.random() * (canvas.width - star.radius * 2);
+      } else if (
+        star.y + star.radius > player.y &&
+        star.x > player.x && star.x < player.x + player.width
+      ) {
+        score++;
+        star.y = 0;
+        star.x = Math.random() * (canvas.width - star.radius * 2);
+      }
+
+      // End game if lives reach zero
+      if (lives <= 0) {
+        gameOver = true;
+      }
+    }
+
+    function displayGameOver() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.font = "24px Arial";
+      ctx.fillStyle = "white";
+      ctx.fillText("Game Over!", canvas.width / 2 - 60, canvas.height / 2);
+      ctx.font = "16px Arial";
+      ctx.fillText("Refresh the page to try again.", canvas.width / 2 - 90, canvas.height / 2 + 30);
+    }
+
+    function gameLoop() {
+      if (gameOver) {
+        displayGameOver();
+        return;
+      }
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawPlayer();
+      drawStar();
+      drawScore();
+      drawLives();
+      updateStar();
+      requestAnimationFrame(gameLoop);
+    }
+
+    movePlayer();
+    gameLoop();
+  </script>
 </Base>
