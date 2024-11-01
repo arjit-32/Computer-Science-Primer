@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "tags": ["nodejs", "expressjs"],
+      "question": "💡 What are Callbacks in Node.js?",
+      "answer": ["Callbacks are functions passed as argument to another function and gets executed after the main func has completed its task. In node.js they are crucial for non-blocking behaviour, callbacks are passed to handle async tasks.", "How it works ? The async task starts → Node.js keeps working → When done, the event loop triggers the callback to handle the result."],
+      "images": ["images/interview-ques/ques1.png"],
+      "code": "fs.readFile('file.txt','utf8', (err,data) => {\n if(err) console.error(err); \n else console.log(data);\n });"
+    },
+    {
+        "id": 2,
+        "tags": ["expressjs"],
+        "question": "💡 Who is Arjit",
+        "answer": ["Callbacks are functions passed as argument to another function and gets executed after the main func has completed its task. In node.js they are crucial for non-blocking behaviour, callbacks are passed to handle async tasks.", "How it works ? The async task starts → Node.js keeps working → When done, the event loop triggers the callback to handle the result."],
+        "images": ["images/interview-ques/ques1.png"],
+        "code": "fs.readFile('file.txt','utf8', (err,data) => {\n if(err) console.error(err); \n else console.log(data);\n });"
+      },
+      {
+        "id": 3,
+        "tags": ["arjit"],
+        "question": "💡 Who is aaaaaaaaaaaaaaaaaaaaa",
+        "answer": ["Callbacks are functions passed as argument to another function and gets executed after the main func has completed its task. In node.js they are crucial for non-blocking behaviour, callbacks are passed to handle async tasks.", "How it works ? The async task starts → Node.js keeps working → When done, the event loop triggers the callback to handle the result."],
+        "images": ["images/interview-ques/ques1.png"],
+        "code": "fs.readFile('file.txt','utf8', (err,data) => {\n if(err) console.error(err); \n else console.log(data);\n });"
+      }
+  ]
+  

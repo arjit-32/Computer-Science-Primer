@@ -63,7 +63,7 @@ service:
 
       video:
         thumbnail: "/images/intro-thumbnail.png"
-        video_id: "mdi7F-e91iU"
+        video_id: "p1-mm4AjVdo" 
       button:
         label: Start with a Series
         link: "/courses"

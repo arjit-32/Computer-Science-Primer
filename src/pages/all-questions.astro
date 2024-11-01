@@ -1,0 +1,35 @@
+---
+import questions from '../data/questions.json';
+---
+
+<style>
+.question-list {
+  max-width: 600px;
+  margin: auto;
+}
+.question-item {
+  border-bottom: 1px solid #ddd;
+  padding: 16px 0;
+}
+.question-image {
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+</style>
+
+<div class="question-list">
+  <h1>All Interview Questions</h1>
+  {questions.map((q) => (
+    <div key={q.id} class="question-item">
+      <strong>Q: {q.question}</strong>
+      <p>A: {q.answer}</p>
+
+      <!-- Render images if available -->
+      {q.image && <img src={q.image} alt="Question related" class="question-image" />}
+      {q.images && q.images.map((imgUrl) => (
+        <img src={imgUrl} alt="Question related" class="question-image" />
+      ))}
+    </div>
+  ))}
+</div>
