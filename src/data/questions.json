@@ -1,27 +1,67 @@
-[
+[   
     {
-      "id": 1,
-      "tags": ["nodejs", "expressjs"],
-      "question": "💡 What are Callbacks in Node.js?",
-      "answer": ["Callbacks are functions passed as argument to another function and gets executed after the main func has completed its task. In node.js they are crucial for non-blocking behaviour, callbacks are passed to handle async tasks.", "How it works ? The async task starts → Node.js keeps working → When done, the event loop triggers the callback to handle the result."],
-      "images": ["images/interview-ques/ques1.png"],
-      "code": "fs.readFile('file.txt','utf8', (err,data) => {\n if(err) console.error(err); \n else console.log(data);\n });"
+        "id": 1,
+        "tags": ["nodejs"],
+        "question": "What do you mean by \"Node.js is a JavaScript runtime\"? ",
+        "answer": ["- Historically, JavaScript only ran in browsers and was limited to DOM manipulation and event handling.","- Node.js allows JavaScript to run outside the browser using chrome’s V8 engine", "- It provides an environment where JS can interact with the system, making it usable for backend development.","- It allows JavaScript to handle backend tasks that were traditionally handled by languages like Java or Python."],
+        "images": [],
+        "code": ""
     },
     {
         "id": 2,
-        "tags": ["expressjs"],
-        "question": "💡 Who is Arjit",
-        "answer": ["Callbacks are functions passed as argument to another function and gets executed after the main func has completed its task. In node.js they are crucial for non-blocking behaviour, callbacks are passed to handle async tasks.", "How it works ? The async task starts → Node.js keeps working → When done, the event loop triggers the callback to handle the result."],
-        "images": ["images/interview-ques/ques1.png"],
-        "code": "fs.readFile('file.txt','utf8', (err,data) => {\n if(err) console.error(err); \n else console.log(data);\n });"
-      },
-      {
+        "tags": ["javascript"],
+        "question": "Role of Javascript in development of web ?",
+        "answer": ["- In early 90s there were only static pages on web.", "- Then for client side scripting ( dynamic frontend ), javascript was introduced.", "- This led to development of JS engines like SpiderMonkey, V8 etc", "- These engines allows browsers to execute javascript code. ", "- Early adopters of Javascript’s features were eBay, Yahoo, Amazon etc", "- Different engines may support different versions of ECMAScript"],
+        "images": [],
+        "code": ""
+    },
+    {
         "id": 3,
-        "tags": ["arjit"],
-        "question": "💡 Who is aaaaaaaaaaaaaaaaaaaaa",
-        "answer": ["Callbacks are functions passed as argument to another function and gets executed after the main func has completed its task. In node.js they are crucial for non-blocking behaviour, callbacks are passed to handle async tasks.", "How it works ? The async task starts → Node.js keeps working → When done, the event loop triggers the callback to handle the result."],
-        "images": ["images/interview-ques/ques1.png"],
-        "code": "fs.readFile('file.txt','utf8', (err,data) => {\n if(err) console.error(err); \n else console.log(data);\n });"
-      }
+        "tags": ["javascript"],
+        "question": "Is V8  just a JavaScript compiler? How do they compare to C and Java?",
+        "answer": ["Its a complete runtime environment. It compiles frequently used code for speed, interpret the rest, and manage memory automatically, handling JS's dynamic nature efficiently.", "While C is compiled ahead-of-time into machine code. Java is compiled to bytecode, then JVM uses JIT to compile that to machine code. In V8, JS is directly JIT compiled to machine code at runtime instead of any intermediary code."],
+        "images": [],
+        "code": ""
+    },
+    {
+        "id": 4,
+        "tags": ["nodejs"],
+        "question": "❓ What is the Node.js event loop?",
+        "answer": ["- Node.js uses an event loop to manage asynchronous tasks while staying single-threaded.", "- It handles tasks like file I/O & API calls outside the main thread, running callbacks only when the main thread is free.", "Example - ", "Sync tasks(start,end) run first => Async task(Timeout) placed in Queue => After 1 sec event loop checks & executes callback. "],
+        "images": [],
+        "code": "console.log(\"start\"); \nsetTimeout(() => console.log(\"Timeout\"), 1000); \nconsole.log(\"end\");"
+    },
+    {
+        "id": 5,
+        "tags": ["nodejs"],
+        "question": "📦 What is package.json in Node.js?",
+        "answer": ["File that manager our project, It is automatically created when we do npm init. It has - ", "- Project Metadata: Contains name, version, description.","- Dependency Management: Lists required packages.","- Script Commands: Defines npm scripts for automation (e.g., start, test).","- Version Control: Ensures consistent package versions across environments.","- Configuration: Stores settings for tools & libraries."],
+        "images": [],
+        "code": ""
+    },
+    {
+        "id": 6,
+        "tags": ["nodejs"],
+        "question": "🚀 What is npm in Node.js?",
+        "answer": ["A package manager/ tool to manage dependencies, scripts and libraries in Node.js project. It allows to include 3rd party code. It is comparable to pip in python and maven in java."],
+        "images": [],
+        "code": ""
+    },
+    {
+        "id": 7,
+        "tags": ["nodejs"],
+        "question": "❓What is a Module System in Node.js? ",
+        "answer": ["Module is reusable code. A module system is used to organize code in seperate functionalities.", "Types of Module System - ", "1️⃣ CommonJs- Default Module system in nodejs. It uses require() to import and module.exports. Synchronously loaded.", "2️⃣ Ecmascript Modules(ESM)- New standard introduced in ES6. It uses import and export syntax and is asynchronously loaded.", "Note - ESM is now supported in nodejs with .mjs extension or enabling in package.json"],
+        "images": [],
+        "code": ""
+    },
+    {
+        "id": 8,
+        "tags": ["nodejs"],
+        "question": "🔔 What is EventEmitter in Node.js?",
+        "answer": ["It is part of the core events module, enabling objects to communicate via events (async)", "It is used in many core modules like (http, fs etc).", "It can be used for event-driven architecture!"],
+        "images": ["images/interview-ques/ques8.jpg"],
+        "code": ""
+    }
   ]
   

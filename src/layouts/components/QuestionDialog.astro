@@ -1,178 +1,15 @@
 ---
-// Import questions from data folder
-import questions from '../../data/questions.json';
+// Import questions data at the Astro component level
+import questions from '../../data/questions.json'; 
 const totalQuestions = questions.length;
 ---
 
-<style>
-  .modal-button {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background-color: #2563eb;
-    color: white;
-    border-radius: 9999px;
-    padding: 12px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    transition: all 200ms;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 40;
-  }
-
-  .modal-button:hover {
-    transform: scale(1.05);
-    background-color: #1d4ed8;
-  }
-
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 50;
-    padding: 24px;
-  }
-
-  .modal-overlay.open {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
-
-  .modal-container {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-    width: 100%;
-    max-width: 28rem;
-    max-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    animation: slide-up 0.3s ease-out;
-  }
-
-  @keyframes slide-up {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  .modal-header {
-    background-color: #2563eb;
-    color: white;
-    padding: 16px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .modal-content {
-    flex: 1;
-    overflow-y: auto;
-    padding: 16px;
-  }
-
-  .question-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 8px;
-  }
-
-  .tags-container {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-  }
-
-  .tag {
-    background-color: #dbeafe;
-    color: #1e40af;
-    padding: 4px 8px;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-  }
-
-  .answer-text {
-    color: #374151;
-    margin-bottom: 12px;
-    line-height: 1.6;
-  }
-
-  .code-block {
-    background-color: #111827;
-    color: #f3f4f6;
-    padding: 16px;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-family: monospace;
-    margin: 16px 0;
-    white-space: pre-wrap;
-  }
-
-  .question-image {
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 16px;
-  }
-
-  .navigation {
-    padding: 16px;
-    border-top: 1px solid #e5e7eb;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    color: #2563eb;
-    background: transparent;
-    transition: background-color 200ms;
-  }
-
-  .nav-button:hover:not(:disabled) {
-    background-color: #dbeafe;
-  }
-
-  .nav-button:disabled {
-    color: #9ca3af;
-    cursor: not-allowed;
-  }
-
-  .close-button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 4px;
-  }
-
-  .close-button:hover {
-    opacity: 0.8;
-  }
-</style>
-
-<!-- Question Button -->
-<button class="modal-button" id="questionBtn" aria-label="Open interview questions">
+<!-- Modal Button -->
+<button 
+  class="fixed bottom-6 right-6 bg-blue-600 text-white rounded-full p-3 border-none cursor-pointer shadow-md transition-all duration-200 hover:scale-105 hover:bg-blue-700 flex items-center justify-center z-40"
+  id="questionBtn" 
+  aria-label="Open interview questions"
+>
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="10"/>
     <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
@@ -181,11 +18,11 @@ const totalQuestions = questions.length;
 </button>
 
 <!-- Modal Dialog -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal-container">
-    <div class="modal-header">
+<div class="fixed inset-0 bg-black/50 z-50 p-6 hidden items-end justify-end" id="modalOverlay">
+  <div class="bg-white rounded-lg shadow-xl w-full max-w-[28rem] max-h-[80vh] flex flex-col animate-[slideUp_0.3s_ease-out]">
+    <div class="bg-[#fee140] text-black p-3 rounded-t-lg flex justify-between items-center">
       <div id="questionCounter">Question 1/{totalQuestions}</div>
-      <button class="close-button" id="closeBtn" aria-label="Close modal">
+      <button class="p-1 hover:opacity-80" id="closeBtn" aria-label="Close modal">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"/>
           <line x1="6" y1="6" x2="18" y2="18"/>
@@ -193,18 +30,24 @@ const totalQuestions = questions.length;
       </button>
     </div>
 
-    <div class="modal-content" id="modalContent">
+    <div class="flex-1 overflow-y-auto p-4" id="modalContent">
       <!-- Content will be dynamically inserted here -->
     </div>
 
-    <div class="navigation">
-      <button class="nav-button" id="prevBtn">
+    <div class="p-4 border-t border-gray-200 flex justify-between items-center">
+      <button 
+        class="flex items-center gap-2 px-4 py-2 rounded-lg text-blue-600 hover:bg-blue-50 disabled:text-gray-400 disabled:cursor-not-allowed disabled:hover:bg-transparent transition-colors duration-200" 
+        id="prevBtn"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="15 18 9 12 15 6"/>
         </svg>
         Previous
       </button>
-      <button class="nav-button" id="nextBtn">
+      <button 
+        class="flex items-center gap-2 px-4 py-2 rounded-lg text-blue-600 hover:bg-blue-50 disabled:text-gray-400 disabled:cursor-not-allowed disabled:hover:bg-transparent transition-colors duration-200" 
+        id="nextBtn"
+      >
         Next
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="9 18 15 12 9 6"/>
@@ -216,86 +59,131 @@ const totalQuestions = questions.length;
 
 <script define:vars={{ questions, totalQuestions }}>
   let currentQuestionIndex = 0;
+  let modalInitialized = false;
 
-  // Get DOM elements
-  const questionBtn = document.getElementById('questionBtn');
-  const modalOverlay = document.getElementById('modalOverlay');
-  const closeBtn = document.getElementById('closeBtn');
-  const modalContent = document.getElementById('modalContent');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const questionCounter = document.getElementById('questionCounter');
-
-  // Function to render current question
   function renderQuestion() {
+    const modalContent = document.getElementById('modalContent');
+    const questionCounter = document.getElementById('questionCounter');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    if (!modalContent || !questionCounter || !prevBtn || !nextBtn) return;
+
     const question = questions[currentQuestionIndex];
+    if (!question) return;
+
     questionCounter.textContent = `Question ${currentQuestionIndex + 1}/${totalQuestions}`;
 
     const content = `
-      <h3 class="question-title">${question.question}</h3>
-      <div class="tags-container">
-        ${question.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+      <h3 class="text-xl mb-3">${question.question}</h3>
+      <div class="flex flex-wrap gap-2 mb-2">
+        ${question.tags.map(tag => `<span class="bg-[#fa709a] text-white p-1 rounded text-xs">${tag}</span>`).join('')}
       </div>
       ${Array.isArray(question.answer) 
-        ? question.answer.map(paragraph => `<p class="answer-text">${paragraph}</p>`).join('')
-        : `<p class="answer-text">${question.answer}</p>`
+        ? question.answer.map(paragraph => `<p class="mb-4 text-base">${paragraph}</p>`).join('')
+        : `<p class="mb-4 text-base">${question.answer}</p>`
       }
-      ${question.code ? `<pre class="code-block"><code>${question.code}</code></pre>` : ''}
-      ${question.images ? question.images.map(img => `<img class="question-image" src="/${img}" alt="Question illustration" />`).join('') : ''}
+      ${question.code ? `<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto font-mono my-4 whitespace-pre-wrap">${question.code}</pre>` : ''}
+      ${question.images ? question.images.map(img => `<img class="w-full rounded-lg mt-4" src="/${img}" alt="Question illustration" loading="lazy" />`).join('') : ''}
     `;
 
     modalContent.innerHTML = content;
 
-    // Update navigation buttons
     prevBtn.disabled = currentQuestionIndex === 0;
     nextBtn.disabled = currentQuestionIndex === totalQuestions - 1;
   }
 
-  // Event Listeners
-  questionBtn.addEventListener('click', () => {
-    modalOverlay.classList.add('open');
-    renderQuestion();
-  });
+  function initializeModal() {
+    if (modalInitialized) return;
 
-  closeBtn.addEventListener('click', () => {
-    modalOverlay.classList.remove('open');
-  });
+    const questionBtn = document.getElementById('questionBtn');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const closeBtn = document.getElementById('closeBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-  prevBtn.addEventListener('click', () => {
-    if (currentQuestionIndex > 0) {
-      currentQuestionIndex--;
+    if (!questionBtn || !modalOverlay || !closeBtn || !prevBtn || !nextBtn) return;
+
+    questionBtn.addEventListener('click', () => {
+      modalOverlay.classList.remove('hidden');
+      modalOverlay.classList.add('flex');
       renderQuestion();
-    }
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modalOverlay.classList.remove('flex');
+      modalOverlay.classList.add('hidden');
+    });
+
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('flex');
+        modalOverlay.classList.add('hidden');
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        renderQuestion();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentQuestionIndex < totalQuestions - 1) {
+        currentQuestionIndex++;
+        renderQuestion();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!modalOverlay.classList.contains('flex')) return;
+
+      switch (e.key) {
+        case 'Escape':
+          modalOverlay.classList.remove('flex');
+          modalOverlay.classList.add('hidden');
+          break;
+        case 'ArrowLeft':
+          if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            renderQuestion();
+          }
+          break;
+        case 'ArrowRight':
+          if (currentQuestionIndex < totalQuestions - 1) {
+            currentQuestionIndex++;
+            renderQuestion();
+          }
+          break;
+      }
+    });
+
+    modalInitialized = true;
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    currentQuestionIndex = 0;
+    modalInitialized = false;
+    initializeModal();
   });
 
-  nextBtn.addEventListener('click', () => {
-    if (currentQuestionIndex < totalQuestions - 1) {
-      currentQuestionIndex++;
-      renderQuestion();
-    }
+  document.addEventListener('astro:before-preparation', () => {
+    modalInitialized = false;
   });
 
-  // Close modal when clicking outside
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-      modalOverlay.classList.remove('open');
-    }
-  });
-
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (!modalOverlay.classList.contains('open')) return;
-
-    switch (e.key) {
-      case 'Escape':
-        modalOverlay.classList.remove('open');
-        break;
-      case 'ArrowLeft':
-        if (!prevBtn.disabled) prevBtn.click();
-        break;
-      case 'ArrowRight':
-        if (!nextBtn.disabled) nextBtn.click();
-        break;
-    }
-  });
+  initializeModal();
 </script>
+
+<style>
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
