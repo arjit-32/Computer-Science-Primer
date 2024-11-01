@@ -22,12 +22,30 @@ const totalQuestions = questions.length;
   <div class="bg-white rounded-lg shadow-xl w-full max-w-[28rem] max-h-[80vh] flex flex-col animate-[slideUp_0.3s_ease-out]">
     <div class="bg-[#fee140] text-black p-3 rounded-t-lg flex justify-between items-center">
       <div id="questionCounter">Question 1/{totalQuestions}</div>
-      <button class="p-1 hover:opacity-80" id="closeBtn" aria-label="Close modal">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
+      <div class="flex gap-2">
+        <button 
+          class="p-2 hover:bg-black/10 rounded-full transition-colors duration-200 flex items-center justify-center" 
+          id="randomizeBtn" 
+          aria-label="Randomize questions"
+          title="Randomize questions"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <path d="M3.29 7l8.11 4.68c.17.1.39.1.56 0L20.07 7"/>
+            <path d="M12 22V12"/>
+          </svg>
+        </button>
+        <button 
+          class="p-1 hover:opacity-80" 
+          id="closeBtn" 
+          aria-label="Close modal"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <div class="flex-1 overflow-y-auto p-4" id="modalContent">
@@ -60,6 +78,21 @@ const totalQuestions = questions.length;
 <script define:vars={{ questions, totalQuestions }}>
   let currentQuestionIndex = 0;
   let modalInitialized = false;
+  let questionOrder = [...Array(totalQuestions).keys()]; // Array of indices [0, 1, 2, ...]
+
+  function shuffleQuestions() {
+    // Fisher-Yates shuffle algorithm
+    for (let i = questionOrder.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questionOrder[i], questionOrder[j]] = [questionOrder[j], questionOrder[i]];
+    }
+    currentQuestionIndex = 0;
+    renderQuestion();
+  }
+
+  function getCurrentQuestion() {
+    return questions[questionOrder[currentQuestionIndex]];
+  }
 
   function renderQuestion() {
     const modalContent = document.getElementById('modalContent');
@@ -69,7 +102,7 @@ const totalQuestions = questions.length;
     
     if (!modalContent || !questionCounter || !prevBtn || !nextBtn) return;
 
-    const question = questions[currentQuestionIndex];
+    const question = getCurrentQuestion();
     if (!question) return;
 
     questionCounter.textContent = `Question ${currentQuestionIndex + 1}/${totalQuestions}`;
@@ -101,9 +134,11 @@ const totalQuestions = questions.length;
     const closeBtn = document.getElementById('closeBtn');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    const randomizeBtn = document.getElementById('randomizeBtn');
 
-    if (!questionBtn || !modalOverlay || !closeBtn || !prevBtn || !nextBtn) return;
+    if (!questionBtn || !modalOverlay || !closeBtn || !prevBtn || !nextBtn || !randomizeBtn) return;
 
+    // Reset question order on modal open
     questionBtn.addEventListener('click', () => {
       modalOverlay.classList.remove('hidden');
       modalOverlay.classList.add('flex');
@@ -136,6 +171,8 @@ const totalQuestions = questions.length;
       }
     });
 
+    randomizeBtn.addEventListener('click', shuffleQuestions);
+
     document.addEventListener('keydown', (e) => {
       if (!modalOverlay.classList.contains('flex')) return;
 
@@ -162,8 +199,10 @@ const totalQuestions = questions.length;
     modalInitialized = true;
   }
 
+  // Reset everything when page loads
   document.addEventListener('astro:page-load', () => {
     currentQuestionIndex = 0;
+    questionOrder = [...Array(totalQuestions).keys()];
     modalInitialized = false;
     initializeModal();
   });
