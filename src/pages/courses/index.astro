@@ -15,29 +15,111 @@ const courses = await getTaxonomy(blog_folder, "courses");
   <Shape />
   <section class="page-hero pb-14 pt-16">
     <div class="container">
-      <PageHeader page_data={{ title: "Courses" }} />
+      <div class="mx-auto max-w-3xl text-center mb-12">
+        <h1 class="mb-4 text-3xl font-bold">Course Collection</h1>
+        <p class="text-lg text-gray-600 mb-8">
+          Welcome to my learning journey! This collection represents a comprehensive curriculum 
+          covering various aspects of software development, computer science, and system design. 
+          Below you'll find detailed course materials and my progress tracker.
+        </p>
+        
+        <!-- Course Stats -->
+        <div class="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
+          <div class="bg-blue-50 p-4 rounded-lg">
+            <div class="text-2xl font-bold text-blue-600">3</div>
+            <div class="text-sm text-gray-600">Active Tracks</div>
+          </div>
+          <div class="bg-green-50 p-4 rounded-lg">
+            <div class="text-2xl font-bold text-green-600">5</div>
+            <div class="text-sm text-gray-600">Completed</div>
+          </div>
+          <div class="bg-purple-50 p-4 rounded-lg">
+            <div class="text-2xl font-bold text-purple-600">20+</div>
+            <div class="text-sm text-gray-600">In Progress</div>
+          </div>
+        </div>
+
+        <!-- Timeline Button -->
+        <button id="kanbanToggle" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-colors duration-300">
+          View Course Completion Timeline
+        </button>
+      </div>
     </div>
   </section>
+
+  <!-- Kanban Board Modal -->
+  <div id="kanbanModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 overflow-auto">
+    <!-- Your existing modal content -->
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <!-- ... rest of your modal content ... -->
+    </div>
+  </div>
+
   <section class="section">
-    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {Object.entries(courseInfo).map(([slug, course]) => (
-        <a href={`/courses/${slug}`} class="group relative card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-          <img src={course.image || "/images/collaboration.png"} alt={course.title} class="w-full h-48 object-cover rounded-md mb-4"/>
-          
-         
-          <span class="inline-block bg-[#f7e26bd8] text-black text-xs font-semibold py-1 px-3 rounded-full mb-4">
-            {course.category}
-          </span>
-          <span class="inline-block bg-[#fa729a] text-white text-xs font-semibold py-1 px-3 rounded-full mb-4">
-            {course.time}
-          </span>
-          <h2 class="text-xl font-semibold text-gray-800">{course.title}</h2>
-          <p class="text-gray-600 mt-2 mb-4">{course.description}</p>
-          
-          <!-- Hover overlay -->
-          <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg"></div>
-        </a>
-      ))}
+    <div class="container">
+      <h2 class="text-2xl font-bold text-center mb-8">Available Courses</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {Object.entries(courseInfo).map(([slug, course]) => (
+          <a href={`/courses/${slug}`} class="group relative card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
+            <img src={course.image || "/images/collaboration.png"} alt={course.title} class="w-full h-48 object-cover rounded-md mb-4"/>
+            
+            <span class="inline-block bg-[#f7e26bd8] text-black text-xs font-semibold py-1 px-3 rounded-full mb-4">
+              {course.category}
+            </span>
+            <span class="inline-block bg-[#fa729a] text-white text-xs font-semibold py-1 px-3 rounded-full mb-4">
+              {course.time}
+            </span>
+            <h2 class="text-xl font-semibold text-gray-800">{course.title}</h2>
+            <p class="text-gray-600 mt-2 mb-4">{course.description}</p>
+            
+            <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg"></div>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 </Base>
+
+<script is:inline>
+  function initializeKanban() {
+    const kanbanToggle = document.getElementById('kanbanToggle');
+    const kanbanModal = document.getElementById('kanbanModal');
+    const closeKanban = document.getElementById('closeKanban');
+
+    if (kanbanToggle && kanbanModal && closeKanban) {
+      // Remove existing event listeners
+      kanbanToggle.removeEventListener('click', toggleModal);
+      closeKanban.removeEventListener('click', closeModal);
+      kanbanModal.removeEventListener('click', handleOutsideClick);
+
+      // Add new event listeners
+      kanbanToggle.addEventListener('click', toggleModal);
+      closeKanban.addEventListener('click', closeModal);
+      kanbanModal.addEventListener('click', handleOutsideClick);
+    }
+  }
+
+  function toggleModal() {
+    const kanbanModal = document.getElementById('kanbanModal');
+    kanbanModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    const kanbanModal = document.getElementById('kanbanModal');
+    kanbanModal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+
+  function handleOutsideClick(e) {
+    if (e.target === document.getElementById('kanbanModal')) {
+      closeModal();
+    }
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', initializeKanban);
+
+  // Initialize when Astro view transitions complete
+  document.addEventListener('astro:page-load', initializeKanban);
+</script>
