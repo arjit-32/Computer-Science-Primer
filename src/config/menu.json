@@ -11,6 +11,10 @@
     {
       "name": "Courses",
       "url": "/courses"
+    },
+    {
+      "name": "Interview Bytes",
+      "url": "/questions"
     }
   ],
 

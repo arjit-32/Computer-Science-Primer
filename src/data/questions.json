@@ -62,6 +62,39 @@
         "answer": ["It is part of the core events module, enabling objects to communicate via events (async)", "It is used in many core modules like (http, fs etc).", "It can be used for event-driven architecture!"],
         "images": ["images/interview-ques/ques8.jpg"],
         "code": ""
+    }, 
+    {
+        "id": 9,
+        "tags": ["nodejs"],
+        "question": "📂 How Node.js handles file operations?",
+        "answer": ["It uses the fs module for working with the file system.", "Use case - When a user requests a file (e.g., an image or document), Node.js reads the file asynchronously, allowing the server to handle other requests.", "Asynchronous I/O prevents blocking other requests!", "There is another method readFileSync which reads file synchronously."],
+        "images": ["images/interview-ques/ques9.jpg"],
+        "code": ""
+    },
+    {
+        "id": 10,
+        "tags": ["nodejs"],
+        "question": "💡 What are Streams in Node.js?",
+        "answer": ["Streams handle I/O efficiently by processing data in chunks instead of loading it all at once. Ideal for large files or real-time data. Types of Stream -", "1. Readable: For reading data", "2. Writable: For writing data","3. Duplex: Both read & write","4. Transform: Modify data while reading/writing","It is perfect for video streaming, file handling, or large datasets! Below is example of using Streams for File Handling."],
+        "images": ["images/interview-ques/ques10.png"],
+        "code": ""
+    },
+    {
+        "id": 11,
+        "tags": ["nodejs"],
+        "question": "💡 What are Callbacks in Node.js?",
+        "answer": ["Callbacks are functions passed as argument to another function and gets executed after the main func has completed its task. In node.js they are crucial for non-blocking behaviour, callbacks are passed to handle async tasks.", "How it works ? The async task starts → Node.js keeps working → When done, the event loop triggers the callback to handle the result."],
+        "images": ["images/interview-ques/ques11.png"],
+        "code": ""
+    },
+    
+    {
+        "id": 12,
+        "tags": ["nodejs"],
+        "question": "💡What are process.nextTick() & setImmediate() in Node.js?",
+        "answer": ["1️⃣ process.nextTick() - Executes before the next event loop. Great for immediate logic after a task, like error handling or cleanup.","2️⃣ setImmediate() - Executes after I/O events in the event loop. Useful for deferred tasks that shouldn’t block the current cycle."],
+        "images": ["images/interview-ques/ques12(1).jpg", "images/interview-ques/ques12(2).jpg"],
+        "code": ""
     }
   ]
   
