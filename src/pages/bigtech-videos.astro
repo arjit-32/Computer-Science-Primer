@@ -1,8 +1,8 @@
 ---
-import Base from '@/layouts/Base.astro';
+import BaseBigTech from '@/layouts/BaseBigTech.astro';
 import blogs from '../data/bigtech-blogs.json';
 ---
-
+<BaseBigTech>
   <div class="min-h-screen bg-black text-white relative">
     <!-- Back Button - Fixed at top left -->
     <a href="/" class="fixed top-4 left-4 z-50 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full flex items-center gap-2 transition-all">
@@ -110,3 +110,4 @@ import blogs from '../data/bigtech-blogs.json';
       scrollbar-width: none;
     }
   </style>
+</BaseBigTech>
