@@ -87,13 +87,92 @@
         "images": ["images/interview-ques/ques11.png"],
         "code": ""
     },
-    
     {
         "id": 12,
         "tags": ["nodejs"],
         "question": "💡What are process.nextTick() & setImmediate() in Node.js?",
         "answer": ["1️⃣ process.nextTick() - Executes before the next event loop. Great for immediate logic after a task, like error handling or cleanup.","2️⃣ setImmediate() - Executes after I/O events in the event loop. Useful for deferred tasks that shouldn’t block the current cycle."],
         "images": ["images/interview-ques/ques12(1).jpg", "images/interview-ques/ques12(2).jpg"],
+        "code": ""
+    },
+    {
+        "id": 13,
+        "tags": ["general"],
+        "question": "🔍 What is Encoding?",
+        "answer": ["1️⃣ Text Encoding: (UTF-8, ASCII) Converts characters into bytes so computers can store and display text.","2️⃣ Binary: Raw 0s & 1s, the language of computers.","3️⃣ Base64: Converts binary data( images, files) to text for safe web/email transmission.","4️⃣ URL Encoding: Handles special characters in URLs (%20 for spaces).","5️⃣ Hex: Easier-to-read format for binary (0-9, A-F)."],
+        "images": [],
+        "code": ""
+    },
+    {
+        "id": 14,
+        "tags": ["nodejs"],
+        "question": "💡 What is the Buffer class in Node.js?",
+        "answer": ["It is a global object which handles raw binary data in memory (Space is allocated in RAM) allowing us to manipulate raw data streams efficiently","It is great for file I/O and Network communications","Example - Reading a binary file using buffer. fs.readFile reads binary data from file & saves in buffer. Buffer.toString(‘base64’) is used to convert raw binary data to base64"],
+        "images": ["images/interview-ques/ques14.jpg"],
+        "code": ""
+    },
+    {
+        "id": 15,
+        "tags": ["expressjs"],
+        "question": "🚀 What is Express.js and why is it required?",
+        "answer": ["Its a minimal, flexible web framework for Node.js. It simplifies tasks like routing, handling requests/responses, and managing middleware.","It -> Reduces boilerplate code, Makes server-side dev fast & clean, Supports middleware, Simplifies Routing, Handles HTTP Methods, Serves Static Files, Supports Templating Engines and has Good Error Handling","Alternatives to Express - Koa.js, Fastify.js ( flexible & modern) , Hapi.js ( More config )"],
+        "images": ["images/interview-ques/ques15.jpg"],
+        "code": ""
+    },
+    {
+        "id": 16,
+        "tags": ["expressjs"],
+        "question": "🙋 What is middleware in Express.js?",
+        "answer": ["It is a function that executes during request-response cycle in express","Can use built-in, 3rd party or custom middlewares.", "Used for tasks like logging, authentication, and parsing data."],
+        "images": ["images/interview-ques/ques16.jpg"],
+        "code": ""
+    },
+    {
+        "id": 17,
+        "tags": ["expressjs"],
+        "question": "🧭 What is routing in Express.js?",
+        "answer": ["It defines how an app responds to client requests at specific URL paths and HTTP methods (GET, POST, etc.). Its how you handle different actions (e.g. displaying data, creating resources) based on the URL.", "How routing works in Express - ", "- Express supports all HTTP methods.", "- Dynamic routes with parameters (e.g., /user/:id).", "- Multiple handlers per route!"],
+        "images": ["images/interview-ques/ques17.jpg"],
+        "code": ""
+    },
+    {
+        "id": 18,
+        "tags": ["expressjs"],
+        "question": "🧭 What are route parameters in Express.js?",
+        "answer": ["Route parameters allow you to capture values from the URL. They are placeholders in the route definition (e.g., /user/:id).", "Useful when u want to create dynamic routes that respond differently based on values in URL.","How route parameters work:","- Parameters are prefixed with : in the route path.","- You can access them using req.params inside your route handler."],
+        "images": ["images/interview-ques/ques18.png"],
+        "code": ""
+    },
+    {
+        "id": 19,
+        "tags": ["expressjs"],
+        "question": "❓What are query parameters in Express.js?",
+        "answer": ["Query parameters are part of the URL that come after the question mark (?) and are used to send data as key-value pairs.","Can be accessed using req.query.","Example - /search?name=phone&category=electronics"],
+        "images": ["images/interview-ques/ques19.jpg"],
+        "code": ""
+    },
+    {
+        "id": 20,
+        "tags": ["expressjs"],
+        "question": "📋 Difference between res.send(), res.json(), and res.end() in Express.js?",
+        "answer": ["- res.send(): It sends various types. Automatically detects and sets Content-Type header. It auto-ends response.", "- res.json(): Sends JSON response with correct headers. It also sets Content-Type to application/json.", "res.end(): Ends response without sending data (unless specified)."],
+        "images": [],
+        "code": ""
+    },
+    {
+        "id": 21,
+        "tags": ["expressjs"],
+        "question": "☠️ Handling errors in Express.js ?",
+        "answer": ["- Define error-handling middleware with 4 args: (err, req, res, next)", "- Use next(err) to pass errors to the handler.", "- For async errors, use try/catch and pass errors to next()."],
+        "images": ["images/interview-ques/ques21.jpg"],
+        "code": ""
+    },
+    {
+        "id": 22,
+        "tags": ["expressjs"],
+        "question": "📁How to serve static files in Express.js ?  ",
+        "answer": ["- Use express.static('folder') to serve HTML, CSS, images, etc.", "- For multiple directories, use express.static() multiple times. ", "- Can also add a virtual path prefix for custom routes."],
+        "images": ["images/interview-ques/ques22.png"],
         "code": ""
     }
   ]
