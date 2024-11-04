@@ -26,12 +26,6 @@
     }
   },
 
-  "disqus": {
-    "enable": true,
-    "shortname": "csp-2",
-    "settings": {}
-  },
-
   "params": {
     "footer_description": "Computer Science Primer is a curriculum to master foundational cs subjects along with real-world development skills needed to become a fullstack developer.",
     "email": "cspbyarjit@gmail.com",

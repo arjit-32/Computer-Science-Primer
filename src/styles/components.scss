@@ -548,32 +548,6 @@ select:invalid {
   }
 }
 
-//faq
-.panel {
-  @apply relative border-b border-border py-4 pl-7 pr-4;
-
-  .accordion-button {
-    @apply py-2;
-  }
-
-  &-body {
-    p + p {
-      @apply mt-6;
-    }
-  }
-
-  &-arrow {
-    @apply absolute left-0 top-8 w-4 -rotate-90;
-
-    &.panel-show {
-      @apply rotate-0;
-    }
-  }
-
-  &:last-child {
-    @apply border-b-0;
-  }
-}
 
 //changelogs
 .changelogs {
@@ -659,25 +633,6 @@ select:invalid {
   }
 }
 
-.faqs {
-  .accordion-icon {
-    @apply -rotate-90;
-  }
-
-  .accordion.active {
-    .accordion-icon {
-      @apply rotate-0;
-    }
-
-    .accordion-content {
-      @apply pb-6 pt-1;
-
-      p + p {
-        @apply mt-6;
-      }
-    }
-  }
-}
 
 .features-tab-penel {
   @apply hidden;
