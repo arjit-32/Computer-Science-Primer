@@ -8,6 +8,7 @@
         "navbar": [
             {
                 "subheading": "Introduction",
+                "about": "Goal: Understand the principles that make a product both functional and delightful for users. \nTopics: \nIntroduction to UI vs. UX: Definitions, key differences, and roles. \n User-Centered Design (UCD): Understanding user needs, pain points, and motivations. \nDesign Thinking: Learn the design thinking process to approach problems with empathy.",
                 "link": [
                     {
                         "type":"youtube",
@@ -23,6 +24,7 @@
             },
             {
                 "subheading": "Wireframing",
+                "about": "",
                 "link": [
                     {
                         "type": "youtube",

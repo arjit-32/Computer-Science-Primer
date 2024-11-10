@@ -1,12 +1,7 @@
 ---
 import Shape from "@/components/Shape.astro";
-import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import courseInfo from "@/data/course-info.json";
-
-const { blog_folder } = config.settings;
-const courses = await getTaxonomy(blog_folder, "courses");
 ---
 
 <Base title={"courses"}>
