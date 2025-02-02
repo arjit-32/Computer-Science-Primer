@@ -1,0 +1,486 @@
+  "java": {
+      "title": "Java for DSA",
+      "image": "/images/thumbnails/java.png",
+      "subtitle": "Master Java language for efficient coding.",
+      "description": "This course covers essential data structures and algorithms in Java, including arrays, linked lists, stacks, queues, trees, graphs, and sorting algorithms. Learn how to implement and optimize them using Java for real-world problem-solving.",
+      "time": "70 hr",
+      "category": "DSA",
+      "navbar": [
+        {
+          "subheading": "Resources",
+          "link": [
+            {
+              "type": "blog",
+              "url": "",
+              "title": "Java for DSA Notes"
+            }
+          ]
+        }
+      ]
+    },
+  "dsa": {
+    "title": "Data Structures & Algorithms",
+    "image": "/images/thumbnails/dsa-thumbnail.png",
+    "subtitle":"DSA etc ",
+    "description": "Learn how data is stored and algorithms that can be applied to master problem solving.",
+    "time": "60 hr",
+    "category": "DSA",
+    "navbar": [
+      {
+        "subheading": "Analysis of Algorithms",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Introduction to Algorithm Analysis"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Big O Notation Explained"
+          },
+          {
+            "type": "blog",
+            "url": "analysis-of-algorithms",
+            "title": "Mastering Algorithm Analysis"
+          }
+        ]
+      },
+      {
+        "subheading": "The Big Picture",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "DSA Overview: Why It Matters and How to Learn It"
+          },
+          {
+            "type": "blog",
+            "url": "dsa-big-picture",
+            "title": "The Big Picture of DSA: Everything You Need to Know Before You Start"
+          }
+        ]
+      },
+      {
+        "subheading": "Mathematics for DSA",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Essential Math for Problem Solving"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Modulo Operations in Programming"
+          },
+          {
+            "type": "blog",
+            "url": "mathematics-for-dsa",
+            "title": "Mathematics Essentials for DSA"
+          }
+        ]
+      },
+      {
+        "subheading": "Bit Manipulation",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Introduction to Bit Manipulation"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Solving Problems with Bit Tricks"
+          },
+          {
+            "type": "blog",
+            "url": "bit-manipulation",
+            "title": "Bit Manipulation Techniques"
+          }
+        ]
+      },
+      {
+        "subheading": "Arrays",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Introduction to Arrays"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Solving Array Problems: Examples"
+          },
+          {
+            "type": "blog",
+            "url": "arrays",
+            "title": "Master Arrays in DSA"
+          }
+        ]
+      },
+      {
+        "subheading": "Strings",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Strings in DSA: Basics"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "String Manipulation Problems"
+          },
+          {
+            "type": "blog",
+            "url": "strings",
+            "title": "Solving Problems with Strings"
+          }
+        ]
+      },
+      {
+        "subheading": "Searching and Sorting",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Introduction to Searching and Sorting"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Binary Search Explained"
+          },
+          {
+            "type": "blog",
+            "url": "searching-sorting",
+            "title": "Mastering Searching and Sorting"
+          }
+        ]
+      },
+      {
+        "subheading": "Recursion and Backtracking",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Understanding Recursion in DSA"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Backtracking Problem Solving"
+          },
+          {
+            "type": "blog",
+            "url": "recursion-backtracking",
+            "title": "Solving Problems with Recursion"
+          }
+        ]
+      },
+      {
+        "subheading": "Linked Lists",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Introduction to Linked Lists"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Solving Problems with Linked Lists"
+          },
+          {
+            "type": "blog",
+            "url": "linked-lists",
+            "title": "Linked Lists in DSA"
+          }
+        ]
+      },
+      {
+        "subheading": "Trees",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Understanding Trees in DSA"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Solving Tree Problems"
+          },
+          {
+            "type": "blog",
+            "url": "trees",
+            "title": "Mastering Trees"
+          }
+        ]
+      },
+      {
+        "subheading": "Advanced Topics (Tries, Segment Trees)",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Tries Explained"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Segment Trees for Range Queries"
+          },
+          {
+            "type": "blog",
+            "url": "advanced-topics",
+            "title": "Tries and Segment Trees in DSA"
+          }
+        ]
+      }
+    ]
+  },
+  "problem-solving": {
+    "title": "Problem Solving",
+    "image": "/images/thumbnails/problem-solving.png",
+    "subtitle": "Sharpen your problem-solving skills with algorithmic thinking and coding challenges.",
+    "description": "Enhance your problem-solving abilities by tackling algorithmic challenges related to dynamic programming, recursion, backtracking, greedy algorithms, and more. Learn strategic approaches to break down complex problems efficiently.",
+    "time": "65 hr",
+    "category": "DSA",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "Problem Solving Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "fullstack-dev": {
+    "title": "Full Stack Development",
+    "image": "/images/thumbnails/fullstack-dev.png",
+    "subtitle": "Become a versatile developer by mastering both frontend and backend technologies.",
+    "description": "This course covers the complete spectrum of full stack development, including HTML, CSS, JavaScript, React, Node.js, Express, databases, and deployment strategies. Build dynamic, responsive web applications from scratch.",
+    "time": "90 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "Full Stack Development Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "api": {
+    "title": "API Design & Development",
+    "image": "/images/thumbnails/api.png",
+    "subtitle": "Learn to design robust, scalable, and secure APIs for modern applications.",
+    "description": "Master the fundamentals of RESTful API and GraphQL design, including principles of scalability, security, versioning, and documentation. Understand best practices for building APIs that are easy to maintain and integrate.",
+    "time": "40 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "API Design Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "system-design-foundation": {
+    "title": "System Design Foundation",
+    "image": "/images/thumbnails/system-design-foundations.png",
+    "subtitle": "Build a solid foundation in designing scalable and reliable systems.",
+    "description": "Learn the core principles of system design, including scalability, load balancing, caching, database sharding, microservices, and distributed systems. Develop the skills to design systems that handle real-world traffic and data challenges.",
+    "time": "60 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "System Design Notes"
+          }
+        ]
+      }
+    ]
+  },
+  
+  "os": {
+    "title": "Operating System",
+    "image": "/images/thumbnails/OS.png",
+    "subtitle": "Master key operating system concepts, from the basics to advanced techniques.",
+    "description": "This course covers essential operating system concepts, including process management, memory allocation, file systems, and more. Build a strong foundation to understand how modern OS work, with practical insights and real-world examples.",
+    "time": "60 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "Operating System Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "cn": {
+    "title": "Computer Networks",
+    "image": "/images/thumbnails/CN.png",
+    "subtitle": "Understand how data moves across networks, from fundamentals to advanced protocols.",
+    "description": "Dive into computer networking concepts such as OSI/TCP-IP models, routing algorithms, network security, and wireless communication. Gain the skills to analyze and design efficient network architectures.",
+    "time": "50 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "Computer Networks Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "dbms": {
+    "title": "Database Management Systems",
+    "image": "/images/thumbnails/DBMS.png",
+    "subtitle": "Master the principles of database design, management, and SQL queries.",
+    "description": "Learn key DBMS concepts such as relational models, normalization, transactions, indexing, and SQL. Develop a strong understanding of how data is stored, retrieved, and managed efficiently.",
+    "time": "55 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "DBMS Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "coa": {
+    "title": "Computer Organization and Architecture",
+    "image": "/images/thumbnails/COA.png",
+    "subtitle": "Explore how computers work from the ground up, including architecture and microprocessors.",
+    "description": "This course covers digital logic, instruction sets, memory hierarchy, pipelining, and processor design. Understand how hardware and software interact to execute programs efficiently.",
+    "time": "60 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "COA Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "compiler": {
+    "title": "Compiler Design",
+    "image": "/images/thumbnails/compiler.png",
+    "subtitle": "Learn how compilers translate code, from lexical analysis to code optimization.",
+    "description": "Understand the phases of compiler design including lexical analysis, syntax analysis, semantic analysis, optimization, and code generation. Build a strong foundation to create efficient language processors.",
+    "time": "45 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "Compiler Design Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "toc": {
+    "title": "Theory of Computation",
+    "image": "/images/thumbnails/toc.png",
+    "subtitle": "Discover the mathematical foundations of computation and problem-solving.",
+    "description": "Explore key TOC concepts including finite automata, regular expressions, context-free grammars, Turing machines, and decidability. Understand the theoretical limits of what machines can and cannot compute.",
+    "time": "50 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "TOC Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "dm": {
+    "title": "Discrete Mathematics",
+    "image": "/images/thumbnails/discrete-math.png",
+    "subtitle": "Build strong problem-solving skills with the fundamentals of discrete math.",
+    "description": "Learn about logic, set theory, combinatorics, graph theory, and mathematical reasoning. This course strengthens analytical thinking, crucial for computer science and algorithm design.",
+    "time": "40 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "Discrete Mathematics Notes"
+          }
+        ]
+      }
+    ]
+  },
+  "digital-logic": {
+    "title": "Digital Logic",
+    "image": "/images/thumbnails/digital-logic.png",
+    "subtitle": "Understand the logic behind digital circuits and computer hardware.",
+    "description": "Cover key digital logic topics such as Boolean algebra, logic gates, combinational circuits, sequential circuits, and flip-flops. Build the foundational knowledge for understanding hardware systems.",
+    "time": "45 hr",
+    "category": "Core",
+    "navbar": [
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "Digital Logic Notes"
+          }
+        ]
+      }
+    ]
+  }

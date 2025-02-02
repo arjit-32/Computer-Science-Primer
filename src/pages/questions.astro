@@ -11,11 +11,11 @@ const uniqueTags = Array.from(allTags);
 ---
 
 <Base>
-  <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+  <div class="min-h-screen bg-gradient-to-br from-pink-50 via-white to-yellow-50 py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto">
       <!-- Header Section -->
       <div class="text-center mb-16">
-        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+        <h1 class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#fa729a] to-black bg-clip-text text-transparent mb-6">
           Interview Bytes
         </h1>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -26,14 +26,14 @@ const uniqueTags = Array.from(allTags);
       <!-- Filter Tags -->
       <div class="flex flex-wrap gap-3 justify-center mb-12">
         <button 
-          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border-2 border-blue-500 hover:bg-blue-50"
+          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border-2 border-[#fa729a] text-[#fa729a] hover:bg-gradient-to-r hover:from-[#fa729a] hover:to-[#fddc43] hover:text-white transform hover:scale-105"
           onclick="filterQuestions('')"
           data-tag="">
           All Questions
         </button>
         {uniqueTags.map((tag) => (
           <button 
-            class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border-2 border-blue-500 hover:bg-blue-50 capitalize"
+            class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border-2 border-[#fa729a] text-[#fa729a] hover:bg-gradient-to-r hover:from-[#fa729a] hover:to-[#fddc43] hover:text-white transform hover:scale-105 capitalize"
             onclick={`filterQuestions('${tag}')`}
             data-tag={tag}>
             {tag}
@@ -45,26 +45,26 @@ const uniqueTags = Array.from(allTags);
       <div class="space-y-8">
         {questions.map((question, index) => (
           <div 
-            class="question-card bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+            class="question-card bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 transform hover:-translate-y-1"
             data-tags={question.tags.join(',')}>
             <div class="p-6 sm:p-8">
               <div class="flex items-start gap-4">
-                <div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">
+                <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#fa729a] to-[#fddc43] rounded-full flex items-center justify-center text-white font-semibold">
                   {index + 1}
                 </div>
                 <div class="flex-1">
-                  <h2 class="text-xl font-semibold text-gray-900 mb-4">
+                  <h2 class="text-xl font-semibold text-gray-900 mb-4 hover:text-[#fa729a] transition-colors duration-300">
                     {question.question}
                   </h2>
                   
-                  <div class="prose prose-blue max-w-none">
+                  <div class="prose prose-pink max-w-none">
                     {question.answer.map((line) => (
                       <p class="text-gray-600 leading-relaxed mb-3">{line}</p>
                     ))}
                   </div>
                   
                   {question.code && (
-                    <div class="mt-6 bg-gray-50 rounded-lg p-4 overflow-x-auto border border-gray-100">
+                    <div class="mt-6 bg-gradient-to-br from-gray-50 to-pink-50 rounded-lg p-4 overflow-x-auto border border-gray-100">
                       <pre class="text-sm text-gray-800 font-mono">{question.code}</pre>
                     </div>
                   )}
@@ -75,7 +75,7 @@ const uniqueTags = Array.from(allTags);
                         <img 
                           src={img} 
                           alt="Question illustration" 
-                          class="rounded-lg w-full h-auto object-cover shadow-sm"
+                          class="rounded-lg w-full h-auto object-cover shadow-sm transition-transform duration-300 hover:scale-[1.02]"
                         />
                       ))}
                     </div>
@@ -83,7 +83,7 @@ const uniqueTags = Array.from(allTags);
 
                   <div class="mt-6 flex flex-wrap gap-2">
                     {question.tags.map((tag) => (
-                      <span class="px-3 py-1 bg-blue-50 text-blue-600 text-sm rounded-full capitalize">
+                      <span class="px-3 py-1 bg-gradient-to-r from-[#fddc43] to-yellow-200 text-black text-sm rounded-full capitalize font-medium">
                         {tag}
                       </span>
                     ))}
@@ -105,27 +105,31 @@ const uniqueTags = Array.from(allTags);
       // Update active button state
       buttons.forEach(btn => {
         if (btn.getAttribute('data-tag') === tag) {
-          btn.classList.add('bg-blue-500', 'text-black');
-          btn.classList.remove('text-blue-500');
+          btn.classList.add('bg-gradient-to-r', 'from-[#fa729a]', 'to-[#fddc43]', 'text-white');
+          btn.classList.remove('text-[#fa729a]');
         } else {
-          btn.classList.remove('bg-blue-500', 'text-black');
-          btn.classList.add('text-blue-500');
+          btn.classList.remove('bg-gradient-to-r', 'from-[#fa729a]', 'to-[#fddc43]', 'text-white');
+          btn.classList.add('text-[#fa729a]');
         }
       });
   
-      // Filter questions
+      // Filter questions with enhanced animation
       questions.forEach((question) => {
         const tags = question.getAttribute('data-tags').split(',');
         const shouldShow = !tag || tags.includes(tag);
-        question.style.display = shouldShow ? 'block' : 'none';
         
-        // Add a subtle animation for showing/hiding
         if (shouldShow) {
-          question.style.opacity = '1';
-          question.style.transform = 'translateY(0)';
+          question.style.display = 'block';
+          setTimeout(() => {
+            question.style.opacity = '1';
+            question.style.transform = 'translateY(0)';
+          }, 50);
         } else {
           question.style.opacity = '0';
           question.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            question.style.display = 'none';
+          }, 300);
         }
       });
     }

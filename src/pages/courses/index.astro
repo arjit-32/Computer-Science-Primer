@@ -6,48 +6,53 @@ import courseInfo from "@/data/course-info.json";
 
 <Base title={"courses"}>
   <Shape />
-  <section class="page-hero pb-14 pt-16">
-    <div class="container">
+  <section class="page-hero pb-14 pt-16 relative bg-gradient-to-br from-white via-pink-50 to-yellow-50">
+    <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(250,114,154,0.05),rgba(253,220,67,0.05))]"></div>
+    <div class="container relative">
       <div class="mx-auto max-w-3xl text-center mb-12">
-        <h1 class="mb-4 text-3xl font-bold">Course Collection</h1>
+        <h1 class="mb-4 text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#fa729a] to-black bg-clip-text text-transparent">
+          Course Collection
+        </h1>
         <p class="text-lg text-gray-600 mb-8">
           Explore curated collection of courses designed to boost your skills across software development, algorithms, and system design. Dive in below to find detailed course materials and track your progress along the way.
         </p>
         
         <!-- Course Stats -->
         <div class="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
-          <div class="bg-blue-50 p-4 rounded-lg">
-            <div class="text-2xl font-bold text-blue-600">6</div>
+          <div class="bg-gradient-to-br from-white to-pink-50 p-6 rounded-xl shadow-sm border border-pink-100">
+            <div class="text-3xl font-bold text-black">6</div>
             <div class="text-sm text-gray-600">Categories</div>
           </div>
-          <div class="bg-green-50 p-4 rounded-lg">
-            <div class="text-2xl font-bold text-green-600">3</div>
+          <div class="bg-gradient-to-br from-white to-yellow-50 p-6 rounded-xl shadow-sm border border-yellow-100">
+            <div class="text-3xl font-bold text-black">3</div>
             <div class="text-sm text-gray-600">In Focus</div>
           </div>
-          <div class="bg-purple-50 p-4 rounded-lg">
-            <div class="text-2xl font-bold text-purple-600">29+</div>
+          <div class="bg-gradient-to-br from-white to-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="text-3xl font-bold text-black">30+</div>
             <div class="text-sm text-gray-600">Courses</div>
           </div>
         </div>
 
         <!-- Timeline Button -->
-        <button id="kanbanToggle" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-colors duration-300 mb-4">
-          View Course Completion Timeline
+        <button 
+          id="kanbanToggle" 
+          class="bg-gradient-to-r from-[#fa729a] to-[#fddc43] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mb-4 transform hover:scale-105"
+        >
+          View Course Categories
         </button>
-        <div class="flex justify-center">
-        <a href="https://www.buymeacoffee.com/csprimer"><img src="https://img.buymeacoffee.com/button-api/?text=Support CSP Project&emoji=🗃️&slug=csprimer&button_colour=fa729a&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
-      </div>
       </div>
     </div>
   </section>
 
-   <!-- Kanban Board Modal -->
-   <div id="kanbanModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 overflow-auto">
+  <!-- Kanban Board Modal -->
+  <div id="kanbanModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 overflow-auto">
     <div class="min-h-screen flex items-center justify-center p-4">
-      <div class="bg-white rounded-lg shadow-xl w-full max-w-6xl max-h-[90vh] overflow-auto">
+      <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg shadow-xl w-full max-w-6xl max-h-[90vh] overflow-auto">
         <!-- Modal Header -->
-        <div class="border-b p-4 flex justify-between items-center sticky top-0 bg-white">
-          <h2 class="text-2xl font-bold text-gray-800">Course Completion Timeline</h2>
+        <div class="border-b p-4 flex justify-between items-center sticky top-0 bg-white bg-opacity-90 backdrop-blur-sm">
+          <h2 class="text-2xl font-bold bg-gradient-to-r from-[#fa729a] to-black bg-clip-text text-transparent">
+            Course Completion Timeline
+          </h2>
           <button id="closeKanban" class="text-gray-600 hover:text-gray-800">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -58,109 +63,127 @@ import courseInfo from "@/data/course-info.json";
         <!-- Kanban Board Content -->
         <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Development Section -->
-          <div class="bg-gray-100 rounded-lg p-4">
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
             <div class="flex items-center gap-2 mb-4">
               <h3 class="text-lg font-bold text-gray-800">Development</h3>
-              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">in Focus</span>
+              <span class="bg-gradient-to-r from-[#fa729a] to-[#fddc43] bg-clip-text text-transparent text-xs font-medium px-2 py-1 rounded border border-pink-200">in Focus</span>
             </div>
             <div class="space-y-2">
-              <div class="bg-white p-3 rounded shadow">Fullstack Development</div>
-              <div class="bg-white p-3 rounded shadow">JavaScript</div>
-              <div class="bg-white p-3 rounded shadow">React Js</div>
-              <div class="bg-white p-3 rounded shadow">Three JS</div>
-              <div class="bg-white p-3 rounded shadow">UI Interview</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Fullstack Development</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">JavaScript</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">React Js</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Three JS</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">UI Interview</div>
             </div>
           </div>
-
-          <!-- Development++ Section -->
-          <div class="bg-gray-100 rounded-lg p-4">
-            <h3 class="text-lg font-bold text-gray-800 mb-4">Development++</h3>
-            <div class="space-y-2">
-              <div class="bg-white p-3 rounded shadow">GIT</div>
-              <div class="bg-white p-3 rounded shadow">Distributed Systems</div>
-              <div class="bg-white p-3 rounded shadow">AWS</div>
-              <div class="bg-white p-3 rounded shadow">Databases Deep Dive</div>
-              <div class="bg-white p-3 rounded shadow">Multi-Programming</div>
-              <div class="bg-white p-3 rounded shadow">Microservices</div>
-              <div class="bg-white p-3 rounded shadow">DevOps</div>
-            </div>
-          </div>
-
+        
           <!-- DSA Section -->
-          <div class="bg-gray-100 rounded-lg p-4">
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
             <div class="flex items-center gap-2 mb-4">
               <h3 class="text-lg font-bold text-gray-800">DSA</h3>
-              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">in Focus</span>
+              <span class="bg-gradient-to-r from-[#fa729a] to-[#fddc43] bg-clip-text text-transparent text-xs font-medium px-2 py-1 rounded border border-pink-200">in Focus</span>
             </div>
             <div class="space-y-2">
-              <div class="bg-white p-3 rounded shadow">Java</div>
-              <div class="bg-white p-3 rounded shadow">DSA</div>
-              <div class="bg-white p-3 rounded shadow">DSA style Interviews</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Java for DSA</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Data Structures & Algorithms</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">DSA Interview</div>
             </div>
           </div>
-
-          <!-- Core CS Section -->
-          <div class="bg-gray-100 rounded-lg p-4">
-            <h3 class="text-lg font-bold text-gray-800 mb-4">Core CS</h3>
-            <div class="space-y-2">
-              <div class="bg-white p-3 rounded shadow">Operating System</div>
-              <div class="bg-white p-3 rounded shadow">Computer Networks</div>
-              <div class="bg-white p-3 rounded shadow">Databases</div>
-              <div class="bg-white p-3 rounded shadow">Computer Arch</div>
-              <div class="bg-white p-3 rounded shadow">Digital Electronics</div>
-              <div class="bg-white p-3 rounded shadow">Compilers</div>
-              <div class="bg-white p-3 rounded shadow">Discrete Math</div>
-              <div class="bg-white p-3 rounded shadow">Automata Theory</div>
-            </div>
-          </div>
-
-          <!-- Product Section -->
-          <div class="bg-gray-100 rounded-lg p-4">
-            <h3 class="text-lg font-bold text-gray-800 mb-4">Product</h3>
-            <div class="space-y-2">
-              <div class="bg-orange-400 p-3 rounded shadow text-white">UI/UX Design (In Progress) </div>
-              <div class="bg-white p-3 rounded shadow">Product Management</div>
-            </div>
-          </div>
-
+        
           <!-- System Design Section -->
-          <div class="bg-gray-100 rounded-lg p-4">
-           
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
             <div class="flex items-center gap-2 mb-4">
               <h3 class="text-lg font-bold text-gray-800">System Design</h3>
-              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">in Focus</span>
+              <span class="bg-gradient-to-r from-[#fa729a] to-[#fddc43] bg-clip-text text-transparent text-xs font-medium px-2 py-1 rounded border border-pink-200">in Focus</span>
             </div>
             <div class="space-y-2">
-              <div class="bg-white p-3 rounded shadow">API Design & Development</div>
-              <div class="bg-white p-3 rounded shadow">System Design Foundations</div>
-              <div class="bg-white p-3 rounded shadow">System Design in Depth</div>
-              <div class="bg-white p-3 rounded shadow">Frontend System Design</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">API Design & Development</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">System Design Fundamentals</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">System Design in Depth</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Frontend System Design</div>
+            </div>
+          </div>
+        
+          <!-- Advanced Development Section -->
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
+            <div class="flex items-center gap-2 mb-4">
+              <h3 class="text-lg font-bold text-gray-800">Advanced Development</h3>
+            </div>
+            <div class="space-y-2">
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Git</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Distributed Systems</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">AWS</div>
+            </div>
+          </div>
+        
+          <!-- UI/UX & Product Section -->
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
+            <div class="flex items-center gap-2 mb-4">
+              <h3 class="text-lg font-bold text-gray-800">UI/UX & Product</h3>
+            </div>
+            <div class="space-y-2">
+              <a href="/courses/ui" class="block bg-white p-3 rounded shadow-sm hover:shadow-md transition-shadow duration-300">UI/UX for Developers</a>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Product Management Basics</div>
+            </div>
+          </div>
+        
+          <!-- Core CS Section -->
+          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
+            <div class="flex items-center gap-2 mb-4">
+              <h3 class="text-lg font-bold text-gray-800">Core CS</h3>
+            </div>
+            <div class="space-y-2">
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Operating System</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Computer Network</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Databases</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Computer Architecture</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Digital Electronics</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Compilers</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Discrete Math</div>
+              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Theory of Computation</div>
             </div>
           </div>
         </div>
+
+        
       </div>
     </div>
   </div>
-</div>
 
-  <section class="section">
+  <section class="section py-16 bg-gradient-to-b from-white to-gray-50">
     <div class="container">
-      <h2 class="text-2xl font-bold text-center mb-8">Available Courses</h2>
+      <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#fa729a] to-black bg-clip-text text-transparent">
+        Available Courses
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {Object.entries(courseInfo).map(([slug, course]) => (
-          <a href={`/courses/${slug}`} class="group relative card bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-            <img src={course.image || "/images/collaboration.png"} alt={course.title} class="w-full h-48 object-cover rounded-md mb-4"/>
+          <a 
+            href={`/courses/${slug}`} 
+            class="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+          >
+            <div class="p-4">
+              <img 
+                src={course.image || "/images/collaboration.png"} 
+                alt={course.title} 
+                class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:scale-105 transition-transform duration-300"
+              />
+              
+              <div class="space-x-2">
+                <span class="inline-block bg-gradient-to-r from-[#fddc43] to-yellow-200 text-black text-xs font-semibold py-1 px-3 rounded-full mb-4">
+                  {course.category}
+                </span>
+                <span class="inline-block bg-gradient-to-r from-[#fa729a] to-pink-400 text-white text-xs font-semibold py-1 px-3 rounded-full mb-4">
+                  {course.time}
+                </span>
+              </div>
+              
+              <h2 class="text-xl font-semibold text-gray-800 group-hover:text-[#fa729a] transition-colors duration-300">
+                {course.title}
+              </h2>
+              <p class="text-gray-600 mt-2 mb-4">{course.subtitle}</p>
+            </div>
             
-            <span class="inline-block bg-[#f7e26bd8] text-black text-xs font-semibold py-1 px-3 rounded-full mb-4">
-              {course.category}
-            </span>
-            <span class="inline-block bg-[#fa729a] text-white text-xs font-semibold py-1 px-3 rounded-full mb-4">
-              {course.time}
-            </span>
-            <h2 class="text-xl font-semibold text-gray-800">{course.title}</h2>
-            <p class="text-gray-600 mt-2 mb-4">{course.description}</p>
-            
-            <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-[#fa729a] to-[#fddc43] opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl"></div>
           </a>
         ))}
       </div>
@@ -175,12 +198,10 @@ import courseInfo from "@/data/course-info.json";
     const closeKanban = document.getElementById('closeKanban');
 
     if (kanbanToggle && kanbanModal && closeKanban) {
-      // Remove existing event listeners
       kanbanToggle.removeEventListener('click', toggleModal);
       closeKanban.removeEventListener('click', closeModal);
       kanbanModal.removeEventListener('click', handleOutsideClick);
 
-      // Add new event listeners
       kanbanToggle.addEventListener('click', toggleModal);
       closeKanban.addEventListener('click', closeModal);
       kanbanModal.addEventListener('click', handleOutsideClick);
@@ -205,9 +226,6 @@ import courseInfo from "@/data/course-info.json";
     }
   }
 
-  // Initialize on page load
   document.addEventListener('DOMContentLoaded', initializeKanban);
-
-  // Initialize when Astro view transitions complete
   document.addEventListener('astro:page-load', initializeKanban);
 </script>

@@ -5,7 +5,7 @@ const {
   call_to_action: {
     title,
     description,
-    button: { label, link },
+    button: { label1, link1, label2, link2 },
   },
 } = config;
 ---
@@ -19,7 +19,8 @@ const {
         <div class="row">
           <div class="lg:col-7">
             <h2 class="h1 text-white">{title}</h2>
-            <a class="btn btn-white mt-8" href={link}>{label}</a>
+            <a class="btn btn-white mt-8" href={link1}>{label1}</a>
+            <a class="btn btn-white mt-8" href={link2}>{label2}</a>
           </div>
           <div class="mt-8 lg:col-5 lg:mt-0">
             <p class="text-white">

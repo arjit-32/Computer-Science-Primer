@@ -1,32 +1,33 @@
 ---
 banner:
-  title: "Fullstack Engineering from the ground up"
-  content: "Computer Science Primer is a curriculum to Master Core CS Fundamentals and Real-World Development Skills to Become a 10x Developer."
+  title: "The Ultimate Software Engineer Blueprint"
+  content: "Master Fullstack Engineering: We shape your expertise across every dimension from foundational CS principles to real-world development. <br/> Why ? So that you can become a \"Complete\" Engineer."
   image: /images/banner-img.png
   button:
-    label: Start with a Series
+    label: Explore Courses
     link: "/courses"
     enable: true
 
 features:
-  title: The 6 Subjects <br /> to work on 
+  title: "Comprehensive Curriculum Across 6 Key Areas"
   features_list:
     - title: Development
-      content: Build complete web applications from concept to deployment. Gain the expertise to develop and launch industry-grade web solutions.
-    - title: Development++
-      content: Advance your skill set with Git, AWS, DevOps, and Microservices, building resilient and scalable systems.
+      content: Build complete web applications, from concept to deployment, using industry-relevant tools and frameworks.
+    - title: Advanced Development
+      content: Enhance your capabilities with Git, AWS, Microservices, DevOps, and other advanced development practices.
     - title: UI/UX & Product 
-      content: It never hurts a developer to have cross-functional skills, collaborating effectively with designers and product managers.
+      content: Bridge the gap between development and design. Learn principles that make you a versatile collaborator across teams.
     - title: Core Computer Science
-      content: Master foundational subjects like Operating Systems, Computer Networks, Databases and more.
+      content: Gain a deep understanding of essential CS subjects, including Operating Systems, Networks, and Databases.
     - title: Data Structures & Algorithms
-      content: Strengthen your problem-solving skills with DSA in Java.
+      content: Master problem-solving techniques and algorithmic thinking to excel in coding interviews and real-world scenarios.
     - title: System Design
-      content: Design APIs, architect systems, and learn design patterns for both low-level and high-level solutions.
+      content: Learn to design scalable, high-performance systems with a strong focus on architecture and design patterns.
+
     
   homepage_tab:
-    title: Roadmap of each Subject
-    description: Follow structured paths to mastery, with clear milestones for every topic from fundamentals to advanced concepts.
+    title: Your Learning Roadmap
+    description: Follow structured pathways with clear milestones to progress from foundational concepts to advanced mastery in each domain.
     tab_list:
         - title: Development
           icon: "code"  #icon package react-feather-icon [https://feathericons.com/]
@@ -49,23 +50,23 @@ features:
 #service
 service:
   our_service:
-    - title: What is the Aim of Computer Science Primer?
-      description: Move beyond the Development vs. DSA debate. The goal is to become a great problem solver with expertise across multiple facets of Computer Science Engineering.
+    - title: Our Mission
+      description: We aim to break the barrier between Development and DSA, helping you become a complete software engineer with strong problem-solving and development skills.
       image: "/images/collaboration.png"
       list:
-        - Become a Full-Stack Web Developer
-        - Master problem-solving skills with DSA
-        - Build a solid foundation in core CS subjects
-        - Cultivate a habit of continuous learning
+        - Build and Deploy Full-Stack Applications.
+        - Master DSA to Crack BigTech Interviews.
+        - Strengthen Core CS concepts.
+        - Design Scalable Systems for Real-World Impact.
    
-    - title: Join the Learning Journey
-      description: I’m completing the CSPrimer syllabus alongside you. Along the way, I’ll share blog series, videos, handwritten notes, open-source projects, roadmaps, and resources for each subject-everything you need to dive in and become a 10x Developer.
+    - title: Follow the Curriculum, Learn Your Way
+      description: Whether you prefer blogs, videos, or hands-on projects, our curriculum guides your journey. Checkout Courses, to get csprimer's content or other recommended courses to fit your learning style.
 
       video:
         thumbnail: "/images/intro-thumbnail.png"
         video_id: "p1-mm4AjVdo" 
       button:
-        label: Start with a Series
+        label: Start Learning Today
         link: "/courses"
         enable: true
 ---

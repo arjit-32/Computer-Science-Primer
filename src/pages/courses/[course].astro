@@ -44,16 +44,9 @@ const courseData = courseInfo[course];
           {courseData.title}
         </h1>
         <p class="text-lg text-gray-200 mb-8">
-          {courseData.description}
+          {courseData.subtitle}
         </p>
-        {courseData.startLink && (
-          <a 
-            href={courseData.startLink}
-            class="inline-block bg-[#fb7299] hover:bg-[#e85c83] transition-colors px-8 py-3 rounded-lg font-semibold"
-          >
-            Start Learning
-          </a>
-        )}
+       
       </div>
     </div>
   </section>
@@ -62,7 +55,10 @@ const courseData = courseInfo[course];
   <section class="py-16 bg-gray-50">
     <div class="container max-w-4xl">
       <h2 class="text-3xl font-bold text-center mb-12">Course Content</h2>
-      
+      <p class="text-lg mb-12">
+        {courseData.description}
+      </p>
+     
       <div class="space-y-4">
         {courseData.navbar.map((section: any, index: number) => (
           <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
@@ -88,16 +84,16 @@ const courseData = courseInfo[course];
               </svg>
             </button>
             
-            <div id={`section-${index}`} class="hidden border-t border-gray-100">
+            <div id={`section-${index}`} class="border-t border-gray-100">
               <div class="p-4 space-y-2">
-                <p>{section.about}</p>
+                {/* <p>{section.about}</p> */}
                 {section.link.map((link: any) => {
                   const isExternal = link.type === "external" || link.type === "course" || link.type === "external-blog";
                   return (
                     <a 
                       href={isExternal || link.type === "youtube" ? link.url : `/blog/${link.url}`}
                       target={isExternal || link.type === "youtube" ? "_blank" : "_self"}
-                      class="flex items-center gap-3 p-2 rounded-md hover:bg-gray-50 transition-colors group"
+                      class="flex items-center gap-3 p-1 rounded-md hover:bg-gray-50 transition-colors group"
                     >
                       {/* Icon selection based on link type */}
                       {link.type === "youtube" ? (

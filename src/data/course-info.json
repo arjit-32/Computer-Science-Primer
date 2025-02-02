@@ -1,63 +1,122 @@
 {
-    "ui": {
-        "title": "UI/UX Design for Developers",
-        "image": "/images/thumbnails/designer.jpeg",
-        "description": "A comprehensive course on UI/UX principles and design processes.",
-        "time": "5 hr",
-        "category": "UI/UX & Product",
-        "navbar": [
-            {
-                "subheading": "Introduction",
-                "about": "Goal: Understand the principles that make a product both functional and delightful for users. \nTopics: \nIntroduction to UI vs. UX: Definitions, key differences, and roles. \n User-Centered Design (UCD): Understanding user needs, pain points, and motivations. \nDesign Thinking: Learn the design thinking process to approach problems with empathy.",
-                "link": [
-                    {
-                        "type":"youtube",
-                        "url":"",
-                        "title":"Video Intro"
-                    },
-                    {
-                        "type":"blog",
-                        "url":"ui-1",
-                        "title":"Introduction to Ui development"
-                    }
-              ]
-            },
-            {
-                "subheading": "Wireframing",
-                "about": "",
-                "link": [
-                    {
-                        "type": "youtube",
-                        "url": "https://youtube.com/...",
-                        "title": "Video Tutorial"
-                      },
-                      {
-                        "type": "external",
-                        "url": "https://example.com",
-                        "title": "External Resource"
-                      },
-                      {
-                        "type": "course",
-                        "url": "https://coursera.org/...",
-                        "title": "Related Course"
-                      },
-                      {
-                        "type": "external-blog",
-                        "url": "https://blog.example.com/...",
-                        "title": "External Blog Post"
-                      },
-                      {
-                        "type": "assignment",
-                        "url": "/assignments/...",
-                        "title": "Weekly Assignment"
-                      },
-                      {
-                        "type": "github",
-                        "url": "https://github.com/...",
-                        "title": "Project Repository"
-                      }
-              ]
-            }
+  "ui": {
+    "title": "UI/UX for Developers",
+    "image": "/images/thumbnails/designer.jpeg",
+    "subtitle": "Learn UI/UX principles, design tools, and processes to create user-centered products.",
+    "description": "Welcome to UI/UX for Developers! This course is crafted to bridge the gap between development and design for developers looking to deliver not only functional but beautifully intuitive products. Together, we'll cover core UI/UX principles and apply them to real projects, like a phone specification website, to make learning practical and hands-on.",
+    "time": "30 hr",
+    "category": "UI/UX & Product Design",
+    "navbar": [
+      {
+        "subheading": "Foundations of UI/UX Design",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Introduction to UI/UX Design"
+          },
+          {
+            "type": "blog",
+            "url": "ui-principles-psychology",
+            "title": "UI Design Principles and User Psychology"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Understanding User Behavior for Better UI"
+          },
+          {
+            "type": "blog",
+            "url": "design-philosophy-laws",
+            "title": "Key Design Laws and Their Applications"
+          }
         ]
-    }
+      },
+      {
+        "subheading": "Design Tools & Techniques",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Figma Basics for Beginners"
+          },
+          {
+            "type": "blog",
+            "url": "core-design-principles",
+            "title": "Mastering Core Design Principles"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Creating Prototypes and Wireframes in Figma"
+          },
+          {
+            "type": "blog",
+            "url": "figma-wireframes",
+            "title": "Wireframing Best Practices with Figma"
+          }
+        ]
+      },
+      {
+        "subheading": "The Complete Design Process",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Sketching UI Concepts Effectively"
+          },
+          {
+            "type": "blog",
+            "url": "design-process-sketching",
+            "title": "The Art of Sketching in UI Design"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Designing User Flows and Sitemaps"
+          },
+          {
+            "type": "blog",
+            "url": "user-flows-sitemaps",
+            "title": "Creating User Flows and Effective Sitemaps"
+          },
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Finalizing UI Designs: Best Practices"
+          },
+          {
+            "type": "blog",
+            "url": "final-ui-design",
+            "title": "Steps to Finalize Your UI Design Effectively"
+          }
+        ]
+      },
+      {
+        "subheading": "Common UI/UX Tips and Tricks",
+        "link": [
+          {
+            "type": "youtube",
+            "url": "",
+            "title": "Tips and Tricks"
+          },
+          {
+            "type": "blog",
+            "url": "",
+            "title": "Tips and Tricks"
+          }
+        ]
+      },
+      {
+        "subheading": "Resources",
+        "link": [
+          {
+            "type": "blog",
+            "url": "",
+            "title": "Resources"
+          }
+        ]
+      }
+    ]
+  }
 }
