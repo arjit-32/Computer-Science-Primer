@@ -11,24 +11,14 @@
         "subheading": "Foundations of UI/UX Design",
         "link": [
           {
-            "type": "youtube",
-            "url": "",
+            "type": "blog",
+            "url": "ui-1",
             "title": "Introduction to UI/UX Design"
           },
           {
             "type": "blog",
-            "url": "ui-principles-psychology",
-            "title": "UI Design Principles and User Psychology"
-          },
-          {
-            "type": "youtube",
-            "url": "",
-            "title": "Understanding User Behavior for Better UI"
-          },
-          {
-            "type": "blog",
-            "url": "design-philosophy-laws",
-            "title": "Key Design Laws and Their Applications"
+            "url": "ui-2",
+            "title": "Design Philosopgy & Laws"
           }
         ]
       },
@@ -36,24 +26,14 @@
         "subheading": "Design Tools & Techniques",
         "link": [
           {
-            "type": "youtube",
-            "url": "",
-            "title": "Figma Basics for Beginners"
-          },
-          {
             "type": "blog",
-            "url": "core-design-principles",
+            "url": "ui-3",
             "title": "Mastering Core Design Principles"
           },
           {
-            "type": "youtube",
-            "url": "",
-            "title": "Creating Prototypes and Wireframes in Figma"
-          },
-          {
             "type": "blog",
-            "url": "figma-wireframes",
-            "title": "Wireframing Best Practices with Figma"
+            "url": "ui-4",
+            "title": "Introduction to Figma"
           }
         ]
       },
@@ -61,59 +41,41 @@
         "subheading": "The Complete Design Process",
         "link": [
           {
-            "type": "youtube",
-            "url": "",
-            "title": "Sketching UI Concepts Effectively"
+            "type": "blog",
+            "url": "ui-5",
+            "title": "Sketching"
           },
           {
             "type": "blog",
-            "url": "design-process-sketching",
-            "title": "The Art of Sketching in UI Design"
-          },
-          {
-            "type": "youtube",
-            "url": "",
-            "title": "Designing User Flows and Sitemaps"
+            "url": "ui-6",
+            "title": "Userflows and Sitemaps"
           },
           {
             "type": "blog",
-            "url": "user-flows-sitemaps",
-            "title": "Creating User Flows and Effective Sitemaps"
-          },
-          {
-            "type": "youtube",
-            "url": "",
-            "title": "Finalizing UI Designs: Best Practices"
+            "url": "ui-7",
+            "title": "Wireframes"
           },
           {
             "type": "blog",
-            "url": "final-ui-design",
-            "title": "Steps to Finalize Your UI Design Effectively"
+            "url": "ui-8",
+            "title": "Final UI Design"
           }
         ]
-      },
-      {
-        "subheading": "Common UI/UX Tips and Tricks",
+      },{
+        "subheading": "Resources & Assignments",
         "link": [
           {
-            "type": "youtube",
-            "url": "",
-            "title": "Tips and Tricks"
-          },
-          {
-            "type": "blog",
-            "url": "",
-            "title": "Tips and Tricks"
-          }
-        ]
-      },
-      {
-        "subheading": "Resources",
-        "link": [
-          {
-            "type": "blog",
-            "url": "",
-            "title": "Resources"
+            "type": "external",
+            "url": "https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery/",
+            "title": "Udemy Course"
+          },{
+            "type": "assignment",
+            "url": "https://www.dailyui.co/",
+            "title": "100 Daily UI challlenges"
+          },{
+            "type": "book",
+            "url": "https://www.practical-ui.com/",
+            "title": "Practical-UI book"
           }
         ]
       }

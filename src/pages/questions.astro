@@ -63,12 +63,12 @@ const uniqueTags = Array.from(allTags);
                     ))}
                   </div>
                   
-                  {question.code && (
+                 {question.code && (
                     <div class="mt-6 bg-gradient-to-br from-gray-50 to-pink-50 rounded-lg p-4 overflow-x-auto border border-gray-100">
                       <pre class="text-sm text-gray-800 font-mono">{question.code}</pre>
                     </div>
                   )}
-                  
+                    
                   {question.images && question.images.length > 0 && (
                     <div class="mt-6 space-y-4">
                       {question.images.map((img) => (

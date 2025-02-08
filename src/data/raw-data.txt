@@ -10,7 +10,7 @@
           "subheading": "Resources",
           "link": [
             {
-              "type": "blog",
+              "type": "blog/youtube/assignment/github/external/book",
               "url": "",
               "title": "Java for DSA Notes"
             }

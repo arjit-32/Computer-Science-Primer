@@ -1,6 +1,7 @@
 ---
 import dateFormat from "@/lib/utils/dateFormat";
 import readingTime from "@/lib/utils/readingTime";
+import courseInfo from "@/data/course-info.json";
 
 import { humanize, slugify } from "@/lib/utils/textConverter";
 import {
@@ -11,8 +12,10 @@ import {
 } from "react-icons/fa";
 import { Image } from "astro:assets";
 
-const { post } = Astro.props;
+const { post, course } = Astro.props;
 const { Content } = await post.render();
+
+const courseData = courseInfo[course];
 ---
 
 <section class="section blog-single">
