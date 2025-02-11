@@ -1,7 +1,7 @@
 ---
 banner:
   title: "The Ultimate Software Engineer Blueprint"
-  content: "Master Fullstack Engineering: We shape your expertise across every dimension from foundational CS principles to real-world development. <br/> Why ? So that you can become a \"Complete\" Engineer."
+  content: "Master Fullstack Engineering: Shape your expertise across every dimension from foundational CS principles to real-world development."
   image: /images/banner-img.png
   button:
     label: Explore Courses
@@ -52,7 +52,7 @@ service:
   our_service:
     - title: Our Mission
       description: We aim to break the barrier between Development and DSA, helping you become a complete software engineer with strong problem-solving and development skills.
-      image: "/images/collaboration.png"
+      image: "/images/collaboration_old.png"
       list:
         - Build and Deploy Full-Stack Applications.
         - Master DSA to Crack BigTech Interviews.
@@ -60,7 +60,7 @@ service:
         - Design Scalable Systems for Real-World Impact.
    
     - title: Follow the Curriculum, Learn Your Way
-      description: Whether you prefer blogs, videos, or hands-on projects, our curriculum guides your journey. Checkout Courses, to get csprimer's content or other recommended courses to fit your learning style.
+      description: Whether you prefer blogs, videos, or hands-on projects, the curriculum keeps you on track. Explore CSPrimer’s courses or other recommended resources that match your learning style.
 
       video:
         thumbnail: "/images/intro-thumbnail.png"

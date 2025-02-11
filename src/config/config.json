@@ -21,7 +21,7 @@
     "title": "Found an Issue?",
     "description": "We’re constantly improving and value your feedback. If you spot an error or have suggestions, let us know to help us grow together.",
     "button": {  
-        "label1": "Contact Us on LinkedIn",  
+        "label1": "Contact Us",  
         "link1": "https://www.linkedin.com/company/csprimer-in/",  
         "label2": "Email Us",  
         "link2": "mailto:cspbyarjit@gmail.com"  
@@ -30,12 +30,12 @@
   },
 
   "params": {
-    "footer_description": "Master Fullstack Engineering: We shape your expertise across every dimension from foundational CS principles to real-world development.",
+    "footer_description": "Master Fullstack Engineering: Shape your expertise across every dimension from foundational CS principles to real-world development.",
     "email": "cspbyarjit@gmail.com",
     "location": "Bengaluru, India",
     "phone": "",
     "contact_form_action": "#",
-    "copyright": "Copyright on content © 2024 by Computer Science Primer"
+    "copyright": "Copyright on content © 5 by Computer Science Primer"
   },
 
   "metadata": {

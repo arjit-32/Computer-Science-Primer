@@ -447,9 +447,9 @@
   "dm": {
     "title": "Discrete Mathematics",
     "image": "/images/thumbnails/discrete-math.png",
-    "subtitle": "Build strong problem-solving skills with the fundamentals of discrete math.",
+    "subtitle": "Build strong foundation with the fundamentals of discrete math.",
     "description": "Learn about logic, set theory, combinatorics, graph theory, and mathematical reasoning. This course strengthens analytical thinking, crucial for computer science and algorithm design.",
-    "time": "40 hr",
+    "time": "1 day",
     "category": "Core",
     "navbar": [
       {

@@ -1,7 +1,6 @@
 ---
 title: Introduction to UI/UX development
 author: Arjit Sharma
-date: 2024-10-02T05:00:00Z
 courses: ["ui"]
 categories: ["Product"]
 featured: false

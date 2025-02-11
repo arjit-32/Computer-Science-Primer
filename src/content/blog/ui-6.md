@@ -1,14 +1,13 @@
 ---
 title: Userflows and Sitemaps
 author: Arjit Sharma
-date: 2024-10-02T05:00:00Z
 courses: ["ui"]
 categories: ["Product"]
 featured: false
 draft: false
 ---
 
-### Userflows
+## Userflows
 
 Series of steps user takes to achieve meaningful goals
 
@@ -21,10 +20,12 @@ Some points to keep in mind -
 2. Flow should only be in 1 direction to avoid confusion
 3. Create distinct flows
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6ffd21e2-c246-4ea6-8879-c7b0b97bbb65/fb0ba78d-c6ae-44ee-89b0-11d1fac54f53/image.png)
+![Userflows-UI](https://res.cloudinary.com/dwa6rcttw/image/upload/v1738869231/iqeyigictmg81zxpqgwm.png)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6ffd21e2-c246-4ea6-8879-c7b0b97bbb65/a59ff4e6-227a-4f29-b276-7360cda4c8f7/image.png)
+![Userflows-UI](https://res.cloudinary.com/dwa6rcttw/image/upload/v1738869230/ficziacik1fb5m9irez7.png)
 
-### SiteMaps
+## SiteMaps
 
 Ensures that all pages are organized logically and that navigation is intuitive for users. A well-structured sitemap will help clarify the information architecture, ensuring users can easily find what they need.
+
+![Sitemaps-UI](https://res.cloudinary.com/dwa6rcttw/image/upload/v1738869231/fnn69tomtjzcigfuywcg.png)

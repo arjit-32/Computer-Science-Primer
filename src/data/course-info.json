@@ -1,10 +1,11 @@
 {
   "ui": {
+    "ongoing": "false",
     "title": "UI/UX for Developers",
     "image": "/images/thumbnails/designer.jpeg",
-    "subtitle": "Learn UI/UX principles, design tools, and processes to create user-centered products.",
+    "subtitle": "Learn UI/UX principles and design tools to create user-centered products.",
     "description": "Welcome to UI/UX for Developers! This course is crafted to bridge the gap between development and design for developers looking to deliver not only functional but beautifully intuitive products. Together, we'll cover core UI/UX principles and apply them to real projects, like a phone specification website, to make learning practical and hands-on.",
-    "time": "30 hr",
+    "time": "5 - 10 days",
     "category": "UI/UX & Product Design",
     "navbar": [
       {
@@ -80,5 +81,60 @@
         ]
       }
     ]
+  },
+  "git":{
+    "ongoing": "true",
+    "title": "Git Basics to Advanced",
+    "image": "/images/thumbnails/git.png",
+    "subtitle": "Learn Git for version control and collaboration.",
+    "description": "This course covers Git fundamentals, branching, merging, rebasing, conflict resolution, and collaboration using GitHub. Master workflows, best practices, and advanced techniques to streamline development and team collaboration.",
+    "time": "1 - 2 Days",
+    "category": "Advanced Development",
+    "navbar": [
+      {
+        "subheading": "Introduction",
+        "link": [
+          { "type": "blog", "url": "git-1", "title": "Introduction" }
+        ]
+      },
+      {
+        "subheading": "Git Basics",
+        "link": [
+          { "type": "blog", "url": "", "title": "Git Basic Workflow" },
+          { "type": "blog", "url": "", "title": "Cloning" },
+          { "type": "blog", "url": "", "title": "Reset" }
+        ]
+      },
+      {
+        "subheading": "Branching & Merging",
+        "link": [
+          { "type": "blog", "url": "", "title": "Branching" },
+          { "type": "blog", "url": "", "title": "Merging" },
+          { "type": "blog", "url": "", "title": "Reflog" },
+          { "type": "blog", "url": "", "title": "Cherry Picking" }
+        ]
+      },
+      {
+        "subheading": "Advanced Git",
+        "link": [
+          { "type": "blog", "url": "", "title": "Git Rebase" },
+          { "type": "blog", "url": "", "title": "Git Bisect" },
+          { "type": "blog", "url": "", "title": "Stashing" },
+          { "type": "blog", "url": "", "title": "Squashing Commits" }
+        ]
+      },
+      {
+        "subheading": "Collaboration & Remote",
+        "link": [
+          { "type": "blog", "url": "", "title": "Fetching and Pulling" },
+          { "type": "blog", "url": "", "title": "Fetching and Merging" },
+          { "type": "blog", "url": "", "title": "Pulling" },
+          { "type": "blog", "url": "", "title": "Pushing Code" },
+          { "type": "blog", "url": "", "title": "Pull Requests" },
+          { "type": "blog", "url": "", "title": "Git Submodules" }
+        ]
+      }
+    ]
   }
+ 
 }

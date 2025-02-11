@@ -2,13 +2,13 @@
 import dateFormat from "@/lib/utils/dateFormat";
 import readingTime from "@/lib/utils/readingTime";
 import courseInfo from "@/data/course-info.json";
-
 import { humanize, slugify } from "@/lib/utils/textConverter";
 import {
   FaRegCalendarAlt,
   FaRegClock,
   FaRegFolder,
   FaRegUserCircle,
+  FaChevronDown,
 } from "react-icons/fa";
 import { Image } from "astro:assets";
 
@@ -20,58 +20,182 @@ const courseData = courseInfo[course];
 
 <section class="section blog-single">
   <div class="container">
-    <div class="row justify-center">
-      { post.data.image && 
-      <div class="lg:col-10">
-        <Image
-          class="w-full rounded-xl"
-          src={post.data.image}
-          alt=""
-          width={920}
-          height={450}
-        />
-      </div>
-      }
-      <div class="mt-10 max-w-[810px] lg:col-9">
-        <h1 class="h2">
-          {post.data.title}
-        </h1>
-        <div class="mb-5 mt-6 flex items-center space-x-2">
-          <ul class="mb-4">
-            <li class="mr-4 inline-block">
-              <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-              {humanize(post.data.author)}
-            </li>
-
-            <li class="mr-4 inline-block">
-              <FaRegCalendarAlt className={"mr-2 -mt-1 inline-block"} />
-              {dateFormat(post.data.date)}
-            </li>
-            <li class="mr-4 inline-block">
-              <FaRegClock className={"mr-2 -mt-1 inline-block"} />
-              {readingTime(post.body)}
-            </li>
-            <li class="mr-4 inline-block">
-              <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
-              {
-                post.data.categories.map((category: string, index: number) => (
-                  <a
-                    href={`/categories/${slugify(category)}`}
-                    class="hover:text-primary"
+    <div class="flex">
+      <!-- Navigation Sidebar - Hidden on mobile, visible on lg screens -->
+      {courseData && courseData.navbar.length > 0 && (
+        <div class="hidden lg:block w-64 shrink-0 pr-6">
+          <div class="space-y-4">
+            {courseData.navbar.map((section, index) => (
+              <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                <button
+                  class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors cursor-pointer group"
+                  id={`nav-button-${index}`}
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#fb7299]/10 text-[#fb7299] font-medium">
+                      {index + 1}
+                    </span>
+                    <span class="font-semibold text-gray-900 group-hover:text-[#fb7299] transition-colors">
+                      {section.subheading}
+                    </span>
+                  </div>
+                  <svg 
+                    class="w-5 h-5 text-gray-400 transform transition-transform duration-200" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
                   >
-                    {humanize(category)}
-                    {index !== post.data.categories.length - 1 && ","}
-                  </a>
-                ))
-              }
-            </li>
-          </ul>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                <div
+                  class="hidden border-t border-gray-100"
+                  id={`nav-content-${index}`}
+                >
+                  <div class="p-4 space-y-2">
+                    {section.link.map((link) => (
+                      <a
+                        href={link.type != "blog" ? link.url : `/blog/${link.url}`}
+                        target={link.type != "blog" ? "_blank" : "_self"}
+                        class="flex items-center gap-3 p-2 rounded-md hover:bg-gray-50 transition-colors group"
+                      >
+                        {/* YouTube Icon */}
+                        {link.type === "youtube" && (
+                          <svg class="w-5 h-5 shrink-0 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                          </svg>
+                        )}
+                        
+                        {/* Book Icon */}
+                        {link.type === "book" && (
+                          <svg class="w-5 h-5 shrink-0 text-blue-700" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 2C4.895 2 4 2.895 4 4V20C4 21.105 4.895 22 6 22H18C19.105 22 20 21.105 20 20V4C20 2.895 19.105 2 18 2H6ZM6 4H18V20H6V4ZM8 6H16V8H8V6ZM8 10H16V12H8V10ZM8 14H13V16H8V14Z"/>
+                          </svg>
+                        )}
+                        
+                        {/* External Link Icon */}
+                        {link.type === "external" && (
+                          <svg class="w-5 h-5 shrink-0 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        )}
+                        
+                        {/* Assignment Icon */}
+                        {link.type === "assignment" && (
+                          <svg class="w-5 h-5 shrink-0 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                          </svg>
+                        )}
+                        
+                        {/* GitHub Icon */}
+                        {link.type === "github" && (
+                          <svg class="w-5 h-5 shrink-0 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                          </svg>
+                        )}
+                        
+                        {/* Default Document Icon */}
+                        {!["youtube", "book", "external", "assignment", "github"].includes(link.type) && (
+                          <svg class="w-5 h-5 shrink-0 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                        )}
+                        
+                        <span class="text-gray-700 group-hover:text-[#fb7299] transition-colors">
+                          {link.title}
+                        </span>
+                        
+                        {link.type != "blog" && (
+                          <svg class="w-4 h-4 shrink-0 text-gray-400 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        )}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-
-        <div class="content">
-          <Content />
+      )}
+      <!-- Main Content -->
+      <div class={'flex-1'}>
+        <div class={` ${courseData ? '' : 'row justify-center'}`}>
+          {post.data.image && (
+            <div class="lg:col-10">
+              <Image
+                class="w-full rounded-xl"
+                src={post.data.image}
+                alt=""
+                width={920}
+                height={450}
+              />
+            </div>
+          )}
+          <div class={` ${courseData ? '' : 'mt-10 max-w-[810px] lg:col-9'}`}>
+            <h1 class="h2">{post.data.title}</h1>
+            <div class="mb-5 mt-6 flex items-center space-x-2">
+              <ul class="mb-4">
+                <li class="mr-4 inline-block">
+                  <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
+                  {humanize(post.data.author)}
+                </li>
+                <li class="mr-4 inline-block">
+                  <FaRegClock className={"mr-2 -mt-1 inline-block"} />
+                  {readingTime(post.body)}
+                </li>
+                <li class="mr-4 inline-block">
+                  <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
+                  {post.data.categories.map((category: string, index: number) => (
+                    <a
+                      href={`/categories/${slugify(category)}`}
+                      class="hover:text-primary"
+                    >
+                      {humanize(category)}
+                      {index !== post.data.categories.length - 1 && ","}
+                    </a>
+                  ))}
+                </li>
+              </ul>
+            </div>
+            <div class="content">
+              <Content />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script is:inline>
+  function initNavHandlers() {
+    setTimeout(() => { // Ensure elements exist before attaching handlers
+      document.querySelectorAll('[id^="nav-button-"]').forEach((button) => {
+        button.removeEventListener("click", toggleNav);
+        button.addEventListener("click", toggleNav);
+      });
+    }, 100); // Slight delay to ensure DOM is ready
+  }
+
+  function toggleNav(event) {
+    const button = event.currentTarget;
+    const index = button.id.split("-").pop();
+    const content = document.getElementById(`nav-content-${index}`);
+    const icon = button.querySelector(".transform");
+
+    if (content) {
+      content.classList.toggle("hidden");
+    }
+    if (icon) {
+      icon.classList.toggle("rotate-180");
+    }
+  }
+
+  // Attach handlers on Astro events
+  document.addEventListener("astro:page-load", initNavHandlers); // Ensures handlers work on first load
+  document.addEventListener("astro:after-swap", initNavHandlers); // Handles dynamic navigation
+  window.addEventListener("load", initNavHandlers); // Ensures handlers attach even if Astro fails
+</script>
