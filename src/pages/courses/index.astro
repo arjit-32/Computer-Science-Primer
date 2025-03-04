@@ -2,158 +2,95 @@
 import Shape from "@/components/Shape.astro";
 import Base from "@/layouts/Base.astro";
 import courseInfo from "@/data/course-info.json";
+import Cta from "@/partials/Cta.astro";
 ---
 
 <Base title={"courses"}>
   <Shape />
   <section class="page-hero pb-14 pt-16 relative bg-gradient-to-br from-white via-pink-50 to-yellow-50">
-    <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(250,114,154,0.05),rgba(253,220,67,0.05))]"></div>
-    <div class="container relative">
-      <div class="mx-auto max-w-3xl text-center mb-12">
-        <h1 class="mb-4 text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#fa729a] to-black bg-clip-text text-transparent">
-          Course Collection
-        </h1>
-        <p class="text-lg text-gray-600 mb-8">
-          Explore curated collection of courses designed to boost your skills across software development, algorithms, and system design. Dive in below to find detailed course materials and track your progress along the way.
-        </p>
-        
-        <!-- Course Stats -->
-        <div class="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
-          <div class="bg-gradient-to-br from-white to-pink-50 p-6 rounded-xl shadow-sm border border-pink-100">
-            <div class="text-3xl font-bold text-black">6</div>
-            <div class="text-sm text-gray-600">Categories</div>
-          </div>
-          <div class="bg-gradient-to-br from-white to-yellow-50 p-6 rounded-xl shadow-sm border border-yellow-100">
-            <div class="text-3xl font-bold text-black">3</div>
-            <div class="text-sm text-gray-600">In Focus</div>
-          </div>
-          <div class="bg-gradient-to-br from-white to-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
-            <div class="text-3xl font-bold text-black">30+</div>
-            <div class="text-sm text-gray-600">Courses</div>
+    <h2 class="text-center mb-6">Exploration Path</h2>
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-center">
+            <!-- Left Side: Categories -->
+            <div class="min-w-0">
+                <div id="categoryButtons" class="space-y-3 md:space-y-4">
+                     <!-- Data Structures & Algorithms (Default Selected) -->
+                     <button data-category="dsa" class="category-btn w-full flex items-center bg-purple-50 rounded-lg p-3 text-left hover:bg-purple-100 transition relative">
+                      <span class="absolute top-[-12px] right-[-12px] bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Priority</span>
+                      <span class="mr-4 text-purple-600">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                          </svg>
+                      </span>
+                      <span class="font-medium text-gray-800">Data Structures & Algorithms</span>
+                  </button>
+
+                  <!-- Development -->
+                  <button data-category="web-development" class="category-btn w-full flex items-center bg-orange-50 rounded-lg p-3 text-left hover:bg-orange-100 transition relative">
+                      <span class="absolute top-[-12px] right-[-12px] bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Priority</span>
+                      <span class="mr-4 text-orange-500">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                      </span>
+                      <span class="font-medium text-gray-700">Development</span>
+                  </button>
+
+                    <button data-category="advanced-web-development" class="category-btn w-full flex items-center bg-red-50 rounded-lg p-3 text-left hover:bg-red-100 transition">
+                        <span class="mr-4 text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </span>
+                        <span class="font-medium text-gray-700">Advanced Development</span>
+                    </button>
+                    
+                    <button data-category="cs" class="category-btn w-full flex items-center bg-green-50 rounded-lg p-3 text-left hover:bg-green-100 transition">
+                        <span class="mr-4 text-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </span>
+                        <span class="font-medium text-gray-700">Core Computer Science</span>
+                    </button>
+                    
+                    <button data-category="system-design" class="category-btn w-full flex items-center bg-red-50 rounded-lg p-3 text-left hover:bg-red-100 transition">
+                        <span class="mr-4 text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
+                            </svg>
+                        </span>
+                        <span class="font-medium text-gray-700">System Design</span>
+                    </button>
+
+                    <button data-category="uiux" class="category-btn w-full flex items-center bg-blue-50 rounded-lg p-3 text-left hover:bg-blue-100 transition">
+                        <span class="mr-4 text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </span>
+                        <span class="font-medium text-gray-700">UI/UX & Product</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Right Side: Dynamic Image/Content -->
+            <div id="roadmapContent" class="w-full">
+              <div class="rounded-xl flex items-center justify-center">
+                <img src="/images/categories/1.png" alt="DSA Roadmap" class="max-w-full max-h-[400px] object-contain">
+              </div>
           </div>
         </div>
-
-        <!-- Timeline Button -->
-        <button 
-          id="kanbanToggle" 
-          class="bg-gradient-to-r from-[#fa729a] to-[#fddc43] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mb-4 transform hover:scale-105"
-        >
-          View Course Categories
-        </button>
-      </div>
     </div>
-  </section>
-
-  <!-- Kanban Board Modal -->
-  <div id="kanbanModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 overflow-auto">
-    <div class="min-h-screen flex items-center justify-center p-4">
-      <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg shadow-xl w-full max-w-6xl max-h-[90vh] overflow-auto">
-        <!-- Modal Header -->
-        <div class="border-b p-4 flex justify-between items-center sticky top-0 bg-white bg-opacity-90 backdrop-blur-sm">
-          <h2 class="text-2xl font-bold bg-gradient-to-r from-[#fa729a] to-black bg-clip-text text-transparent">
-            Course Completion Timeline
-          </h2>
-          <button id="closeKanban" class="text-gray-600 hover:text-gray-800">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Kanban Board Content -->
-        <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Development Section -->
-          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
-            <div class="flex items-center gap-2 mb-4">
-              <h3 class="text-lg font-bold text-gray-800">Development</h3>
-              <span class="bg-gradient-to-r from-[#fa729a] to-[#fddc43] bg-clip-text text-transparent text-xs font-medium px-2 py-1 rounded border border-pink-200">in Focus</span>
-            </div>
-            <div class="space-y-2">
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Fullstack Development</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">JavaScript</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">React Js</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Three JS</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">UI Interview</div>
-            </div>
-          </div>
-        
-          <!-- DSA Section -->
-          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
-            <div class="flex items-center gap-2 mb-4">
-              <h3 class="text-lg font-bold text-gray-800">DSA</h3>
-              <span class="bg-gradient-to-r from-[#fa729a] to-[#fddc43] bg-clip-text text-transparent text-xs font-medium px-2 py-1 rounded border border-pink-200">in Focus</span>
-            </div>
-            <div class="space-y-2">
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Java for DSA</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Data Structures & Algorithms</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">DSA Interview</div>
-            </div>
-          </div>
-        
-          <!-- System Design Section -->
-          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
-            <div class="flex items-center gap-2 mb-4">
-              <h3 class="text-lg font-bold text-gray-800">System Design</h3>
-              <span class="bg-gradient-to-r from-[#fa729a] to-[#fddc43] bg-clip-text text-transparent text-xs font-medium px-2 py-1 rounded border border-pink-200">in Focus</span>
-            </div>
-            <div class="space-y-2">
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">API Design & Development</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">System Design Fundamentals</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">System Design in Depth</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Frontend System Design</div>
-            </div>
-          </div>
-        
-          <!-- Advanced Development Section -->
-          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
-            <div class="flex items-center gap-2 mb-4">
-              <h3 class="text-lg font-bold text-gray-800">Advanced Development</h3>
-            </div>
-            <div class="space-y-2">
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Git</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Distributed Systems</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">AWS</div>
-            </div>
-          </div>
-        
-          <!-- UI/UX & Product Section -->
-          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
-            <div class="flex items-center gap-2 mb-4">
-              <h3 class="text-lg font-bold text-gray-800">UI/UX & Product Design</h3>
-            </div>
-            <div class="space-y-2">
-              <a href="/courses/ui" class="block bg-white p-3 rounded shadow-sm hover:shadow-md transition-shadow duration-300">UI/UX for Developers</a>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Product Management Basics</div>
-            </div>
-          </div>
-        
-          <!-- Core CS Section -->
-          <div class="bg-gradient-to-br from-white to-gray-50 rounded-lg p-4 shadow-sm border border-gray-100">
-            <div class="flex items-center gap-2 mb-4">
-              <h3 class="text-lg font-bold text-gray-800">Core CS</h3>
-            </div>
-            <div class="space-y-2">
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Operating System</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Computer Network</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Databases</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Computer Architecture</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Digital Electronics</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Compilers</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Discrete Math</div>
-              <div class="bg-gray-200 p-3 rounded shadow-sm opacity-50 cursor-not-allowed">Theory of Computation</div>
-            </div>
-          </div>
-        </div>
-
-        
-      </div>
-    </div>
-  </div>
+</section>
+  
+  
+  
 
   <section class="section py-16 bg-gradient-to-b from-white to-gray-50">
     <div class="container">
       <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#fa729a] to-black bg-clip-text text-transparent">
-        Available Courses
+        Ongoing Series
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {Object.entries(courseInfo).map(([slug, course]) => (
@@ -190,43 +127,51 @@ import courseInfo from "@/data/course-info.json";
       </div>
     </div>
   </section>
+  <Cta />
 </Base>
 
 <script is:inline>
-  function initializeKanban() {
-    const kanbanToggle = document.getElementById('kanbanToggle');
-    const kanbanModal = document.getElementById('kanbanModal');
-    const closeKanban = document.getElementById('closeKanban');
 
-    if (kanbanToggle && kanbanModal && closeKanban) {
-      kanbanToggle.removeEventListener('click', toggleModal);
-      closeKanban.removeEventListener('click', closeModal);
-      kanbanModal.removeEventListener('click', handleOutsideClick);
+function initCategoryButtons() {
+  const categoryButtons = document.getElementById("categoryButtons");
+  const roadmapContent = document.getElementById("roadmapContent");
 
-      kanbanToggle.addEventListener('click', toggleModal);
-      closeKanban.addEventListener('click', closeModal);
-      kanbanModal.addEventListener('click', handleOutsideClick);
-    }
-  }
+  if (!categoryButtons || !roadmapContent) return;
 
-  function toggleModal() {
-    const kanbanModal = document.getElementById('kanbanModal');
-    kanbanModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
+  const roadmapImages = {
+    "web-development": "/images/categories/1.png",
+    "advanced-web-development": "/images/categories/2.png",
+    "uiux": "/images/categories/3.png",
+    "cs": "/images/categories/4.png",
+    "dsa": "/images/categories/5.png",
+    "system-design": "/images/categories/6.png",
+  };
 
-  function closeModal() {
-    const kanbanModal = document.getElementById('kanbanModal');
-    kanbanModal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-  }
+  categoryButtons.addEventListener("click", (event) => {
+    const button = event.target.closest(".category-btn");
+    if (!button) return;
 
-  function handleOutsideClick(e) {
-    if (e.target === document.getElementById('kanbanModal')) {
-      closeModal();
-    }
-  }
+    // Remove active state from all buttons
+    document.querySelectorAll(".category-btn").forEach((btn) => {
+      btn.classList.remove("border-2", "border-blue-500");
+    });
 
-  document.addEventListener('DOMContentLoaded', initializeKanban);
-  document.addEventListener('astro:page-load', initializeKanban);
+    // Add active state to clicked button
+    button.classList.add("border-2", "border-blue-500");
+
+    const category = button.dataset.category;
+    const imagePath = roadmapImages[category];
+
+    roadmapContent.innerHTML = `
+      <div class="rounded-xl flex items-center justify-center">
+        <img src="${imagePath}" alt="${category} Roadmap" class="max-w-full max-h-[400px] object-contain">
+      </div>
+    `;
+  });
+}
+
+document.addEventListener("astro:page-load", initCategoryButtons); // Ensures handlers work on first load
+  document.addEventListener("astro:after-swap", initCategoryButtons); // Handles dynamic navigation
+  window.addEventListener("load", initCategoryButtons); // Ensures handlers attach even if Astro fails
+
 </script>

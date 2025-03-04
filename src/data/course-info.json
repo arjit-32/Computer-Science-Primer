@@ -3,10 +3,10 @@
     "ongoing": "false",
     "title": "UI/UX for Developers",
     "image": "/images/thumbnails/designer.jpeg",
-    "subtitle": "Learn UI/UX principles and design tools to create user-centered products.",
-    "description": "Welcome to UI/UX for Developers! This course is crafted to bridge the gap between development and design for developers looking to deliver not only functional but beautifully intuitive products. Together, we'll cover core UI/UX principles and apply them to real projects, like a phone specification website, to make learning practical and hands-on.",
-    "time": "5 - 10 days",
-    "category": "UI/UX & Product Design",
+    "subtitle": "UI/UX principles and design tools to create user-centered products.",
+    "description": "This series is short, sweet and enough to bridge the gap between development and design (for developers). Together, we'll cover core UI/UX principles and apply them to real project, like a phone specification website.",
+    "time": "8 articles",
+    "category": "UI/UX & Product",
     "navbar": [
       {
         "subheading": "Foundations of UI/UX Design",
@@ -39,7 +39,7 @@
         ]
       },
       {
-        "subheading": "The Complete Design Process",
+        "subheading": "UI/UX Workflow for Developers",
         "link": [
           {
             "type": "blog",
@@ -63,7 +63,7 @@
           }
         ]
       },{
-        "subheading": "Resources & Assignments",
+        "subheading": "Further Learning & Challenges",
         "link": [
           {
             "type": "external",
@@ -86,9 +86,9 @@
     "ongoing": "true",
     "title": "Git Basics to Advanced",
     "image": "/images/thumbnails/git.png",
-    "subtitle": "Learn Git for version control and collaboration.",
-    "description": "This course covers Git fundamentals, branching, merging, rebasing, conflict resolution, and collaboration using GitHub. Master workflows, best practices, and advanced techniques to streamline development and team collaboration.",
-    "time": "1 - 2 Days",
+    "subtitle": "Manage multiple versions of your codebase and collaborate with others.",
+    "description": "This series covers Git fundamentals, branching, merging, rebasing, conflict resolution, and collaboration using GitHub. Master workflows, best practices, and advanced techniques to streamline development and team collaboration.",
+    "time": "NaN",
     "category": "Advanced Development",
     "navbar": [
       {
