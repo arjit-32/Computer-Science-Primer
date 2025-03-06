@@ -29,7 +29,7 @@ service:
   our_service:
     - title: What You’ll Find Here
       description: This is my space to document, explore, and simplify software engineering. Expect deep dives on a particular subject through series containing notes, videos and much more.
-      image: "/images/collaboration.png"
+      image: "/images/feynman.png"
       list:
         - Build full-stack applications from scratch.
         - Explore DSA through real-world problems.
