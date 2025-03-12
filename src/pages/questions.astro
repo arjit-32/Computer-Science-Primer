@@ -1,5 +1,7 @@
 ---
+import Code from 'astro/components/Code.astro';
 import questions from '../data/questions.json';
+import type { BundledLanguage } from "shiki";
 import Base from '@/layouts/Base.astro';
 
 const allTags = questions.reduce((tags, question) => {
@@ -64,22 +66,20 @@ const uniqueTags = Array.from(allTags);
                   </div>
                   
                  {question.code && (
-                    <div class="mt-6 bg-gradient-to-br from-gray-50 to-pink-50 rounded-lg p-4 overflow-x-auto border border-gray-100">
-                      <pre class="text-sm text-gray-800 font-mono">{question.code}</pre>
-                    </div>
+                      <Code code={question.code} lang={question.language as BundledLanguage || "javascript"}/>
                   )}
                     
-                  {question.images && question.images.length > 0 && (
-                    <div class="mt-6 space-y-4">
-                      {question.images.map((img) => (
-                        <img 
-                          src={img} 
-                          alt="Question illustration" 
-                          class="rounded-lg w-full h-auto object-cover shadow-sm transition-transform duration-300 hover:scale-[1.02]"
-                        />
-                      ))}
-                    </div>
-                  )}
+                    {(question.images ?? []).length > 0 && (
+                  <div class="mt-6 space-y-4">
+                    {question.images.map((img) => (
+                      <img 
+                        src={img} 
+                        alt="Question illustration" 
+                        class="rounded-lg w-full h-auto object-cover shadow-sm transition-transform duration-300 hover:scale-[1.02]"
+                      />
+                    ))}
+                  </div>
+)}
 
                   <div class="mt-6 flex flex-wrap gap-2">
                     {question.tags.map((tag) => (
