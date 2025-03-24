@@ -224,6 +224,46 @@
       }
     ]
   },
+  "distributed": {
+      "ongoing": "false",
+      "title": "Distributed Systems Mastery",
+      "image": "/images/thumbnails/distributed-systems.png",
+      "subtitle": "Explore application design in multi-node systems.",
+      "description": "Learn distributed systems through this series, tackling key concepts like consistency and consensus, trade-offs like CAP, and real-world applications.",
+      "time": "9 articles",
+      "category": "Advanced Development",
+     "navbar": [
+    {
+      "subheading": "Foundations",
+      "link": [
+        { "type": "blog", "url": "distributed-1", "title": "Introduction" },
+        { "type": "blog", "url": "distributed-2", "title": "Data Management" }
+      ]
+    },
+    {
+      "subheading": "Coordination & Consistency",
+      "link": [
+        { "type": "blog", "url": "distributed-3", "title": "Consistency & Concurrency Control" },
+        { "type": "blog", "url": "distributed-6", "title": "Consensus" },
+        { "type": "blog", "url": "distributed-7", "title": "Ordering and Time" }
+      ]
+    },
+    {
+      "subheading": "System Design & Operations",
+      "link": [
+        { "type": "blog", "url": "distributed-4", "title": "Transactions" },
+        { "type": "blog", "url": "distributed-5", "title": "Trade-offs (CAP & Beyond)" },
+        { "type": "blog", "url": "distributed-8", "title": "Communication Patterns" }
+      ]
+    },
+    {
+      "subheading": "Real-World Applications",
+      "link": [
+        { "type": "blog", "url": "distributed-9", "title": "Real-World Applications" }
+      ]
+    }
+  ]
+    },  
   "dm": {
     "title": "Discrete Mathematics",
     "image": "/images/thumbnails/discrete-math.png",
