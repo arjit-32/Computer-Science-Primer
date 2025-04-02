@@ -1,5 +1,5 @@
 ---
-title: Building SudoLang- A Hindi Inspired Programming Language
+title: Building hindilang- A Hindi Inspired Programming Language
 subtitle: how is a compiler working under the hood, learn by building your own programming language 
 author: Arjit Sharma
 courses: []
@@ -9,14 +9,14 @@ featured: true
 draft: false
 ---
 
-Programming languages are fascinating. But have you ever wondered **how they work under the hood?** As an academic exercise, I set out to build my own programming language **SudoLanguage**, a Hindi-inspired scripting language that transpiles to JavaScript!
+Programming languages are fascinating. But have you ever wondered **how they work under the hood?** As an academic exercise, I set out to build my own programming language **hindilang**, a Hindi-inspired scripting language that transpiles to JavaScript!
 
 > Disclaimer: I am not a subject expert in writing languages. I am just sharing my findings.
 > 
 
-## Features of SudoLang 🌟
+## Features of hindilang 🌟
 
-SudoLang provides fundamental programming constructs, all with Hindi-inspired syntax:
+hindilang provides fundamental programming constructs, all with Hindi-inspired syntax:
 
 ✅ **Print Statements** – Display output using `CHAPO` (like `console.log`).
 
@@ -32,7 +32,7 @@ SudoLang provides fundamental programming constructs, all with Hindi-inspired sy
 
 ✅ **Comments** – Add comments with `#`.
 
-## Example Code in SudoLang
+## Example Code in hindilang
 
 ```javascript
 MANLO x = 5;
@@ -70,10 +70,10 @@ X bada hai
 
 ## Installation & Running
 
-You can install SudoLang globally using npm:
+You can install hindilang globally using npm:
 
 ```bash
-npm install -g sudolang
+npm install -g hindilang
 ```
 
 Then, run a `.hindi` script like this:
@@ -90,7 +90,7 @@ hindic myscript.hindi
 
 ## Understanding the Grammar (BNF-like)
 
-SudoLang follows a **BNF-like grammar** (Backus-Naur Form) to define its syntax. Here’s a simplified structure:
+hindilang follows a **BNF-like grammar** (Backus-Naur Form) to define its syntax. Here’s a simplified structure:
 
 ```bash
 <program> ::= <statement_list>
@@ -117,11 +117,11 @@ SudoLang follows a **BNF-like grammar** (Backus-Naur Form) to define its syntax.
 
 ```
 
-SudoLang follows a **recursive descent parsing** approach and supports **LL(1) parsing**, meaning it looks at only one token at a time without backtracking.
+hindilang follows a **recursive descent parsing** approach and supports **LL(1) parsing**, meaning it looks at only one token at a time without backtracking.
 
 ## Understanding Code Flow  🚀
 
-Here’s a breakdown of how the **different components** of SudoLang work together:
+Here’s a breakdown of how the **different components** of hindilang work together:
 
 1. **package.json** - Defines the project, dependencies (`readline-sync`), and command-line executable (`hindic`).
 2. **bin/hindic** -
@@ -145,14 +145,14 @@ Here’s a breakdown of how the **different components** of SudoLang work togeth
 
 ## Deeper Dive: What’s Next?
 
-Right now, SudoLang is a **transpiler** (converts one high-level language to another). But if we wanted to build a **true compiler** that generates machine code, we could explore:
+Right now, hindilang is a **transpiler** (converts one high-level language to another). But if we wanted to build a **true compiler** that generates machine code, we could explore:
 
  
 
 1. **LLVM (Low-Level Virtual Machine)** - A compiler framework that generates optimized machine code for multiple architectures.
 
 ```css
-Sudolanguage → Lexer → Parser → LLVM IR → Machine Code (x86, ARM, etc.)
+hindilang → Lexer → Parser → LLVM IR → Machine Code (x86, ARM, etc.)
 ```
 
 2. **Direct Assembly Code Generation** - Emit **x86 assembly** and use an **assembler** (like `nasm`) to generate machine code.
@@ -171,7 +171,7 @@ A high-level language is just a bunch of strings that the compiler accepts. The 
 
 2. **Errors? They Excite Me Now.**
 
-In sudoLang, I didn’t even bother giving useful message. Debugging feels less like a headache and more like a feature. Wow, atleast the language tells me where mistake might be !
+In hindilang, I didn’t even bother giving useful message. Debugging feels less like a headache and more like a feature. Wow, atleast the language tells me where mistake might be !
 
 3. **The Better You Understand Your Language, The Better You Write.**
 
