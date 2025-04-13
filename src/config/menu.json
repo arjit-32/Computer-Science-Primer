@@ -5,31 +5,16 @@
       "url": "/"
     },
     {
-      "name": "Blogs",
-      "url": "/blog"
+      "name": "Articles",
+      "url": "/articles"
     },
     {
       "name": "Series",
-      "url": "/courses"
+      "url": "/series"
     },
     {
-      "name": "Interview Bytes",
+      "name": "Dev-Bytes",
       "url": "/questions"
-    }
-  ],
-
-  "footer": [
-    {
-      "name": "Hashnode",
-      "url": "https://computerscienceprimer.hashnode.dev/"
-    },
-    {
-      "name": "Dev.to",
-      "url": "https://dev.to/cspbyarjit"
-    },
-    {
-      "name": "Medium",
-      "url": "https://medium.com/@cspbyarjit"
     }
   ]
 }

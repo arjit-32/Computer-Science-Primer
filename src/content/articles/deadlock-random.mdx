@@ -1,0 +1,214 @@
+---
+title: Deadlocks in real world
+subtitle: Do the theoritical concept of deadlock have an impact on webdeveloper's life ?
+meta_title: Deadlocks in the Real World- Impact on Web Developers (2024)
+description: Explore how the theoretical concept of deadlocks affects real-world web development. Understand when and why deadlocks occur, and how to avoid them in your applications. A must-read for developers in 2024.
+author: Arjit Sharma
+series: []
+categories: ["Core-CS", "Development-Plus"]
+image: /images/thumbnails/deadlock.png
+featured: true
+year: 2024
+draft: false
+---
+
+The other day, I was re-visiting my notes on operating systems, and one thing caught my eye. That was **“Deadlocks”**,  To illustrate, imagine a traffic jam where each car is stuck, waiting for the other to move; no one can go forward. 
+
+Given the reliance of web applications on underlying operating systems, I wondered if this often-overlooked issue could potentially impact their performance. 
+
+Spoiler alert - most commonly used OS for webservers( linux) has made many developers and administrators tear their hair out over the "deadlock issue."
+
+## What is Deadlock
+
+In operating systems, deadlocks occur when two or more processes are stuck waiting for each other to release resources, creating a cycle of dependency where none of the processes can proceed.  Rather than diving into the technical details of deadlock conditions or solutions, let’s take a closer look at deadlocks from the perspective of software developers.
+
+## Why should a Software Developer care ?
+
+You might be thinking: *I’m not an OS developer—why should I care about deadlocks?*
+
+- Every web server relies on an OS - Understanding how your chosen OS handles resources like memory and file locks can prevent unwanted surprises. A web server stuck in a deadlock could slow down your entire application, affecting user experience and system performance.
+    
+    
+    Example - A web server running on Linux might experience a deadlock when multiple users access the same file, but the application is responsible for handling it and gives a granular control. While Windows is more proactive and prevents deadlock so is better for enterprise apps.
+    
+- Your code might create deadlocks - You don’t need to touch OS internals to encounter deadlocks. Writing bad or careless code can lead to deadlocks in higher-level programming too.
+    
+    Example 1 - Simultaneous updates in MySQL
+    
+    Neither transaction can proceed because they are both waiting for the other to release a lock, leading to a deadlock.
+    
+    ```sql ln lh={1-3} name={"hello.java"}
+    -- Transaction A
+    START TRANSACTION;
+    UPDATE accounts SET balance = balance - 100 WHERE account_id = 1; -- Locks account 1
+    UPDATE accounts SET balance = balance + 100 WHERE account_id = 2; -- Locks account 2
+    COMMIT;
+    
+    -- Transaction B
+    START TRANSACTION;
+    UPDATE accounts SET balance = balance - 50 WHERE account_id = 2; -- Locks account 2 
+    UPDATE accounts SET balance = balance + 50 WHERE account_id = 1; -- Locks account 1
+    COMMIT;
+    ```
+    
+    Example 2 - Nested Transactions
+    
+    - Parent Transaction locks a resource.
+    - The Nested Transaction tries to lock another resource that is needed by the parent transaction.
+    - The parent transaction waits for the nested transaction to complete, but the nested transaction cannot proceed because the parent transaction holds the lock it needs.
+    
+    ```jsx
+    const mysql = require('mysql2/promise');
+    
+    async function transferFunds(fromAccountId, toAccountId, amount) {
+        const connection = await mysql.createConnection({ /* connection config */ });
+        await connection.beginTransaction();
+        await connection.query('UPDATE accounts SET balance = balance - ? WHERE account_id = ?', [amount, fromAccountId]);
+        
+        // Incorrectly starting another transaction
+        await connection.beginTransaction(); 
+        await connection.query('UPDATE accounts SET balance = balance + ? WHERE account_id = ?', [amount, toAccountId]);
+        
+        await connection.commit(); // Attempt to commit the inner transaction
+        await connection.commit(); // Attempt to commit the outer transaction
+    }
+    ```
+    
+
+## Deadlock handling in different Web-Servers
+
+### Apache HTTP Server (Apache)
+
+Runs on both Linux and Windows. However, when using its **`prefork` Multi-Processing Module (MPM)**, resource contention can occur under high load, leading to potential deadlocks. This happens because `prefork` creates multiple child processes, each handling a single request, which can exhaust system resources.
+
+**Recommendation**: Switch to the **`worker`** or **`event`** MPM. Both are designed to improve concurrency by handling multiple requests within a single thread, thereby reducing the likelihood of deadlocks due to resource contention.
+
+### Nginx
+
+Highly efficient on Linux due to its **non-blocking architecture** allows it to handle many connections simultaneously without blocking other operations. However, running Nginx on Windows may introduce latency and performance issues, which can exacerbate deadlock scenarios due to less efficient resource handling.
+
+### Internet Information Services (IIS)
+
+Windows-only.
+
+**Recommendation**: To manage high traffic, tweak application pool settings like increasing idle timeouts and adjusting request timeouts to prevent resource contention.
+
+### NodeJs
+
+Node.js operates on a **single-threaded** event loop model, which significantly reduces the chance of deadlocks since it can only process one request at a time.
+
+### Tomcat
+
+When running on Windows, Tomcat's thread management can become inefficient under high load, potentially leading to deadlocks. This is particularly relevant when multiple requests are queued and waiting for resources.
+
+**Recommendation**: Adjust the **`maxThreads`** setting in `server.xml`. This parameter controls the maximum number of request processing threads. Tuning it to better match expected traffic can enhance performance and reduce the chances of deadlocks by ensuring that sufficient resources are available for concurrent requests.
+
+#### Choosing the Right OS & Server for Your Application
+
+- **High Traffic Web Apps**:
+    
+    For apps like e-commerce sites, **Linux-based servers (Apache with worker MPM or Nginx)** are ideal for handling high concurrency and efficient resource use.
+    
+- **Real-time Applications**:
+    
+    For low-latency apps (e.g., chat apps), **Node.js on Linux** is best due to its non-blocking design. Windows can introduce potential delays and deadlocks.
+    
+- **Enterprise Apps**:
+    
+    **IIS on Windows** is great for secure enterprise apps that need Microsoft integration. However, proper configuration is key to avoid deadlocks under heavy load.
+    
+
+## Best Practices for Preventing deadlocks
+
+### 1. **Consistent Locking Order:**
+
+- **Example:** If you always lock `account_1` before `account_2`, ensure every transaction follows this order.
+
+```sql
+-- Always lock account 1 before account 2
+START TRANSACTION;
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1; -- Lock account 1
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 2; -- Lock account 2
+COMMIT;
+
+```
+
+### 2. Use Timeouts
+
+Set a timeout for your transaction to avoid waiting indefinitely.
+
+```sql
+SET innodb_lock_wait_timeout = 5; -- Timeout after 5 seconds
+```
+
+### 3. Deadlock Detection
+
+Enable deadlock detection in your database settings, allowing it to roll back a transaction when a deadlock is detected.
+
+```sql
+-- MySQL automatically detects deadlocks; you can check the status with:
+SHOW ENGINE INNODB STATUS;
+```
+
+### 4. Minimize Locking Scope
+
+Lock only the resources that are absolutely necessary, and avoid holding locks longer than needed.
+
+```sql
+-- Instead of locking the entire table, lock only the rows that need updating
+START TRANSACTION;
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1; -- Lock only the required row
+COMMIT;
+```
+
+### 5. Use Read Committed Isolation Level
+
+In databases that support transaction isolation levels, using the "Read Committed" isolation level can help prevent deadlocks by reducing unnecessary locks.
+
+```sql
+-- Set isolation level to Read Committed to reduce lock contention
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+```
+
+## Monitoring and Resolving Deadlocks
+
+Tools like **MySQL Workbench** and **pgAdmin** provide visual representations of database activity and can help identify deadlock situations by showing locks and transactions. Some other Application Performance Monitoring tools are **Datadog** and **NewRelic.** If somebody wants I can go into deep-dive of these tools.
+
+## Case Studies
+
+### 1. Apache Web Server deadlocks
+
+In 2002, Apache faced deadlock issues primarily due to its multi-threaded handling of requests. 
+
+*Cause -* The threading model of Apache, combined with Linux's resource management at the kernel level, created a situation where threads were waiting on each other indefinitely.
+
+### 2. NFS (Network File System) deadlocks
+
+NFS experienced deadlock situations when multiple machines accessed the same files across a network. 
+*Cause -* If one machine crashed or had network issues, locks that were supposed to be released remained held, leading to other machines waiting indefinitely.
+
+### 3. MySQL Database deadlocks
+
+MySQL databases, especially version 5.0 released in 2005, faced significant deadlock scenarios during transaction processing. 
+
+*Cause -* Deadlock arose from the way transactions acquired locks on rows. Ex- Transaction A locked Row 1 and then tried to lock Row 2 while Transaction B had already locked Row 2 and was attempting to lock Row 1, they would block each other indefinitely.
+
+### 4. Docker Container deadlocks
+
+ In 2016, Docker containers exhibited deadlock issues due to resource contention. 
+*Cause -* When one container became resource-heavy, it could monopolize CPU cycles or memory, leaving other containers starved for the same resources eventually leading to indefinite wait.
+
+## Conclusion
+
+A proactive approach to deadlock handling not only enhances the reliability of the software but also protects the organization from potential downtime and lost revenue.
+
+### Additional Links
+
+https://stackoverflow.com/questions/2332768/how-to-avoid-mysql-deadlock-found-when-trying-to-get-lock-try-restarting-trans
+
+https://github.com/moby/moby/issues/28236
+
+https://bugs.launchpad.net/ubuntu/+source/apache2/+bug/1565744
+
+https://serverfault.com/questions/890162/how-to-solve-nfs-cross-mounting-ordering-dead-lock

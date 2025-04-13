@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+const {
+  categories: { title, category_list },
+} = Astro.props;
+---
+ <section class="section services">
+  <div class="container">
+    <div class="row items-center justify-between">
+      <div class="md:col-5">
+        <h2 class="text-center md:text-left" set:html={title} />
+      </div>
+    </div>
+    
+    <!-- Priority cards section -->
+    <div class="row mt-14">
+      <div class="col-12 mb-10">
+        <div class="row">
+          {
+            category_list.slice(0, 2).map((item: any, i: number) => (
+              <div class="mb-8 sm:col-6">
+                <div class="rounded-xl bg-white p-6 shadow-lg lg:p-8 border-2 border-emerald-500 relative">
+                  <div class="absolute -top-3 -right-3 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">Priority</div>
+                  <div class="gradient-number relative inline-block">
+                    <span class="bg-gradient absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                      {`0${i + 1}`}
+                    </span>
+                    <Image
+                      height={90}
+                      width={90}
+                      src="/images/gradient-number-bg.png"
+                      alt=""
+                    />
+                  </div>
+                  <h4 class="my-6">{item.title}</h4>
+                  <p>{item.content}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      
+      <!-- Exploration cards section  -->
+      <div class="col-12 mb-2">
+        <div class="relative overflow-hidden">
+          <div class="flex animate-marquee">
+            {
+              category_list.slice(2).map((item: any) => (
+                <div class="flex-shrink-0 w-64 mx-3">
+                  <div class="rounded-xl bg-white p-4 shadow-md border border-gray-200 h-full">
+                    <div class="bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                    <h4 class="mb-3 text-lg">{item.title}</h4>
+                    <p class="text-sm text-gray-600">{item.content}</p>
+                  </div>
+                </div>
+              ))
+            }
+            {
+              category_list.slice(2).map((item: any) => (
+                <div class="flex-shrink-0 w-64 mx-3">
+                  <div class="rounded-xl bg-white p-4 shadow-md border border-gray-200 h-full">
+                    <div class="bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                    <h4 class="mb-3 text-lg">{item.title}</h4>
+                    <p class="text-sm text-gray-600">{item.content}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+</style>

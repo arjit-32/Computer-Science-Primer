@@ -14,33 +14,33 @@
   "settings": {
     "pagination": 6,
     "summary_length": 100,
-    "blog_folder": "blog"
+    "blog_folder": "articles"
   },
 
   "call_to_action": {
-    "title": "Want to Chat?",
-    "description": "Whether it’s a bug, a question, or a project idea, just drop me a message. Let’s figure things out together!",
+    "title": "Connect with arjit !",
+    "description": "Got a cool idea? Need a hand on a project? Or just want to talk tech? I’m always open to conversations.",
     "button": {  
-        "label1": "Linkedin",  
+        "label1": "Say Hi on LinkedIn",  
         "link1": "https://www.linkedin.com/in/arjit32/",  
-        "label2": "Email",  
+        "label2": "Shoot Me an Email",  
         "link2": "mailto:cspbyarjit@gmail.com"  
       }  
     
   },
 
   "params": {
-    "footer_description": "Simplifying complex concepts through notes, videos, and real-world explorations.",
+    "footer_description": "From fundamentals to fullstack development — A structured journey through computer science.",
     "email": "cspbyarjit@gmail.com",
     "location": "Bengaluru, India",
     "phone": "",
     "contact_form_action": "#",
-    "copyright": "© 2024 CSPrimer.in, All Rights Reserved."
+    "copyright": "© 2025 CSPrimer.in, All Rights Reserved."
   },
 
   "metadata": {
     "meta_author": "CSPrimer",
     "meta_image": "/images/og-image.png",
-    "meta_description": "CSPrimer is your ultimate guide to mastering full-stack development, DSA, and system design. Learn coding, system architecture, and computer science fundamentals with real-world applications."
+    "meta_description": "CSPrimer is a personal blog and learning hub where I share my journey through full-stack development, system design, and core computer science. Learn coding, architecture, and real-world problem solving — from scratch."
   }
 }

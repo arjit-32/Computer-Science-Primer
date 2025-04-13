@@ -13,86 +13,82 @@ const uniqueTags = Array.from(allTags);
 ---
 
 <Base>
-  <div class="min-h-screen bg-gradient-to-br from-pink-50 via-white to-yellow-50 py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto">
-      <!-- Header Section -->
-      <div class="text-center mb-16">
-        <h1 class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#fa729a] to-black bg-clip-text text-transparent mb-6">
-          Interview Bytes
-        </h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Tackling the topics we work with daily, yet often struggle to summarize. Interview Bytes delivers concise, practical answers to the questions that matter, helping you stay sharp and interview-ready.
-        </p>
-      </div>
+  <section class="py-4 bg-gradient-to-br from-white via-pink-50 to-yellow-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-zinc-900">Dev Bytes</h2>
       
-      <!-- Filter Tags -->
-      <div class="flex flex-wrap gap-3 justify-center mb-12">
-        <button 
-          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border-2 border-[#fa729a] text-[#fa729a] hover:bg-gradient-to-r hover:from-[#fa729a] hover:to-[#fddc43] hover:text-white transform hover:scale-105"
-          onclick="filterQuestions('')"
-          data-tag="">
-          All Questions
-        </button>
-        {uniqueTags.map((tag) => (
+
+      <!-- Grid Layout: Left - Filters | Right - Questions -->
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <!-- Filter Pills (Left) -->
+        <div class="space-y-3 lg:col-span-1">
           <button 
-            class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border-2 border-[#fa729a] text-[#fa729a] hover:bg-gradient-to-r hover:from-[#fa729a] hover:to-[#fddc43] hover:text-white transform hover:scale-105 capitalize"
-            onclick={`filterQuestions('${tag}')`}
-            data-tag={tag}>
-            {tag}
+            class="filter-btn w-full flex items-center bg-pink-100 rounded-lg p-3 text-left hover:bg-pink-200 transition font-medium justify-between"
+            onclick="filterQuestions('')"
+            data-tag="">
+            All Questions
           </button>
-        ))}
-      </div>
+          {uniqueTags.map((tag) => (
+            <button 
+              class="filter-btn w-full flex items-center bg-pink-50 rounded-lg p-3 text-left hover:bg-pink-100 transition capitalize font-medium justify-between"
+              onclick={`filterQuestions('${tag}')`}
+              data-tag={tag}>
+              {tag}
+            </button>
+          ))}
+        </div>
 
-      <!-- Questions List -->
-      <div class="space-y-8">
-        {questions.map((question, index) => (
-          <div 
-            class="question-card bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 transform hover:-translate-y-1"
-            data-tags={question.tags.join(',')}>
-            <div class="p-6 sm:p-8">
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#fa729a] to-[#fddc43] rounded-full flex items-center justify-center text-white font-semibold">
-                  {index + 1}
-                </div>
-                <div class="flex-1">
-                  <h2 class="text-xl font-semibold text-gray-900 mb-4 hover:text-[#fa729a] transition-colors duration-300">
-                    {question.question}
-                  </h2>
-                  
-                  <div class="prose prose-pink max-w-none">
-                    {question.answer.map((line) => (
-                      <p class="text-gray-600 leading-relaxed mb-3">{line}</p>
-                    ))}
+        <!-- Questions List (Right) -->
+        <div class="lg:col-span-3 space-y-8" id="questionsGrid">
+          {questions.map((question, index) => (
+            <div 
+              class="question-card bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 transform hover:-translate-y-1"
+              data-tags={question.tags.join(',')}>
+              <div class="p-6 sm:p-6">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#fa729a] to-[#fddc43] rounded-full flex items-center justify-center text-white font-semibold">
+                    {index + 1}
                   </div>
-                  
-                 {question.code && (
-                      <Code code={question.code} lang={question.language as BundledLanguage || "javascript"}/>
-                  )}
-                    
+                  <div class="flex-1">
+                    <h2 class="text-lg font-semibold text-gray-900 mb-3 hover:text-[#fa729a] transition-colors duration-300">
+                      {question.question}
+                    </h2>
+
+                    <div class="prose prose-sm max-w-none text-gray-600 mb-4">
+                      {question.answer.map((line) => (
+                        <p class="mb-2">{line}</p>
+                      ))}
+                    </div>
+
+                    {question.code && (
+                      <Code code={question.code} lang={question.language as BundledLanguage || "javascript"} />
+                    )}
+
                     {(question.images ?? []).length > 0 && (
-                  <div class="mt-6 space-y-4">
-                    {question.images.map((img) => (
-                      <img 
-                        src={img} 
-                        alt="Question illustration" 
-                        class="rounded-lg w-full h-auto object-cover shadow-sm transition-transform duration-300 hover:scale-[1.02]"
-                      />
-                    ))}
-                  </div>
-)}
+                      <div class="mt-4 space-y-3">
+                        {question.images.map((img) => (
+                          <img 
+                            src={img} 
+                            alt="Question illustration" 
+                            class="rounded-lg w-full h-auto object-cover shadow-sm transition-transform duration-300 hover:scale-[1.02]"
+                          />
+                        ))}
+                      </div>
+                    )}
 
-                  <div class="mt-6 flex flex-wrap gap-2">
-                    {question.tags.map((tag) => (
-                      <span class="px-3 py-1 bg-gradient-to-r from-[#fddc43] to-yellow-200 text-black text-sm rounded-full capitalize font-medium">
-                        {tag}
-                      </span>
-                    ))}
+                    <div class="mt-4 flex flex-wrap gap-2">
+                      {question.tags.map((tag) => (
+                        <span class="px-3 py-1 bg-gradient-to-r from-[#fddc43] to-yellow-200 text-black text-xs rounded-full capitalize font-medium">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   </div>
@@ -101,19 +97,15 @@ const uniqueTags = Array.from(allTags);
     function filterQuestions(tag) {
       const questions = document.querySelectorAll('.question-card');
       const buttons = document.querySelectorAll('.filter-btn');
-      
-      // Update active button state
+
       buttons.forEach(btn => {
-        if (btn.getAttribute('data-tag') === tag) {
-          btn.classList.add('bg-gradient-to-r', 'from-[#fa729a]', 'to-[#fddc43]', 'text-white');
-          btn.classList.remove('text-[#fa729a]');
-        } else {
-          btn.classList.remove('bg-gradient-to-r', 'from-[#fa729a]', 'to-[#fddc43]', 'text-white');
-          btn.classList.add('text-[#fa729a]');
-        }
+        const isActive = btn.getAttribute('data-tag') === tag;
+        btn.classList.toggle('bg-pink-300', isActive);
+        btn.classList.toggle('text-white', isActive);
+        btn.classList.toggle('bg-pink-50', !isActive);
+        btn.classList.toggle('text-gray-700', !isActive);
       });
-  
-      // Filter questions with enhanced animation
+
       questions.forEach((question) => {
         const tags = question.getAttribute('data-tags').split(',');
         const shouldShow = !tag || tags.includes(tag);
@@ -133,10 +125,10 @@ const uniqueTags = Array.from(allTags);
         }
       });
     }
-  
-    // Initialize with all questions shown
+
     document.addEventListener('DOMContentLoaded', () => {
       filterQuestions('');
     });
   </script>
+  </section>
 </Base>

@@ -5,12 +5,15 @@ const blogCollection = defineCollection({
   schema: z.object({
     id: z.string().optional(),
     title: z.string(),
-    subtitle: z.string().optional(),
+    subtitle: z.string().optional(),         
+    meta_title: z.string().optional(),         
+    description: z.string().optional(),        
     image: z.string().optional(),
     author: z.string().optional(),
-    courses: z.array(z.string()).default(["others"]),
+    series: z.array(z.string()).default(["others"]),
     categories: z.array(z.string()).default(["others"]),
     draft: z.boolean().optional(),
+    year: z.number().optional(),
     featured: z.boolean().optional(),
   }),
 });
@@ -31,6 +34,6 @@ const pagesCollection = defineCollection({
 
 // Export collections
 export const collections = {
-  blog: blogCollection,
+  articles: blogCollection,
   pages: pagesCollection
 };

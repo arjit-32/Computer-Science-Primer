@@ -1,18 +1,16 @@
 ---
 import Base from "@/layouts/Base.astro";
 import Banner from "@/layouts/components/Banner.astro";
-import Service from "@/layouts/components/Service.astro";
+import Categories from "@/components/Categories.astro";
 import Cta from "@/layouts/partials/Cta.astro";
-import { getEntryBySlug } from "astro:content";
-import Works from "@/components/about/Works.astro";
+import { getEntry } from "astro:content";
 
-const homepage = await getEntryBySlug("homepage", "index");
-const { banner, features, service, testimonial } = homepage.data;
+const homepage = await getEntry("homepage", "index");
+const { banner, categories } = homepage.data;
 ---
 
 <Base>
   <Banner banner={banner} />
-  <Service service={service} />
-  <Works features={features} />
+  <Categories categories={categories} />
   <Cta />
 </Base>

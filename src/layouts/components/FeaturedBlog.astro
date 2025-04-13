@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import config from "@/config/config.json";
 import readingTime from "@/lib/utils/readingTime";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
@@ -6,25 +7,35 @@ const { summary_length } = config.settings;
 const { posts } = Astro.props;
 ---
 
-<div class="row">
+<h2 class="h4 mb-4">Featured Posts</h2>
+<div class="featured-posts row">
   {
-    posts.map((item: any) => (
-      <div class="mb-8 md:col-6 lg:col-4">
+    posts.map((post: any) => (
+      <div class="mb-8 md:col-6">
         <div class="card">
+          <Image
+            class="card-img"
+            width={235}
+            height={304}
+            src={post.data.image}
+            alt={post.data.title}
+          />
           <div class="card-content">
-            <h3 class="h4 card-title">
-              <a href={`/articles/${item.slug}`}>{item.data.title}</a>
-            </h3>
-            <span class="card-tags space-x-1" style="">
-              {item.data.categories.map((categories: any) => (
+            <div class="card-tags space-x-1">
+              <span class="card-tags space-x-1" style="">
+              {post.data.categories.map((categories: any) => (
                 <span class="bg-[#f7e26bd8] border-[#f7e26b] border-2 rounded text-black px-1 text-sm">
                   {humanize(categories)}
                 </span>
               ))}
               
             </span>
+            </div>
+            <h3 class="h4 card-title">
+              <a href={`/articles/${post.slug}`}>{post.data.title}</a>
+            </h3>
             <p class="mb-4 text-text">
-              {plainify(item.data.subtitle?.slice(0, Number(summary_length)))}
+              {plainify(post.data.subtitle?.slice(0, Number(summary_length)))}...
             </p>
             <div class="card-footer mt-6 flex space-x-4">
               
@@ -42,7 +53,7 @@ const { posts } = Astro.props;
                     fill="#939393"
                   />
                 </svg>
-                {readingTime(item.body)}
+                {readingTime(post.body)}
               </span>
               <span class="inline-flex items-center text-xs text-[#666]">
   <svg
@@ -62,7 +73,7 @@ const { posts } = Astro.props;
     <line x1="8" y1="2" x2="8" y2="6"></line>
     <line x1="3" y1="10" x2="21" y2="10"></line>
   </svg>
-  {item.data.year}
+  {post.data.year}
 </span>
             </div>
           </div>
