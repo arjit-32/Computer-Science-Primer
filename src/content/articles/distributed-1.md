@@ -4,7 +4,7 @@ meta_title: Introduction to Distributed Systems in 2025
 description: Understand the foundational concepts of distributed systems. Explore the architecture, components, and challenges of building distributed systems in 2025.
 author: Arjit Sharma
 series: ["distributed"]
-categories: ["Development-Plus"]
+categories: ["System-Design"]
 draft: false
 year: 2025
 ---

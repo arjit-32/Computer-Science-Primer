@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "CSPrimer: Master Full-Stack Engineering and Computer Science Foundations",
+    "title": "Master Full-Stack Development",
     "base_url": "",
     "base_path": "/",
     "trailing_slash": false,
@@ -41,6 +41,6 @@
   "metadata": {
     "meta_author": "CSPrimer",
     "meta_image": "/images/og-image.png",
-    "meta_description": "CSPrimer is a personal blog and learning hub where I share my journey through full-stack development, system design, and core computer science. Learn coding, architecture, and real-world problem solving — from scratch."
+    "meta_description": "Level up your tech skills with CSPrimer! Follow a full-stack developer's journey in system design, core computer science, and practical problem-solving. Start learning to code and build from the ground up."
   }
 }

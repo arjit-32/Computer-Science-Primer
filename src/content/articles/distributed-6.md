@@ -4,7 +4,7 @@ meta_title: Consensus Algorithms in Distributed Systems (2025)
 description: Learn about consensus algorithms in distributed systems, including popular methods like Paxos and Raft. Understand how they ensure reliability and fault tolerance in 2025.
 author: Arjit Sharma
 series: ["distributed"]
-categories: ["Development-Plus"]
+categories: ["System-Design"]
 draft: false
 year: 2025
 ---

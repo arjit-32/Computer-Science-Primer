@@ -5,7 +5,6 @@ import seriesInfo from "@/data/series.json";
 import Cta from "@/partials/Cta.astro";
 ---
 <Base title="Series">
-
   <section class="py-4 bg-gradient-to-br from-white via-pink-50 to-yellow-50">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-zinc-900">Series</h2>
@@ -68,8 +67,8 @@ import Cta from "@/partials/Cta.astro";
                 class="course-card group relative bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
                 data-category={series.category}
               >
-                {series.ongoing == "true" && (
-                  <p class="py-1 bg-slate-200 text-zinc-900 text-center text-xs">Ongoing</p>
+                {series.ongoing !== "false" && (
+                  <p class="py-1 bg-slate-200 text-zinc-900 text-center text-xs">{series.ongoing}</p>
                 )}
                 <div class="p-4">
                   <img

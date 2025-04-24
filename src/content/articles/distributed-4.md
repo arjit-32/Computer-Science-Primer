@@ -4,7 +4,7 @@ meta_title: Transactions in Distributed Systems in 2025
 description: Explore how transactions are handled in distributed systems. Understand ACID properties, distributed transactions, and the challenges of ensuring consistency across systems.
 author: Arjit Sharma
 series: ["distributed"]
-categories: ["Development-Plus"]
+categories: ["System-Design"]
 draft: false
 year: 2025
 ---

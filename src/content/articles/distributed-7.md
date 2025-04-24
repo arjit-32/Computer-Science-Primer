@@ -4,7 +4,7 @@ meta_title: Ordering and Time in Distributed Systems in 2025
 description: Explore how ordering and time are managed in distributed systems. Learn about vector clocks, logical clocks, and synchronization challenges in 2025’s distributed environments.
 author: Arjit Sharma
 series: ["distributed"]
-categories: ["Development-Plus"]
+categories: ["System-Design"]
 draft: false
 year: 2025
 ---

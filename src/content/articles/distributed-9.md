@@ -4,7 +4,7 @@ meta_title: Real World Applications of Distributed Systems in 2025
 description: Explore real-world applications of distributed systems in fields like cloud computing, blockchain, and big data. Understand their impact on modern technology in 2025.
 author: Arjit Sharma
 series: ["distributed"]
-categories: ["Development-Plus"]
+categories: ["System-Design"]
 draft: false
 year: 2025
 ---

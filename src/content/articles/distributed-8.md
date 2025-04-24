@@ -4,7 +4,7 @@ meta_title: Communication Patterns in Distributed Systems in 2025
 description: Discover the communication patterns used in distributed systems. Learn how synchronous and asynchronous communication plays a role in system design in 2025.
 author: Arjit Sharma
 series: ["distributed"]
-categories: ["Development-Plus"]
+categories: ["System-Design"]
 draft: false
 year: 2025
 ---
