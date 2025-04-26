@@ -15,9 +15,10 @@ const { Content } = await post.render();
 const courseData = seriesInfo[series];
 ---
 
-<section class="section blog-single py-4 bg-white">
+<section class="section blog-single py-4 bg-white border-b pb-20">
   <div class="container max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex flex-col lg:flex-row gap-8">
+      
       <!-- Navigation Sidebar - Hidden on mobile, visible on lg screens -->
       {courseData && courseData.navbar.length > 0 && (
         <div class="hidden lg:block w-64 shrink-0">
@@ -138,33 +139,88 @@ const courseData = seriesInfo[series];
             <h1 class="text-3xl font-bold leading-tight mb-4">{post.data.title}</h1>
             
             <div class="mb-6 flex flex-wrap items-center text-sm text-gray-600">
+              {courseData && courseData.navbar.length > 0 && (
+              <div class="flex items-center mr-4 mb-2">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                <a
+                  href={`/series/${series}`}
+                  class="text-sm text-[#fb7299] font-semibold hover:underline"
+                >
+                  Back to {humanize(courseData?.title || series)}
+                </a>
+              </div>
+              )}
+
               <div class="flex items-center mr-4 mb-2">
                 <FaRegUserCircle className={"mr-1"} />
-                <span>{humanize(post.data.author)}</span>
+                <a 
+                  href="https://arjit-32.github.io" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="text-gray-700 hover:text-[#fb7299] transition-colors"
+                >
+                  {humanize(post.data.author)}
+                </a>
               </div>
+
               
               <div class="flex items-center mr-4 mb-2">
                 <FaRegClock className={"mr-1"} />
                 <span>{readingTime(post.body)}</span>
               </div>
               
-              <div class="flex items-center flex-wrap mb-2">
-                <FaRegFolder className={"mr-1"} />
-                {post.data.categories.map((category: string, index: number) => (
-                  <a
-                    href={`/categories/${slugify(category)}`}
-                    class="hover:text-[#fb7299] transition-colors"
-                  >
-                    {humanize(category)}
-                    {index !== post.data.categories.length - 1 && ", "}
-                  </a>
-                ))}
-              </div>
+             
+              
             </div>
             
-            <div class="content prose max-w-none">
+            <div class="content prose max-w-none prose-headings:text-2xl">
               <Content />
             </div>
+          
+            {courseData && courseData.navbar.length > 0 && (() => {
+              const flatArticles = courseData.navbar
+                .flatMap(section => section.link)
+                .filter(link => link.type === "articles")
+                .map(link => link.url);
+            
+              const currentSlug = post.slug || post.data.slug || "";
+              const currentIndex = flatArticles.indexOf(currentSlug);
+            
+              const prevSlug = currentIndex > 0 ? flatArticles[currentIndex - 1] : null;
+              const nextSlug = currentIndex < flatArticles.length - 1 ? flatArticles[currentIndex + 1] : null;
+            
+              return (
+                <div class="mt-10 flex justify-between pt-6 text-sm font-medium text-[#fb7299]">
+                  <div>
+                    {prevSlug && (
+                      <a
+                        href={`/articles/${prevSlug}`}
+                        class="inline-flex items-center hover:underline"
+                      >
+                        ← Previous
+                      </a>
+                    )}
+                  </div>
+                  <div class="ml-auto">
+                    {nextSlug && (
+                      <a
+                        href={`/articles/${nextSlug}`}
+                        class="inline-flex items-center hover:underline"
+                      >
+                        Next →
+                      </a>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
+
+            
+            
+            
+            
           </div>
         </div>
       </div>

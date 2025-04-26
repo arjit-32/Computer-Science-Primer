@@ -18,26 +18,59 @@
   },
 
   "call_to_action": {
-    "title": "Connect with arjit !",
-    "description": "Got a cool idea? Need a hand on a project? Or just want to talk tech? I’m always open to conversations.",
-    "button": {  
-        "label1": "Say Hi on LinkedIn",  
-        "link1": "https://www.linkedin.com/in/arjit32/",  
-        "label2": "Shoot Me an Email",  
-        "link2": "mailto:cspbyarjit@gmail.com"  
-      }  
-    
+  "title": "Let’s Create Something Cool!",
+  "description": "Got an idea? Let’s bring it to life. Whether it’s tech, design, or just a good chat - I’m always open.",
+  "button": {  
+    "label1": "Connect on LinkedIn",  
+    "link1": "https://www.linkedin.com/in/arjit32/",  
+    "label2": "Connect on Twitter",  
+    "link2": "https://x.com/arjit32"  
+  }
   },
-
   "params": {
-    "footer_description": "From fundamentals to fullstack development — A structured journey through computer science.",
-    "email": "cspbyarjit@gmail.com",
-    "location": "Bengaluru, India",
-    "phone": "",
-    "contact_form_action": "#",
-    "copyright": "© 2025 CSPrimer.in, All Rights Reserved."
+    "footer_description": "From fundamentals to full-stack development — A journey through computer science, with a twist of creativity and innovation.",
+    "copyright": "© 2025 All Rights Reserved.",
+    "quick_links": [
+      {
+        "name": "Core CS",
+        "url": "/series?category=Core-CS"
+      },
+      {
+        "name": "Advanced Web Development",
+        "url": "/series?category=Development-Plus"
+      },
+      {
+        "name": "Data Structures & Algorithms",
+        "url": "/series?category=DSA"
+      },
+      {
+        "name": "Web Development",
+        "url": "/series?category=Development"
+      },
+      {
+        "name": "System Design",
+        "url": "/series?category=System-Design"
+      },
+      {
+        "name": "Product Development",
+        "url": "/series?category=Product"
+      }
+    ],
+    "latest_blogs":[
+      {
+        "name": "Deadlocks slow down your webapps",
+        "url": "/articles/deadlock-the-invisible-trap"
+      },
+      {
+        "name": "Why VoIP beats regular phone calls ",
+        "url": "/articles/voip-random"
+      },
+      {
+        "name": "How web analytics work",
+        "url": "/articles/analytics-random"
+      }
+    ]
   },
-
   "metadata": {
     "meta_author": "CSPrimer",
     "meta_image": "/images/og-image.png",

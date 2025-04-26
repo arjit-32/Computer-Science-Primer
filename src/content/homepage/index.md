@@ -13,7 +13,7 @@ categories:
   category_list:
     - title: Data Structures & Algorithms
       content: I'm revisiting DSA to get better at logic building eventually used everywhere.
-      link: /series/dsa
+      link: /series?category=DSA
     - title: Fullstack Web Development
       content: Go from absolute basic of the web to applications in MERN stack
       link: /series?category=Development

@@ -4,46 +4,51 @@ import Social from "@/components/Social.astro";
 import config from "@/config/config.json";
 import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
-const { copyright, location, email, phone, footer_description } = config.params;
+const { copyright, latest_blogs, quick_links, footer_description } = config.params;
 ---
-
 <footer class="footer bg-[#FFF]">
   <div class="container">
-    <div class="gx-5 row pb-10 pt-[52px]">
+    <div class="gx-5 row pb-10">
+      <!-- Logo and Description -->
       <div class="col-12 mt-12 md:col-6 lg:col-3">
         <Logo />
-        <p class="mt-6">
-          {footer_description}
-        </p>
+        <p class="mt-6 text-gray-600">{footer_description}</p>
       </div>
-      <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h6>Socials</h6>
 
+      <!-- Socials -->
+      <div class="col-12 mt-12 md:col-6 lg:col-3">
+        <h6 class="font-semibold text-gray-800">Connect</h6>
         <Social source={social} className="social-icons mt-4 lg:mt-6" />
       </div>
+      <!-- Latest Blogs -->
       <div class="col-12 mt-12 md:col-6 lg:col-3">
-        <h6>Location & Contact</h6>
+        <h6 class="font-semibold text-gray-800">Latest Blogs</h6>
         <ul>
-          <li class="mb-2">{location}</li>
-          <li class="mb-2">
-            <a class="mb-2 hover:text-primary" href={`mailto:${email}`}
-              >{email}</a
-            >
-          </li>
-          <li>
-            <a class="hover:text-primary hover:underline" href={`tel:${phone}`}
-              >{phone}</a
-            >
-          </li>
+          {latest_blogs.map((link) => (
+            <li class="mb-2">
+              <a href={link.url} class="text-gray-600 hover:text-primary">{link.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-12 mt-12 md:col-6 lg:col-3">
+        <h6 class="font-semibold text-gray-800">Quick Links</h6>
+        <ul>
+          {quick_links.map((link) => (
+            <li class="mb-2">
+              <a href={link.url} class="text-gray-600 hover:text-primary">{link.name}</a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
   </div>
+
   <div class="container max-w-[1440px]">
-    <div
-      class="footer-copyright mx-auto border-t border-border pb-10 pt-7 text-center"
-    >
-      <p class="content text-text" set:html={markdownify(copyright)} />
+    <div class="footer-copyright mx-auto pb-4 pt-2 text-center">
+      <p class="content text-text">{markdownify(copyright)}</p>
     </div>
   </div>
 </footer>
