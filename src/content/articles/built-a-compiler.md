@@ -14,7 +14,7 @@ draft: false
 
 Programming languages are fascinating. But have you ever wondered **how they work under the hood?** As an academic exercise, I set out to build my own programming language [hindilang](https://github.com/arjit-32/hindilang), a Hindi inspired scripting language that transpiles to JavaScript!
 
-If you want to dive straight into the code, check out the full source here: GitHub Repo 🔥
+If you want to dive straight into the code, check out the full source here: [GitHub Repo 🔥](https://github.com/arjit-32/hindilang)
 
 > Disclaimer: I am not a subject expert in writing languages. I am just sharing my findings.
 > 
