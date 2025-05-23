@@ -1,5 +1,7 @@
 ---
 title: Control Flow and Logic in Java
+meta_title: Control Flow in Java- Learn Logic | CS Primer
+description: Understand Java control flow. Master if-else, loops, and logic for efficient programming and CS skills.
 author: Arjit Sharma
 series: ["java"]
 categories: ["DSA"]

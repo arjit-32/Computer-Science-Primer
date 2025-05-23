@@ -1,5 +1,7 @@
 ---
 title: Introduction to Object-Oriented Programming (OOP)
+meta_title: Introduction to OOP in Java | CS Primer
+description: Start with OOP in Java. Learn objects, classes, and principles for structured programming in CS.
 author: Arjit Sharma
 series: ["java"]
 categories: ["DSA"]

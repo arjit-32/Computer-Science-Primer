@@ -1,6 +1,6 @@
 ---
 title: Design Philosophy & Laws
-meta_title: Design Philosophy & Laws- Key Principles for UI/UX Design (2025)
+meta_title: Design Philosophy & Laws | CS Primer
 description: Dive into the essential design philosophies and laws that shape user interfaces and user experiences. Learn how these principles guide product design decisions in 2025.
 author: Arjit Sharma
 series: ["ui"]

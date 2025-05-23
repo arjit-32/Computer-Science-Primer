@@ -1,5 +1,7 @@
 ---
 title: Abstract Classes and Interfaces
+meta_title: Java Abstract Classes & Interfaces | CS Primer
+description: Explore Java abstract classes and interfaces. Learn abstraction for flexible programming in CS.
 author: Arjit Sharma
 series: ["java"]
 categories: ["DSA"]

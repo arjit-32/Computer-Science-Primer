@@ -1,6 +1,6 @@
 ---
 title: Consistency & Concurrency Control
-meta_title: Consistency and Concurrency Control in Distributed Systems (2025)
+meta_title: Consistency and Concurrency Control in Distributed Systems | CS Primer
 description: Dive into the principles of consistency and concurrency control in distributed systems. Learn how to manage data integrity and synchronization in 2025’s distributed environment.
 author: Arjit Sharma
 series: ["distributed"]

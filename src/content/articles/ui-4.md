@@ -1,6 +1,6 @@
 ---
 title: Figma Basics
-meta_title: Figma Basics for UI/UX Designers in 2025
+meta_title: Figma Basics for UI/UX Designers | CS Primer
 description: Get started with Figma for UI/UX design. Learn the essential tools and features to create interactive designs and prototypes. Perfect for beginners in 2025.
 author: Arjit Sharma
 series: ["ui"]

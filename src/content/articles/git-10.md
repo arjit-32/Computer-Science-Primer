@@ -1,6 +1,6 @@
 ---
 title: Squashing Commits with Rebase
-meta_title: Squashing Commits with Git Rebase in 2025
+meta_title: Squashing Commits | CS Primer
 description: Discover how to squash multiple commits into a single one using Git rebase to maintain a clean and concise commit history in 2025.
 author: Arjit Sharma
 series: ["git"]

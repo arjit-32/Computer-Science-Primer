@@ -1,6 +1,6 @@
 ---
 title: Cloning in Git
-meta_title: Cloning Repositories in Git (2025)
+meta_title: Cloning Repositories in Git | CS Primer
 description: Master the art of cloning Git repositories and how to contribute to projects by copying remote repositories to your local machine in 2025.
 author: Arjit Sharma
 series: ["git"]

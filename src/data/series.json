@@ -161,62 +161,53 @@
     ]
   },
   "aws": {
-    "ongoing": "In progress",
+    "ongoing": "false",
     "title": "AWS for Developers",
     "image": "/images/thumbnails/aws.png",
     "subtitle": "Cloud fundamentals and AWS tools for building scalable apps.",
-    "description": "This series breaks down AWS for software developers—starting from cloud basics to deploying real apps using AWS services. We'll cover infrastructure, security, serverless, and CI/CD with hands-on examples.",
-    "time": "8 articles",
+    "description": "This series breaks down AWS for software developers starting from cloud basics to deploying real apps using AWS services. We'll cover security, serverless, and databases with hands-on examples.",
+    "time": "13 articles",
     "category": "Development-Plus",
     "navbar": [
       {
-        "subheading": "Foundations of Cloud & AWS",
+        "subheading": "Cloud Foundations",
         "link": [
-          {
-            "type": "articles",
-            "url": "aws-1",
-            "title": "Fundamentals of Cloud Computing"
-          },
-          {
-            "type": "articles",
-            "url": "aws-2",
-            "title": "Getting Started with AWS: Console, CLI, and IAM"
-          }
+          { "type": "articles", "url": "aws-1", "title": "Fundamentals of Cloud" },
+          { "type": "articles", "url": "aws-4", "title": "IAM - Secure Access" }
         ]
       },
       {
-        "subheading": "Core AWS Services",
+        "subheading": "Zero to AWS: Quick Win",
         "link": [
-          {
-            "type": "articles",
-            "url": "aws-3",
-            "title": "EC2 Deep Dive: Launching and Managing Virtual Servers"
-          },
-          {
-            "type": "articles",
-            "url": "aws-4",
-            "title": "S3 for Developers: Storage, Hosting, and Static Sites"
-          },
-          {
-            "type": "articles",
-            "url": "aws-5",
-            "title": "Lambda & Serverless: Building Event-Driven Functions"
-          }
+          { "type": "articles", "url": "aws-2", "title": "AWS Cheatsheet" },
+          { "type": "articles", "url": "aws-3", "title": "Cut through the Clutter" }
         ]
       },
       {
-        "subheading": "DevOps & Infrastructure as Code",
+        "subheading": "Compute Services",
         "link": [
-          {
-            "type": "articles",
-            "url": "aws-6",
-            "title": "CI/CD on AWS: CodePipeline + CodeBuild Basics"
-          },
-          {
-            "type": "articles",
-            "url": "aws-7",
-            "title": "Infrastructure as Code with AWS CDK (or Terraform)"
-          }
+
+          { "type": "articles", "url": "aws-5", "title": "EC2- Virtual Servers" },
+          { "type": "articles", "url": "aws-6", "title": "Deploy a Node.js App on EC2" },
+          { "type": "articles", "url": "aws-12", "title": "ELB- Distribute Traffic" },
+          { "type": "articles", "url": "aws-9", "title": "Lambda- Serverless" },
+          { "type": "articles", "url": "aws-10", "title": "API with Lambda & API Gateway" }
+        ]
+      },
+      {
+        "subheading": "Storage & Database",
+        "link": [
+          { "type": "articles", "url": "aws-7", "title": "S3- Object Storage" },
+          { "type": "articles", "url": "aws-8", "title": "Website Hosting using S3" },
+          { "type": "articles", "url": "aws-11", "title": "DynamoDB- NoSQL database" }
+        ]
+      },
+      {
+        "subheading": "Application Integration",
+        "link": [
+          { "type": "articles", "url": "aws-15", "title": "SQS- Decoupled Apps" },
+          { "type": "articles", "url": "aws-14", "title": "SNS- Send Notifications" },
+          { "type": "articles", "url": "aws-13", "title": "API Gateway" }
         ]
       },
       {
@@ -295,48 +286,98 @@
     ]
   }
   ]
-
   },  
   "distributed": {
-      "ongoing": "false",
-      "title": "Distributed Systems",
-      "image": "/images/thumbnails/distributed-systems.png",
-      "subtitle": "Explore application design in multi-node systems.",
-      "description": "Learn distributed systems through this series, tackling key concepts like consistency and consensus, trade-offs like CAP, and real-world applications.",
-      "time": "9 articless",
-      "category": "System-Design",
-     "navbar": [
-    {
-      "subheading": "Foundations",
-      "link": [
-        { "type": "articles", "url": "distributed-1", "title": "Introduction" },
-        { "type": "articles", "url": "distributed-2", "title": "Data Management" }
-      ]
-    },
-    {
-      "subheading": "Coordination & Consistency",
-      "link": [
-        { "type": "articles", "url": "distributed-3", "title": "Consistency & Concurrency Control" },
-        { "type": "articles", "url": "distributed-6", "title": "Consensus" },
-        { "type": "articles", "url": "distributed-7", "title": "Ordering and Time" }
-      ]
-    },
-    {
-      "subheading": "System Design & Operations",
-      "link": [
-        { "type": "articles", "url": "distributed-4", "title": "Transactions" },
-        { "type": "articles", "url": "distributed-5", "title": "Trade-offs (CAP & Beyond)" },
-        { "type": "articles", "url": "distributed-8", "title": "Communication Patterns" }
-      ]
-    },
-    {
-      "subheading": "Real-World Applications",
-      "link": [
-        { "type": "articles", "url": "distributed-9", "title": "Real-World Applications" }
-      ]
-    }
-  ]
-    },  
+    "ongoing": "false",
+    "title": "Distributed Systems",
+    "image": "/images/thumbnails/distributed-systems.png",
+    "subtitle": "Explore application design in multi-node systems.",
+    "description": "Learn distributed systems through this series, tackling key concepts like consistency and consensus, trade-offs like CAP, and real-world applications.",
+    "time": "9 articless",
+    "category": "System-Design",
+   "navbar": [
+  {
+    "subheading": "Foundations",
+    "link": [
+      { "type": "articles", "url": "distributed-1", "title": "Introduction" },
+      { "type": "articles", "url": "distributed-2", "title": "Data Management" }
+    ]
+  },
+  {
+    "subheading": "Coordination & Consistency",
+    "link": [
+      { "type": "articles", "url": "distributed-3", "title": "Consistency & Concurrency Control" },
+      { "type": "articles", "url": "distributed-6", "title": "Consensus" },
+      { "type": "articles", "url": "distributed-7", "title": "Ordering and Time" }
+    ]
+  },
+  {
+    "subheading": "System Design & Operations",
+    "link": [
+      { "type": "articles", "url": "distributed-4", "title": "Transactions" },
+      { "type": "articles", "url": "distributed-5", "title": "Trade-offs (CAP & Beyond)" },
+      { "type": "articles", "url": "distributed-8", "title": "Communication Patterns" }
+    ]
+  },
+  {
+    "subheading": "Real-World Applications",
+    "link": [
+      { "type": "articles", "url": "distributed-9", "title": "Real-World Applications" }
+    ]
+  }
+]
+  },
+  "api": {
+    "ongoing": "false",
+    "title": "API Design",
+    "image": "/images/thumbnails/api.png",
+    "subtitle": "From Network Basics to Advanced API Design",
+    "description": "A comprehensive guide covering network fundamentals, API concepts, protocols, architectures, and practical implementation",
+    "time": "15 articles",
+    "category": "System-Design",
+    "navbar": [
+      {
+        "subheading": "Network Foundations",
+        "link": [
+          { "type": "articles", "url": "api-1", "title": "Crash course on Internet Basics" },
+          { "type": "articles", "url": "api-2", "title": "Understanding Network Performance - A Simple Guide" }
+        ]
+      },
+      {
+        "subheading": "API Fundamentals",
+        "link": [
+          { "type": "articles", "url": "api-3", "title": "Introduction to APIs" },
+          { "type": "articles", "url": "api-4", "title": "What Happens During an API Call?" }
+        ]
+      },
+      {
+        "subheading": "Communication Protocols",
+        "link": [
+          { "type": "articles", "url": "api-5", "title": "Client-Server Communication in APIs" },
+          { "type": "articles", "url": "api-6", "title": "HTTP - The Backbone of API Communication" },
+          { "type": "articles", "url": "api-7", "title": "WebSockets - For Real-Time APIs" },
+          { "type": "articles", "url": "api-8", "title": "Event-Driven Protocols for Asynchronous Updates" },
+          { "type": "articles", "url": "api-9", "title": "Common Data Formats for Web APIs" }
+        ]
+      },
+      {
+        "subheading": "API Architectures",
+        "link": [
+          { "type": "articles", "url": "api-10", "title": "REST - Representational State Transfer" },
+          { "type": "articles", "url": "api-11", "title": "GraphQL - Flexible APIs for Modern Apps" },
+          { "type": "articles", "url": "api-12", "title": "RPC and gRPC - Function Oriented APIs" }
+        ]
+      },
+      {
+        "subheading": "API Design & Implementation",
+        "link": [
+          { "type": "articles", "url": "api-13", "title": "Complete Guide to API Design" },
+          { "type": "articles", "url": "api-14", "title": "Designing the Coffee Shop API - A Practical Blueprint" },
+          { "type": "articles", "url": "api-15", "title": "API Optimization & Performance Patterns" }
+        ]
+      }
+    ]
+  },
   "dm": {
     "ongoing": "false",
     "title": "Discrete Mathematics",
@@ -347,20 +388,29 @@
     "category": "Core-CS",
     "navbar": [
       {
-        "subheading": "Handwritten Notes",
+        "subheading": "Chapters",
         "link": [
-          {
-            "type": "articles",
-            "url": "dm-1",
-            "title": "Discrete Mathematics Notes"
-          }
-        ]
-      }
-    ]
+        { "type": "articles", "url": "dm-1", "title": "Set Theory" },
+        { "type": "articles", "url": "dm-2", "title": "Relations"},
+        { "type": "articles", "url": "dm-3", "title": "POSET & Lattices"},
+        { "type": "articles", "url": "dm-4", "title": "Functions"},
+        { "type": "articles", "url": "dm-5", "title": "Theory of Logic"},
+        { "type": "articles", "url": "dm-6", "title": "Algebraic Structures"},
+        { "type": "articles", "url": "dm-7", "title": "Graph Theory"},
+        { "type": "articles", "url": "dm-8", "title": "Combinatorics"}
+      ]
+    },
+    {
+      "subheading": "Further Learnings",
+      "link": [
+      { "type": "articles", "url": "dm-9", "title": "DM Handwritten Notes" }
+      ]
+    }
+  ]
   },
   "dl": {
     "ongoing": "false",
-    "title": "Digital Logic",
+    "title": "Digital Electronics",
     "image": "/images/thumbnails/digital-logic.png",
     "subtitle": "Understand how computers process binary data through logic circuits.",
     "description": "Learn Boolean algebra, logic gates, combinational and sequential circuits, and flip-flops. This series lays the groundwork for understanding computer hardware and microprocessor design.",
@@ -368,20 +418,55 @@
     "category": "Core-CS",
     "navbar": [
       {
-        "subheading": "Handwritten Notes",
+        "subheading": "Chapters",
         "link": [
-          {
-            "type": "articles",
-            "url": "dl-1",
-            "title": "Digital Logic Notes"
-          }
-        ]
-      }
+        { "type": "articles", "url": "dl-1", "title": "Introduction to Digital Logic" },
+        { "type": "articles", "url": "dl-2", "title": "Boolean Algebra"},
+        { "type": "articles", "url": "dl-3", "title": "Boolean Expressions"},
+        { "type": "articles", "url": "dl-4", "title": "Combinational Circuits"},
+        { "type": "articles", "url": "dl-5", "title": "Sequential Circuits"},
+        { "type": "articles", "url": "dl-6", "title": "Number System"}
+      ]
+    },
+    {
+      "subheading": "Further Learnings",
+      "link": [
+      { "type": "articles", "url": "dl-7", "title": "DL Handwritten Notes" }
+      ]
+    }
     ]
+  },
+  "coa": {
+    "ongoing": "false",
+    "title": "Computer Architecture",
+    "image": "/images/thumbnails/COA.png",
+    "subtitle": "Understand how computer hardware and software interact to execute programs.",
+    "description": "This series covers instruction sets, memory hierarchy, pipelining, and processor design, helping you grasp the fundamental working of modern computer systems.",
+    "time": "1 day",
+    "category": "Core-CS",
+    "navbar": [
+      {
+        "subheading": "Chapters",
+        "link": [
+        { "type": "articles", "url": "coa-1", "title": "Introduction to COA" },
+        { "type": "articles", "url": "coa-2", "title": "Processor Organization"},
+        { "type": "articles", "url": "coa-3", "title": "Instruction Cycle"},
+        { "type": "articles", "url": "coa-4", "title": "Control Unit"},
+        { "type": "articles", "url": "coa-5", "title": "Addressing Modes"},
+        { "type": "articles", "url": "coa-6", "title": "ISA"}
+      ]
+    },
+    {
+      "subheading": "Further Learnings",
+      "link": [
+      { "type": "articles", "url": "coa-7", "title": "COA Handwritten Notes" }
+      ]
+    }
+  ]
   },
   "toc": {
     "ongoing": "false",
-    "title": "Theory of Computation",
+    "title": "Automata Theory",
     "image": "/images/thumbnails/toc.png",
     "subtitle": "Explore the theoretical limits of computation and automata theory.",
     "description": "Dive into formal languages, finite automata, regular expressions, context-free grammars, Turing machines, and computational complexity to understand what problems computers can and cannot solve.",
@@ -389,16 +474,24 @@
     "category": "Core-CS",
     "navbar": [
       {
-        "subheading": "Handwritten Notes",
+        "subheading": "Chapters",
         "link": [
-          {
-            "type": "articles",
-            "url": "toc-1",
-            "title": "TOC Notes"
-          }
-        ]
-      }
-    ]
+        { "type": "articles", "url": "toc-1", "title": "Introduction to Automata Theory" },
+        { "type": "articles", "url": "toc-2", "title": "Finite Automata"},
+        { "type": "articles", "url": "toc-3", "title": "Regex & Regular Languages"},
+        { "type": "articles", "url": "toc-4", "title": "Formal Grammars & Chomsky Hierarchy"},
+        { "type": "articles", "url": "toc-5", "title": "Pushdown Automata (PDA)"},
+        { "type": "articles", "url": "toc-6", "title": "Context-Sensitive & Turing Machines"},
+        { "type": "articles", "url": "toc-7", "title": "Decidability & Computability"}
+      ]
+    },
+    {
+      "subheading": "Further Learnings",
+      "link": [
+      { "type": "articles", "url": "toc-8", "title": "TOC Handwritten Notes" }
+      ]
+    }
+  ]
   },
   "compiler": {
     "ongoing": "false",
@@ -410,37 +503,25 @@
     "category": "Core-CS",
     "navbar": [
       {
-        "subheading": "Handwritten Notes",
+        "subheading": "Chapters",
         "link": [
-          {
-            "type": "articles",
-            "url": "compiler-1",
-            "title": "Compiler Design Notes"
-          }
-        ]
-      }
-    ]
-  },
-  "coa": {
-    "ongoing": "false",
-    "title": "Computer Organization and Architecture",
-    "image": "/images/thumbnails/COA.png",
-    "subtitle": "Understand how computer hardware and software interact to execute programs.",
-    "description": "This series covers instruction sets, memory hierarchy, pipelining, and processor design, helping you grasp the fundamental working of modern computer systems.",
-    "time": "1 day",
-    "category": "Core-CS",
-    "navbar": [
-      {
-        "subheading": "Handwritten Notes",
-        "link": [
-          {
-            "type": "articles",
-            "url": "coa-1",
-            "title": "COA Notes"
-          }
-        ]
-      }
-    ]
+        { "type": "articles", "url": "compiler-1", "title": "Introduction to Compilers" },
+        { "type": "articles", "url": "compiler-2", "title": "Lexical Analysis"},
+        { "type": "articles", "url": "compiler-3", "title": "Syntax Analysis (Parsing)"},
+        { "type": "articles", "url": "compiler-4", "title": "Semantic Analysis"},
+        { "type": "articles", "url": "compiler-5", "title": "Intermediate Code Generation"},
+        { "type": "articles", "url": "compiler-6", "title": "Code Optimization"},
+        { "type": "articles", "url": "compiler-7", "title": "Target Code Generation"},
+        { "type": "articles", "url": "compiler-8", "title": "Linking & Execution"}
+      ]
+    },
+    {
+      "subheading": "Further Learnings",
+      "link": [
+      { "type": "articles", "url": "compiler-9", "title": "Compiler Handwritten Notes" }
+      ]
+    }
+  ]
   },
   "springboot": {
     "ongoing": "false",

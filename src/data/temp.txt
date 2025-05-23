@@ -1,3 +1,24 @@
+  "os": {
+    "ongoing": "false",
+    "title": "Operating Systems",
+    "image": "/images/thumbnails/OS.png",
+    "subtitle": "Learn the interface handling your web servers",
+    "description": "We will go through all important concepts of operating systems",
+    "time": "1 day",
+    "category": "Core-CS",
+    "navbar": [
+      {
+        "subheading": "Handwritten Notes",
+        "link": [
+          {
+            "type": "articles",
+            "url": "os-1",
+            "title": "Operating System Notes"
+          }
+        ]
+      }
+    ]
+  },
 "dsa": {
     "ongoing": "Planned",
     "title": "Data Structures and Algorithms",
@@ -61,4 +82,22 @@
         ]
       }
     ]
+  },  
+ "system-design-foundation": {
+    "ongoing": "false",
+    "title": "System Design Foundation",
+    "image": "/images/thumbnails/system-design-foundations.png",
+    "subtitle": "",
+    "description": "",
+    "time": "12 articless",
+    "category": "System-Design",
+   "navbar": [
+  {
+    "subheading": "Foundations",
+    "link": [
+      { "type": "articles", "url": "distributed-1", "title": "Introduction" },
+      { "type": "articles", "url": "distributed-2", "title": "Data Management" }
+    ]
+  }
+  ]
   },

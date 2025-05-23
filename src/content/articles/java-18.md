@@ -1,5 +1,7 @@
 ---
 title: Iterable and Iterator Interface
+meta_title: Java Iterable & Iterator- CS Guide | CS Primer
+description: Understand Java Iterable and Iterator. Learn to traverse collections for programming in CS.
 author: Arjit Sharma
 series: ["java"]
 categories: ["DSA"]

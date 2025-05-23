@@ -1,7 +1,7 @@
 ---
 title: Building my own Programming Language
 subtitle: How is a compiler working under the hood, learn by building your own programming language 
-meta_title: Building a Programming Language- How Compilers Work Under the Hood (2025)
+meta_title: Building a Programming Language | CS Primer
 description: Dive into how compilers work by building your own programming language from scratch. A hands-on guide for software engineers exploring language design and systems programming in 2025.
 author: Arjit Sharma
 series: []

@@ -1,6 +1,6 @@
 ---
 title: Reflog in Git
-meta_title: Git Reflog – Recovering Lost Commits in 2025
+meta_title: Git Reflog | CS Primer
 description: Learn how to use Git reflog to recover lost commits and navigate your Git history in 2025. A powerful tool for managing your Git repository.
 author: Arjit Sharma
 series: ["git"]

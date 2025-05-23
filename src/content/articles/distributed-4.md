@@ -1,6 +1,6 @@
 ---
 title: Transactions in Distributed Systems
-meta_title: Transactions in Distributed Systems in 2025
+meta_title: Transactions in Distributed Systems | CS Primer
 description: Explore how transactions are handled in distributed systems. Understand ACID properties, distributed transactions, and the challenges of ensuring consistency across systems.
 author: Arjit Sharma
 series: ["distributed"]
