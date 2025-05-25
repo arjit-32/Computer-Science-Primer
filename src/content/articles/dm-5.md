@@ -32,6 +32,8 @@ These are your cheatsheet showing all possible outcomes from a proposition.
 
 Example - Let A = “It is sunny” and B = “I have money”. Then lets make a truth table for
 
+![logic](https://res.cloudinary.com/dwa6rcttw/image/upload/v1748157124/logic_y2wz5f.png)
+
 | **A (sunny)** | **B (have money)** | **Buy ice-cream** |
 | --- | --- | --- |
 | true | true | true |

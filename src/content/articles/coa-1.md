@@ -55,6 +55,8 @@ In the **1940s**, computers moved from mechanical to electronic with vacuum t
 
 ## Von Neumann Architecture: The Modern Blueprint
 
+![von-nueman-architecture](https://res.cloudinary.com/dwa6rcttw/image/upload/v1748157123/von-nueman_w7a7at.png)
+
 One of the limitations of ENIAC was for each program you had to manually change wiring. In **1945**, John von Neumann proposed the stored-program concept.
 
 - Program instructions and data stored in the same memory

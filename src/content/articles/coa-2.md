@@ -59,4 +59,4 @@ The Control Unit decodes the current instruction and manages the operations li
 
 ## Conclusion
 
-Every program you use*(browser, games etc)* ends up as a series of binary instructions. These instructions flow through this internal structure where registers hold intermediate values, ALU computes. registers hold result, everything flows through a bus, synchronized using a clock and managed by Control Unit.
+Every program you use *(browser, games etc)* ends up as a series of binary instructions. These instructions flow through this internal structure where registers hold intermediate values, ALU computes. registers hold result, everything flows through a bus, synchronized using a clock and managed by Control Unit.

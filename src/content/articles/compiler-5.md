@@ -45,6 +45,6 @@ Example (from `a = b + c * d;`):
 
 ## Conclusion
 
-- Intermediate Code bridges **s**emantic understanding and machine execution
+- Intermediate Code bridges semantic understanding and machine execution
 - Makes code portable, optimizable, and easier to analyze
 - Forms like three-address code are widely used

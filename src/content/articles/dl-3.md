@@ -62,3 +62,6 @@ Steps:
 1. Fill in 1s for where the output is true.
 2. Group adjacent 1s in pairs, quads or octets
 3. Derive a simplified term for each group (combine variables that stay constant)
+
+
+![k-map](https://res.cloudinary.com/dwa6rcttw/image/upload/v1748157124/k-map_u3b1hc.png)

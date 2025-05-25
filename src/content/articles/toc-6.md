@@ -35,3 +35,9 @@ A **Turing Machine** consists of:
 2. A *head* that reads and writes on the tape
 3. A *state register* to keep track of the machine's state
 4. A t*ransition function* that determines the machine's next action (move left/right, write a symbol, change state)
+
+---
+
+## Turing Machine Example
+
+![turing-machine](https://res.cloudinary.com/dwa6rcttw/image/upload/v1748157124/turin-machine_sjjdpd.png)
