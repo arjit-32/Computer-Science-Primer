@@ -15,6 +15,7 @@ const { Content } = await post.render();
 const courseData = seriesInfo[series];
 ---
 
+
 <section class="section blog-single py-4 bg-white border-b pb-20">
   <div class="container max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex flex-col lg:flex-row gap-8">
@@ -230,10 +231,44 @@ const courseData = seriesInfo[series];
 
 <script is:inline>
   function initNavHandlers() {
-    setTimeout(() => { // Ensure elements exist before attaching handlers
-      document.querySelectorAll('[id^="nav-button-"]').forEach((button) => {
+    setTimeout(() => {
+      // Get the current page's slug from the URL
+      const currentPath = window.location.pathname;
+      const currentSlug = currentPath.split('/').pop() || '';
+
+      // Find all nav buttons and content sections
+      document.querySelectorAll('[id^="nav-button-"]').forEach((button, index) => {
+        // Remove existing listeners to prevent duplicates
         button.removeEventListener("click", toggleNav);
         button.addEventListener("click", toggleNav);
+
+        const content = document.getElementById(`nav-content-${index}`);
+        if (!content) return;
+
+        // Check if this section contains the current blog post
+        const links = content.querySelectorAll('a');
+        let isActiveSection = false;
+
+        links.forEach(link => {
+          const linkUrl = link.getAttribute('href').split('/').pop() || '';
+          // Highlight the link if it matches the current slug
+          if (linkUrl === currentSlug) {
+            link.classList.add('active-link');
+            isActiveSection = true;
+          } else {
+            link.classList.remove('active-link');
+          }
+        });
+
+        // Expand the section if it contains the current blog post
+        const icon = button.querySelector(".transform");
+        if (isActiveSection) {
+          content.classList.remove("hidden");
+          if (icon) icon.classList.add("rotate-180");
+        } else {
+          content.classList.add("hidden");
+          if (icon) icon.classList.remove("rotate-180");
+        }
       });
     }, 100); // Slight delay to ensure DOM is ready
   }

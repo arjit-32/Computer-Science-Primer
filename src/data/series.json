@@ -395,7 +395,7 @@
         { "type": "articles", "url": "dm-3", "title": "POSET & Lattices"},
         { "type": "articles", "url": "dm-4", "title": "Functions"},
         { "type": "articles", "url": "dm-5", "title": "Theory of Logic"},
-        { "type": "articles", "url": "dm-6", "title": "Algebraic Structures"},
+        { "type": "articles", "url": "dm-6", "title": "Group Theory"},
         { "type": "articles", "url": "dm-7", "title": "Graph Theory"},
         { "type": "articles", "url": "dm-8", "title": "Combinatorics"}
       ]

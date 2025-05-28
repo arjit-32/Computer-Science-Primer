@@ -44,3 +44,15 @@ h6,
 .h6 {
   @apply text-h6;
 }
+.active-link {
+    background-color: #fb7299; 
+    color: white !important; /* White text for contrast */
+    font-weight: 500; /* Slightly bolder text */
+
+    svg{
+      color: white !important;
+    }
+  }
+  .active-link:hover {
+    background-color: #e65b8a; 
+  }

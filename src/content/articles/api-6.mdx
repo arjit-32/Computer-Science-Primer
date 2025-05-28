@@ -82,7 +82,7 @@ Although HTTP is **stateless**, meaning the server doesn't remember previous req
 | **HTTP/0.9** | Single-line protocol with only GET method and HTML-only responses |
 | **HTTP/1.0** | <ul><li>Added HEAD/POST methods, headers</li>  <li>Multiple content types</li></ul> |
 | **HTTP/1.1** | <ul><li>Introduced persistent connections</li>  <li>Request pipelining *(sending multiple-inflight requests before the arrival of the responses of earlier request*)</li>  <li>Mandatory Host header *(helped in virtual hosting)*</li></ul> |
-| **HTTP/2.0** | <ul><li>Prioritized resposes / multiplexing *(If 2 images requested, sends small image before bigger image*) </li> <li>Server push *(send resources to the client without it requesting)* </li><li> Binary protocol with header compression </li></ul> |
+| **HTTP/2.0** | <ul><li>Prioritized resposes / multiplexing *(If 2 images requested, sends small image before bigger image*) </li> <li>Server push *(send resources to the client without it requesting)*. Server push is deprecated by most browsers including Chrome in 2022, Firefox in 2024</li><li> Binary protocol with header compression </li></ul> |
 | **HTTP/3.0** | <ul><li>QUIC-based (UDP) transport with built-in TLS 1.3 </li> <li>Resolves Head-on-line blocking</li> </ul> |
 
 `Note` - Most HTTP connection should use HTTPS over HTTP/2 and if that doesn't work should use HTTP 1.1
