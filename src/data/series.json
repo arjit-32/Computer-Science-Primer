@@ -403,7 +403,10 @@
     {
       "subheading": "Further Learnings",
       "link": [
-      { "type": "articles", "url": "dm-9", "title": "DM Handwritten Notes" }
+      { "type": "articles", "url": "dm-9", "title": "DM Handwritten Notes" },
+      { "type": "youtube", "url": "https://youtu.be/3zOtLEeHygg?si=a64Wturp6O_c8qO4", "title": "DM in 1 video(KnowledgeGate)" },
+      { "type": "external", "url": "https://www.coursera.org/specializations/discrete-mathematics", "title": "Coursera Specialization" },
+      { "type": "youtube", "url": "https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS", "title": "Trefor Bazett's Playlist" }      
       ]
     }
   ]
@@ -431,7 +434,10 @@
     {
       "subheading": "Further Learnings",
       "link": [
-      { "type": "articles", "url": "dl-7", "title": "DL Handwritten Notes" }
+      { "type": "articles", "url": "dl-7", "title": "DL Handwritten Notes" },
+      { "type": "youtube", "url": "https://youtu.be/pHNbm-4reIc?si=WdV8OboMJm9fHlvJ", "title": "DL in 1 video(KnowledgeGate)" },
+      { "type": "external", "url": "https://www.cburch.com/logisim/", "title": "A cool tool" },
+      { "type": "youtube", "url": "https://www.youtube.com/watch?v=nB6724G3b3E", "title": "Build Logic Gates" }
       ]
     }
     ]
@@ -459,7 +465,10 @@
     {
       "subheading": "Further Learnings",
       "link": [
-      { "type": "articles", "url": "coa-7", "title": "COA Handwritten Notes" }
+      { "type": "articles", "url": "coa-7", "title": "COA Handwritten Notes" },
+      { "type": "youtube", "url": "https://youtu.be/DsK35f8wyUw?si=ItJBTTvVc19aZKA7", "title": "COA in 1 video(KnowledgeGate)" },
+      { "type": "external", "url": "https://www.coursera.org/learn/comparch", "title": "Princeton Course" },
+      { "type": "youtube", "url": "https://youtu.be/EeHK3Jbgv2s?si=af5VahN9eEcFQvaR", "title": "Make your own CPU" }      
       ]
     }
   ]
@@ -488,7 +497,9 @@
     {
       "subheading": "Further Learnings",
       "link": [
-      { "type": "articles", "url": "toc-8", "title": "TOC Handwritten Notes" }
+      { "type": "articles", "url": "toc-8", "title": "TOC Handwritten Notes" },
+       { "type": "youtube", "url": "https://youtu.be/9kuynHcM3UA?si=Kb0pXxCwJMg8vSDm", "title": "TOC in 1 video(KnowledgeGate)" },
+      { "type": "youtube", "url": "https://www.youtube.com/playlist?list=PLlcKBuC3E3X0lStB3FqghE5ylLDTukTta", "title": "Jeff Ullman - Stanford lectures" }      
       ]
     }
   ]
@@ -518,7 +529,10 @@
     {
       "subheading": "Further Learnings",
       "link": [
-      { "type": "articles", "url": "compiler-9", "title": "Compiler Handwritten Notes" }
+      { "type": "articles", "url": "compiler-9", "title": "Compiler Handwritten Notes" },
+      { "type": "articles", "url": "built-a-compiler", "title": "Building a Programming Language (arjit)" },
+      { "type": "youtube", "url": "https://youtu.be/OQCjakjCJu4?si=1CK846RLkOPztvPz", "title": "Compilers in 1 video(KnowledgeGate)" },
+      { "type": "youtube", "url": "https://www.youtube.com/playlist?list=PLTsf9UeqkRebOYdw4uqSN0ugRShSmHrzH", "title": "Alex Aiken - Stanford lectures" }      
       ]
     }
   ]
