@@ -141,7 +141,7 @@
         ]
       },
       {
-        "subheading": "Further Learning & Challenges",
+        "subheading": "Further Learnings",
         "link": [
           {
             "type": "book",
@@ -211,22 +211,17 @@
         ]
       },
       {
-        "subheading": "Further Learning & Resources",
+        "subheading": "Further Learnings",
         "link": [
           {
             "type": "external",
-            "url": "https://learn.awscloud.com/",
-            "title": "AWS Skill Builder"
+            "url": "https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/",
+            "title": "AWS Solutions Architect(Udemy)"
           },
           {
-            "type": "assignment",
-            "url": "https://www.cloudresumechallenge.dev/",
-            "title": "Cloud Resume Challenge"
-          },
-          {
-            "type": "book",
-            "url": "https://www.oreilly.com/library/view/amazon-web-services/9781492095815/",
-            "title": "AWS for Developers (O’Reilly)"
+            "type": "external",
+            "url": "https://www.ducktyped.org/",
+            "title": "Aditya Bhargava's Networking Series"
           }
         ]
       }
@@ -284,6 +279,25 @@
       { "type": "articles", "url": "java-23", "title": "Set Interface"},
       { "type": "articles", "url": "java-24", "title": "Map Interface"}
     ]
+  },{
+  "subheading": "Further Learnings",
+  "link": [
+    {
+      "type": "youtube",
+      "url": "https://youtu.be/VE_AAUxTUCY?si=FVl5nu3KqGxHwrJB",
+      "title": "Collection Framework (Riddhi Dutta)"
+    },
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/playlist?list=PLOE1GTZ5ouRPbpTnrZ3Wqjamfwn_Q5Y9A",
+      "title": "Distributed Systems Playlist" 
+    },
+    {
+      "type": "external",
+      "url": "https://www.tpointtech.com/java-tutorial",
+      "title": "JavaTPoint Series"
+    }
+  ]
   }
   ]
   },  
@@ -324,8 +338,17 @@
     "link": [
       { "type": "articles", "url": "distributed-9", "title": "Real-World Applications" }
     ]
-  }
-]
+  },{
+  "subheading": "Further Learnings",
+  "link": [
+    {
+      "type": "youtube",
+      "url": "https://www.youtube.com/playlist?list=PLOE1GTZ5ouRPbpTnrZ3Wqjamfwn_Q5Y9A",
+      "title": "Distributed Systems Playlist" 
+    }
+    ]
+    }
+  ]
   },
   "api": {
     "ongoing": "false",
@@ -375,7 +398,16 @@
           { "type": "articles", "url": "api-14", "title": "Designing the Coffee Shop API - A Practical Blueprint" },
           { "type": "articles", "url": "api-15", "title": "API Optimization & Performance Patterns" }
         ]
-      }
+      },{
+  "subheading": "Further Learnings",
+  "link": [
+    {
+      "type": "external",
+      "url": "https://www.educative.io/courses/grokking-the-product-architecture-interview/unpacking-api-design?utm_campaign=brand_educative&utm_source=google&utm_medium=ppc&utm_content=performance_max_india&utm_term=&aff=K3Zq&utm_term=&utm_campaign=%5BNew%5D+Performance+Max&utm_source=adwords&utm_medium=ppc&hsa_acc=5451446008&hsa_cam=18931439518&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=18924941403&gbraid=0AAAAADfWLuTtU0q8sM1D2kPeDG8uu1_LT&gclid=Cj0KCQjw0erBBhDTARIsAKO8iqQdMp-lQ0uxxyWl5yhr0KR7sYuPHAbo8GBvOJ70C33c1yZIJShhFcAaAp10EALw_wcB",
+      "title": "Educative's Course"
+    }
+  ]
+}
     ]
   },
   "dm": {
@@ -404,9 +436,9 @@
       "subheading": "Further Learnings",
       "link": [
       { "type": "articles", "url": "dm-9", "title": "DM Handwritten Notes" },
-      { "type": "youtube", "url": "https://youtu.be/3zOtLEeHygg?si=a64Wturp6O_c8qO4", "title": "DM in 1 video(KnowledgeGate)" },
       { "type": "external", "url": "https://www.coursera.org/specializations/discrete-mathematics", "title": "Coursera Specialization" },
-      { "type": "youtube", "url": "https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS", "title": "Trefor Bazett's Playlist" }      
+      { "type": "youtube", "url": "https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS", "title": "Trefor Bazett's Playlist" },
+      { "type": "youtube", "url": "https://youtu.be/3zOtLEeHygg?si=a64Wturp6O_c8qO4", "title": "DM in 1 video(KnowledgeGate)" }      
       ]
     }
   ]
@@ -435,10 +467,10 @@
       "subheading": "Further Learnings",
       "link": [
       { "type": "articles", "url": "dl-7", "title": "DL Handwritten Notes" },
-      { "type": "youtube", "url": "https://youtu.be/pHNbm-4reIc?si=WdV8OboMJm9fHlvJ", "title": "DL in 1 video(KnowledgeGate)" },
       { "type": "external", "url": "https://www.cburch.com/logisim/", "title": "A cool tool" },
-      { "type": "youtube", "url": "https://www.youtube.com/watch?v=nB6724G3b3E", "title": "Build Logic Gates" }
-      ]
+      { "type": "youtube", "url": "https://www.youtube.com/watch?v=nB6724G3b3E", "title": "Build Logic Gates" },
+      { "type": "youtube", "url": "https://youtu.be/pHNbm-4reIc?si=WdV8OboMJm9fHlvJ", "title": "DL in 1 video(KnowledgeGate)" }      
+    ]
     }
     ]
   },
@@ -466,9 +498,9 @@
       "subheading": "Further Learnings",
       "link": [
       { "type": "articles", "url": "coa-7", "title": "COA Handwritten Notes" },
-      { "type": "youtube", "url": "https://youtu.be/DsK35f8wyUw?si=ItJBTTvVc19aZKA7", "title": "COA in 1 video(KnowledgeGate)" },
       { "type": "external", "url": "https://www.coursera.org/learn/comparch", "title": "Princeton Course" },
-      { "type": "youtube", "url": "https://youtu.be/EeHK3Jbgv2s?si=af5VahN9eEcFQvaR", "title": "Make your own CPU" }      
+      { "type": "youtube", "url": "https://youtu.be/EeHK3Jbgv2s?si=af5VahN9eEcFQvaR", "title": "Make your own CPU" },
+      { "type": "youtube", "url": "https://youtu.be/DsK35f8wyUw?si=ItJBTTvVc19aZKA7", "title": "COA in 1 video(KnowledgeGate)" }
       ]
     }
   ]
